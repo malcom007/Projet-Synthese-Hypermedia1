@@ -1,5 +1,6 @@
 <?php
 
+require_once ('../included/config/Config.php');
 
 class Database
 {
@@ -23,6 +24,7 @@ class Database
                 Config::DB_USER,
                 Config::DB_PWD);
         }
+        echo "connexion établie";
         return self::$instance;
     }
 
