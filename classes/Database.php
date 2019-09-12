@@ -24,7 +24,7 @@ class Database
                 Config::DB_USER,
                 Config::DB_PWD);
         }
-        echo "connexion établie";
+        echo "connexion établie ";
         return self::$instance;
     }
 
