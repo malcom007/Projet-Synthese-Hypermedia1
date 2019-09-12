@@ -10,8 +10,7 @@ body
 
 body a
 {
-    color: yellow;
-
+    color: #ff5821;
 }
 
 body a:hover {
@@ -92,6 +91,19 @@ li a {
     background: #ff5821;
     padding: 2px 20px;
 }
+
+
+.user-login a:hover{
+    background: #ff5821c4;
+    border-color: #ff5821c4;
+}
+
+a.text-uppercase.btn:hover {
+    color: #ff5821c4;
+    background: #fff;
+    border-color: #fff;
+}
+
 
 .user-register a
 {
