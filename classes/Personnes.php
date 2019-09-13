@@ -1,16 +1,83 @@
 <?php
 
-
+require_once './included/IdGenerator.php';
 
 
 class Personnes
 {
-    private $_Id, $_Prenom,$_Nom,$_NumCell,$_DateActivation,$_Actived,$_DateModification;
+    private $_Id, $_Prenom,$_Nom,$_NumCell,$_DateActivation,$_Actived,$_DateModification,$_Mail,$_Password,$_TypeCompte;
 
 
     public function __construct()
     {
     }
+
+
+
+    public function createNewPersonWeb($prenom,$nom,$numCell,$email,$password,$typeCompte)
+    {
+        $today= MyGenerator::getDateNow();
+
+        $this->_Id= MyGenerator::getIdGenerated();
+        $this->_Prenom = $prenom;
+        $this->_Nom = $nom;
+        $this->_NumCell = $numCell;
+        $this->_Mail = $email;
+        $this->_Password = $password;
+        $this->_TypeCompte = $typeCompte;
+        $this->_DateActivation= $today;
+        $this->_DateModification=$today;
+
+    }
+
+
+
+
+    /**
+     * Methode permettant de créer une personne a partir d'un objet provenant de la base de donnée
+     * @param mixed $obj
+     */
+    public function loadFromObjet($obj)
+    {
+        $this->_Id= $obj->id;
+        $this->_Prenom = $obj->prenom;
+        $this->_Nom = $obj->nom;
+        $this->_NumCell = $obj->cellulaire;
+        $this->_Mail = $obj->email;
+        $this->_Password = $obj->password;
+        $this->_TypeCompte = $obj->typeCompte;
+        $this->_Actived = $obj->actived;
+        $this->_DateActivation= $obj->dateActivation;
+        $this->_DateModification = $obj->dateModificaton;
+
+    }
+
+
+    /**
+     * Methode permettant de créer une personne a partir d'un tableau provenant de la base de donnée
+     * @param mixed $tableau
+     */
+    public function loadFromArray($tableau)
+    {
+        $this->_Id= $tableau['id'];
+        $this->_Prenom = $tableau["prenom"];
+        $this->_Nom = $tableau['nom'];
+        $this->_NumCell = $tableau['cellulaire'];
+        $this->_Mail = $tableau['email'];
+        $this->_Password = $tableau['password'];
+        $this->_TypeCompte = $tableau['typeCompte'];
+        $this->_Actived = $tableau ['actived'];
+        $this->_DateActivation['dateActivation'];
+        $this->_DateModification = $tableau['dateModificaton'];
+
+    }
+
+
+    /**
+     * ==============================
+     * Getteur and Setter
+     * =============================
+     */
 
     /**
      * @param mixed $Id
@@ -124,22 +191,55 @@ class Personnes
         $this->_DateModification = $DateModification;
     }
 
-
-
+    /**
+     * @return mixed
+     */
+    public function getMail()
+    {
+        return $this->_Mail;
+    }
 
     /**
-     * Methode permettant de créer une personne a partir d'un tableau provenant de la base de donnée
-     * @param mixed $tableau
+     * @param mixed $Mail
      */
-    public function loadFromArray($tableau)
+    public function setMail($Mail)
     {
-        $this->_Prenom = $tableau["prenom"];
-        $this->_Nom = $tableau['nom'];
-        $this->_Actived = $tableau ['actived'];
-        $this->_NumCell = $tableau['cellulaire'];
-        $this->_DateActivation['dateActivation'];
-        $this->_DateModification = $tableau['dateModificaton'];
+        $this->_Mail = $Mail;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPassword()
+    {
+        return $this->_Password;
+    }
+
+    /**
+     * @param mixed $Password
+     */
+    public function setPassword($Password)
+    {
+        $this->_Password = $Password;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTypeCompte()
+    {
+        return $this->_TypeCompte;
+    }
+
+    /**
+     * @param mixed $TypeCompte
+     */
+    public function setTypeCompte($TypeCompte)
+    {
+        $this->_TypeCompte = $TypeCompte;
+    }
+    
+
 
 
 
