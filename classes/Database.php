@@ -1,6 +1,6 @@
 <?php
 
-require_once ('../included/config/Config.php');
+require_once ('./included/config/Config.php');
 
 class Database
 {
@@ -20,7 +20,7 @@ class Database
     {
         if (self::$instance == null)
         {
-            self::$instance = new PDO("mysql:host=".Config::DB_HOST.";dbname=".Config::DB_NAME."",
+            self::$instance = new PDO("mysql:host=".Config::DB_HOST.";dbname=".Config::DB_NAME,
                 Config::DB_USER,
                 Config::DB_PWD);
         }

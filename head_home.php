@@ -51,9 +51,11 @@
                     <div class="col-md-5">
 
                         <ul class="list-inline user-menu pull-right ">
-                            <li class="user-register  mr-md-3"> <a href="#" class="text-uppercase"> <i class="fa fa-edit mr-1 "></i> Devenir un client</a></li>
-                            <li class="user-login  "> <a href="#" class="text-uppercase"><i class="fa fa-user-circle mr-1 "></i> Se connecter</a></li>
+                            <li class="user-register  mr-md-3"> <a href="#" class="text-uppercase btn nav-link"> <i class="fa fa-edit mr-1 "></i> Devenir client  </a></li>
+                            <li class="user-login  "> <a href="#" class="text-uppercase btn"><i class="fa fa-user-circle mr-1 "></i> Se connecter  <i class="fa fa-chevron-down"></i></a></li>
                         </ul>
+
+
 
 
                     </div>
