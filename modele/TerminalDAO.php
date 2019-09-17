@@ -62,6 +62,7 @@ class TerminalDAO{
         }
         catch (PDOException $ex){
             ?>
+            <!-- Affichage du message d'erreur au console terminal-->
             <script>console.log("Error createDAO:  <?= $ex->getMessage()?>")</script>
             <?php
         }

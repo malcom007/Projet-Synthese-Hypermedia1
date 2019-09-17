@@ -31,7 +31,7 @@ class Database
         }
         catch (PDOException $ex){
             ?>
-            <script>console.log("Erreur de connexion BD :    <?= $ex->getMessage()?>  Merci")</script>
+            <script>console.log("Erreur de connexion BD :    <?= $ex->getMessage()?> ")</script>
             <?php
         }
 
