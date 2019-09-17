@@ -4,6 +4,7 @@
 class MyGenerator
 {
 
+
     private function __construct()
     {
     }

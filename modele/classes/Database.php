@@ -1,6 +1,8 @@
 <?php
 
-require_once ('./included/config/Config.php');
+//require_once '/config/config.php';
+//Pour mon test dans le dossier racine
+require_once 'modele/config/config.php';
 
 class Database
 {
@@ -36,4 +38,7 @@ class Database
         self::$instance=null;
     }
 
+
+
 }
+

@@ -1,6 +1,6 @@
 <?php
 
-require_once './included/IdGenerator.php';
+
 
 
 class Personnes
@@ -18,7 +18,7 @@ class Personnes
     {
         $today= MyGenerator::getDateNow();
 
-        $this->_Id= MyGenerator::getIdGenerated();
+        $this->_Id= strtoupper(MyGenerator::getIdGenerated());
         $this->_Prenom = $prenom;
         $this->_Nom = $nom;
         $this->_NumCell = $numCell;
@@ -67,7 +67,7 @@ class Personnes
         $this->_Password = $tableau['password'];
         $this->_TypeCompte = $tableau['typeCompte'];
         $this->_Actived = $tableau ['actived'];
-        $this->_DateActivation['dateActivation'];
+        $this->_DateActivation=$tableau['dateActivation'];
         $this->_DateModification = $tableau['dateModificaton'];
 
     }
