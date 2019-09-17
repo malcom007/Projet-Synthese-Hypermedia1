@@ -1,6 +1,7 @@
 <?php
 
 //require_once '/config/config.php';
+
 //Pour mon test dans le dossier racine
 require_once 'modele/config/config.php';
 
@@ -20,13 +21,18 @@ class Database
      * */
     public static function getInstance()
     {
-        if (self::$instance == null)
-        {
-            self::$instance = new PDO("mysql:host=".Config::DB_HOST.";dbname=".Config::DB_NAME,
-                Config::DB_USER,
-                Config::DB_PWD);
+        try{
+            if(self::$instance == null) {
+                self::$instance = new PDO(
+                    "mysql:host=".Config::DB_HOST.";dbname=".Config::DB_NAME."",
+                    Config::DB_USER,
+                    Config::DB_PWD,array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
+            }
         }
-        echo "connexion établie ";
+        catch (PDOException $ex){
+            echo "Erreur :  ".$ex->getMessage();
+        }
+
         return self::$instance;
     }
 
