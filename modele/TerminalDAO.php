@@ -119,11 +119,11 @@ class TerminalDAO{
     }
 
 
-    public static function delete($terminalO=NULL){
+    public static function delete($terminalObjet=NULL){
 
         $request="DELETE FROM terminals WHERE idTerminal=:id";
 
-        if (is_null($terminalO)){
+        if (is_null($terminalObjet)){
             ?>
             <!-- Affichage du message d'erreur au console terminal-->
             <script>console.log("Impossible de supprimer, aucun parametre")</script>
@@ -136,7 +136,16 @@ class TerminalDAO{
             //Preparation de la requette SQL pour l'execution(Tableau)
             $pstm=$db->prepare($request);
             //Execution de la requette préparer
-            $pstm->execute(array(":id"->))
+            $pstm->execute(array(":id"=>$terminalObjet->getIdTerminal()));
+
+            //On arret le curseur
+            $pstm->closeCursor();
+            //On vide la variable
+            $pstm = null;
+
+            //On ferme la connexion
+            Database::close();
+
             
         }
         catch (PDOException $ex){

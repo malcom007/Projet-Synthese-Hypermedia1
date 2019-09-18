@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="" />
+    <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/TerminalDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/TerminalDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/classes/Terminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Terminal.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +37,10 @@
   </component>
   <component name="ProjectId" id="1QiV5RgJS2uiS990M8nxdv4bMnl" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/git-bash.exe" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -48,6 +54,20 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="JavaScript Debug.TestDAOTerminal.php (1)">
+    <configuration name="TestDAOTerminal.php (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/TestDAOTerminal.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="TestDAOTerminal.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Projet-Synthese-Hypermedia1/vue/TestDAOTerminal.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.TestDAOTerminal.php (1)" />
+        <item itemvalue="JavaScript Debug.TestDAOTerminal.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -59,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1568253219979</updated>
       <workItem from="1568253221465" duration="19920000" />
+      <workItem from="1568841607093" duration="1843000" />
     </task>
     <servers />
   </component>
@@ -70,7 +91,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
