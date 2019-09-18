@@ -1,5 +1,5 @@
 <?php
-require_once '/modele/IdGenerator.php';
+require_once '../../modele/IdGenerator.php';
 
 class Terminal
 {
@@ -32,12 +32,12 @@ class Terminal
     public function loadFromObjet($obj)
     {
 
-        $this->_Statut = $obj->statut;
-        $this->_IdEntreprise - $obj->idEntreprise;
-        $this->_Login = $obj->login;
-        $this->_Password = $obj->password;
-        $this->_DateActivation = $obj->dateActivation;
-        $this->_DateModification = $obj->dateModification;
+        //$this->_Statut = $obj->statut;
+        //$this->_IdEntreprise - $obj->idEntreprise;
+        //$this->_Login = $obj->login;
+        //$this->_Password = $obj->password;
+        //$this->_DateActivation = $obj->dateActivation;
+        //$this->_DateModification = $obj->dateModification;
         $this->_DateAjout=$obj->dateAjout;
         $this->_IdTerminal= $obj->idTerminal;
         $this->_Libelle=$obj->libelle;
