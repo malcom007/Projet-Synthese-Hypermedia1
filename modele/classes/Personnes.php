@@ -18,7 +18,7 @@ class Personnes
     {
         $today= MyGenerator::getDateNow();
 
-        $this->_Id= strtoupper(MyGenerator::getIdGenerated());
+        $this->_Id= MyGenerator::getIdGenerated();
         $this->_Prenom = $prenom;
         $this->_Nom = $nom;
         $this->_NumCell = $numCell;
@@ -39,16 +39,16 @@ class Personnes
      */
     public function loadFromObjet($obj)
     {
-        $this->_Id= $obj->id;
+        $this->_Id= $obj->idPersonne;
         $this->_Prenom = $obj->prenom;
         $this->_Nom = $obj->nom;
-        $this->_NumCell = $obj->cellulaire;
-        $this->_Mail = $obj->email;
+        $this->_NumCell = $obj->numCell;
+        $this->_Mail = $obj->mail;
         $this->_Password = $obj->password;
         $this->_TypeCompte = $obj->typeCompte;
         $this->_Actived = $obj->actived;
         $this->_DateActivation= $obj->dateActivation;
-        $this->_DateModification = $obj->dateModificaton;
+        $this->_DateModification = $obj->dateModification;
 
     }
 
