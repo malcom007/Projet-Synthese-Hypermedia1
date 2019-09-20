@@ -32,12 +32,7 @@ class Terminal
     public function loadFromObjet($obj)
     {
 
-        //$this->_Statut = $obj->statut;
-        //$this->_IdEntreprise - $obj->idEntreprise;
-        //$this->_Login = $obj->login;
-        //$this->_Password = $obj->password;
-        //$this->_DateActivation = $obj->dateActivation;
-        //$this->_DateModification = $obj->dateModification;
+
         $this->_DateAjout=$obj->dateAjout;
         $this->_IdTerminal= $obj->idTerminal;
         $this->_Libelle=$obj->libelle;
@@ -54,19 +49,13 @@ class Terminal
      */
     public function loadFromArray($tableau)
     {
-        $this->_Statut = $tableau['statut'];
-        $this->_IdEntreprise - $tableau['idEntreprise'];
-        $this->_Login = $tableau['login'];
-        $this->_Password = $tableau['password'];
-        $this->_DateActivation = $tableau['dateActivation'];
-        $this->_DateModification = $tableau['dateModification'];
+
         $this->_DateAjout=$tableau['dateAjout'];
         $this->_IdTerminal= $tableau['idTerminal'];
         $this->_Libelle=$tableau['libelle'];
         $this->_MacAdresse=$tableau['macAdress'];
         //On arrondi a 2chiffre après la virgule
         $this->_Prix=round($tableau['prix'],2);
-
 
     }
 
