@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/RequirePRGAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/PersonneDao.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/TerminalDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/TerminalDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/classes/Personnes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Personnes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/classes/Terminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Terminal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/TestDAOTerminal.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/terminal/TestDaoTerminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/terminal/TestDaoTerminal.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +44,17 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
+    <property name="last_opened_file_path" value="G:/Mon Drive/2. Cours/Cours 2019/1 Ete/Hypermedia 1/Projet Synthese/Dossier Partage" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web.server" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Mon Drive\2. Cours\Cours 2019\1 Ete\Hypermedia 1\Projet Synthese\Dossier Partage" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\controleur" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\vue\Personne" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -54,15 +68,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.TestDAOTerminal.php (1)">
+  <component name="RunManager" selected="JavaScript Debug.TestDaoPersonne.php">
     <configuration name="TestDAOTerminal.php (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/TestDAOTerminal.php">
       <method v="2" />
     </configuration>
     <configuration name="TestDAOTerminal.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Projet-Synthese-Hypermedia1/vue/TestDAOTerminal.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="TestDaoPersonne.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/Personne/TestDaoPersonne.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="TestDaoTerminal.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/terminal/TestDaoTerminal.php">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.TestDaoPersonne.php" />
+        <item itemvalue="JavaScript Debug.TestDaoTerminal.php" />
         <item itemvalue="JavaScript Debug.TestDAOTerminal.php (1)" />
         <item itemvalue="JavaScript Debug.TestDAOTerminal.php" />
       </list>
@@ -79,7 +101,9 @@
       <option name="presentableId" value="Default" />
       <updated>1568253219979</updated>
       <workItem from="1568253221465" duration="19920000" />
-      <workItem from="1568841607093" duration="1843000" />
+      <workItem from="1568841607093" duration="8497000" />
+      <workItem from="1568903299903" duration="568000" />
+      <workItem from="1568904643335" duration="18833000" />
     </task>
     <servers />
   </component>

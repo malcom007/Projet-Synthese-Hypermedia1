@@ -1,18 +1,19 @@
 <?php
 
 require_once '/../modele/classes/Database.php';
-require_once '/../modele/classes/Terminal.php';
+require_once '/../modele/classes/Personnes.php';
+
 
 class TerminalDAO{
 
     /***
-     * Methode permettant d'ajouter un terminal en inventaire par les employes de SwipnGo
+     * Methode permettant d'ajouter une personne
      * @param $terminalO
      */
     public static function create($terminalO){
         $db = Database::getInstance();
 
-        $request="INSERT INTO terminals (idTerminal,libelle,macAdress,prix) values (:id,:lib,:mac,:price)";
+        $request="INSERT INTO personnes (id,prenom,nom,numCell,	mail,password,typeCompte,) values (:id,:prenom,:nom,:numCell,:mail,:pwd,:typeCompte)";
 
         try{
 
@@ -25,10 +26,16 @@ class TerminalDAO{
             $pstm = $db->prepare($request);
 
             $pstm->execute(array(
-                ':id' => $terminalO->getIdTerminal(),
-                ':lib' => $terminalO->getLibelle(),
-                ':mac' => $terminalO->getMacAdresse(),
-                ':price' => $terminalO->getPrix()
+                ':id' => $terminalO->getId(),
+                ':prenom' => $terminalO->getPrenom(),
+                ':nom' => $terminalO->getNom(),
+                ':numCell' => $terminalO->getNumCell(),
+                ':mail' => $terminalO->getMail(),
+                ':pwd' => $terminalO->getPassword(),
+                ':typeCompte' => $terminalO->getTypeCompte(),
+
+
+
             ));
 
             $pstm->closeCursor();
@@ -89,7 +96,7 @@ class TerminalDAO{
                 //Parcours de notre pstm tant qu'il y des données
                 while ($result = $pstmt->fetch(PDO::FETCH_OBJ)){
                     //Creation d'un terminal
-                    $terminal = new Terminal();
+                    //$terminal = new Terminal();
 
                     //Transfere des information d'objet vers un tableau
                     $terminal->loadFromObjet($result);
@@ -167,7 +174,7 @@ class TerminalDAO{
      * @param $terminalOb
      */
     public static function update($terminalOb){
-        $request="UPDATE terminals SET libelle=:lib, macAdress=:mac, prix=:prix, dateModif=NOW() WHERE idTerminal=:id";
+        $request="UPDATE terminals SET libelle=:lib, macAdress=:mac, prix=:prix WHERE idTerminal=:id";
 
         $db=Database::getInstance();
 

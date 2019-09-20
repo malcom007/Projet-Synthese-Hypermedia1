@@ -1,5 +1,5 @@
 <?php
-
+require_once '../../modele/IdGenerator.php';
 
 
 
@@ -238,7 +238,7 @@ class Personnes
     {
         $this->_TypeCompte = $TypeCompte;
     }
-    
+
 
 
 
