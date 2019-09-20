@@ -1,24 +1,28 @@
 <?php
 //
-
+//require_once '../../modele/IdGenerator.php';
 require_once '../../modele/PersonneDAO.php';
 
-$maPersonne = new Personnes();
+//$maPersonne = new Personnes();
 
 
-$hashPwd= password_hash('rasmuslerdorf', PASSWORD_BCRYPT );
+//$hashPwd = MyGenerator::getPasswordHached("Malcom");
 
-echo $hashPwd."<br/>";
-
-
-$maPersonne->createNewPersonWeb("Jean","Claude","4502094445","malcom@live.com",$hashPwd,1);
-
-var_dump($maPersonne);
-
-//$test1= TerminalDAO::create($monTerminal);
+//echo $hashPwd."<br/>";
 
 
-//var_dump($monTerminal);
+//$maPersonne->createNewPersonWeb("Marie","Claude","4502094447","malcom@live.com",$hashPwd,1);
+
+//var_dump($maPersonne);
+
+//echo MyGenerator::getTodayPlus30Minutes();
+
+
+
+
+//$mapers=PersonneDAO::create($maPersonne);
+
+//var_dump($mapers);
 
 
 /****
@@ -26,17 +30,18 @@ var_dump($maPersonne);
  *                                              RECHERCHE PAR IDTERMINAL
  * --------------------------------------------------------------------------------------------------------------
  */
-//$test=TerminalDAO::findById();
-////S'il n'y a aucune donnée
-//if (empty($test)){
-//    echo "Aucune données";
-//}else{
-//    foreach ($test as $item){
-//        echo $item->getIdTerminal()."<br>";
-//        echo $item->getLibelle()."<br>";
-//        echo $item->getMacAdresse()."<br>";
-//    }
-//}
+$test=PersonneDAO::findById('3f9494');
+var_dump($test);
+//S'il n'y a aucune donnée
+if (empty($test)){
+    echo "Aucune données";
+}else{
+    foreach ($test as $item){
+       echo $item->getId()."<br>";
+        echo $item->getPrenom()."<br>";
+        echo $item->getPassword()."<br>";
+    }
+}
 //var_dump($test);
 /****
  *--------------------------------------------------------------------------------------------------------------
@@ -45,30 +50,29 @@ var_dump($maPersonne);
  */
 
 ////Stockage  resulte de la recherche avec l'ID
-//$terminal=TerminalDAO::findById('8122C3');
+$personne=PersonneDAO::findById('7AF0AD');
 //
 ////A supprimer, juste pour le teste
 //echo "<BR>OBJET RECUPERE DE LA BASE DE DONNÉE</br>";
 ////A supprimer
-//var_dump($terminal);
+echo "A supprimer";
+var_dump($personne);
 //
 //
 //
 ////Si tableau obtenu a l'aide de la recherche n'est pas null, on continue
-//if (!empty($terminal)){
-//
-//
+if (!empty($personne)){
+
 //    //On crée un objet qui servira pour le parametre de suppression
-//    $toDelete = new Terminal();
-//
-//    //On attribue l'idTerminal avec le tableau de Type Terminal
-//    $toDelete->setIdTerminal($terminal[0]->getIdTerminal());
+    $toDelete = new Personnes();
+    //On attribue l'idTerminal avec le tableau de Type Terminal
+$toDelete->setId($personne[0]->getId());
 //
 //    //On supprimer l'objet
-//    TerminalDAO::delete($toDelete);
+    PersonneDAO::delete($toDelete);
 //
 //
-//}
+}
 
 /****
  *--------------------------------------------------------------------------------------------------------------
@@ -77,36 +81,54 @@ var_dump($maPersonne);
  */
 
 ////Stockage  resulte de la recherche avec l'ID
-//$terminal=TerminalDAO::findById('936D80');
+$personne=PersonneDAO::findById('3f9494');
 //
 //
 ////A supprimer, juste pour le teste
 //echo "<BR>OBJET RECUPERE DE LA BASE DE DONNÉE</br>";
 ////A supprimer
-//var_dump($terminal);
+echo "A Supprimer";
+var_dump($personne);
 //
 //
 //
 ////Si tableau obtenu a l'aide de la recherche n'est pas null, on continue
-//if (!empty($terminal)){
+if (!empty($personne)){
 //
 //
 //    //On crée un objet qui servira de parametre pour la mise à jour
-//    $toUpdate = new Terminal();
+    $toUpdate = new Personnes();
 //
 //    //On fait des Setter  avec les valeurs du tableau de Type Terminal
-//    $toUpdate->setIdTerminal($terminal[0]->getIdTerminal());
-//    $toUpdate->setPrix(200.00);
-//    $toUpdate->setMacAdresse("A452985");
-//    $toUpdate->setLibelle("Mise a jour fait");
+    $toUpdate->setId($personne[0]->getId());
+    $toUpdate->setDateModification(MyGenerator::getDateNow());
+    $toUpdate->setActived(1);
+    $toUpdate->setMail("newMalil@msn.com");
+
+    //On force le hachage du nouveau mot de passe
+    $toUpdate->setPassword(MyGenerator::getPasswordHached("junior"));
+
+    $toUpdate->setTypeCompte(2);
+    $toUpdate->setNumCell("4507683995");
+    $toUpdate->setNom("Nouveau Nom");
+    $toUpdate->setPrenom("Nouveau Prenom");
+
+    var_dump($toUpdate);
 //
 //
 //    //On supprimer l'objet
-//    TerminalDAO::update($toUpdate);
+    PersonneDAO::update($toUpdate);
 //    echo "Completé";
 //
 //
 //
+
+
+
+
+
+
+
 
 
 /***
@@ -129,4 +151,4 @@ if (password_verify('malcom', $hashPwd)) {
 }
 
 
-//}
+}
