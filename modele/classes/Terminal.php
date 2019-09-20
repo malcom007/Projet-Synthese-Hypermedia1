@@ -5,7 +5,7 @@ class Terminal
 {
     private $_IdTerminal,$_Libelle,$_MacAdresse,$_Prix, $_DateAjout;
 
-    private $_IdEntreprise,$_Statut,$_Login,$_Password, $_DateActivation,$_DateModification;
+
 
 
     public function __construct()
@@ -15,7 +15,7 @@ class Terminal
     public function addTerminalInventory($libelle, $macAdresse,$prix)
     {
         $this->_DateAjout=MyGenerator::getDateNow();
-        $this->_IdTerminal= strtoupper(MyGenerator::getIdGenerated());
+        $this->_IdTerminal= MyGenerator::getIdGenerated();
         $this->_Libelle=$libelle;
         $this->_MacAdresse=strtoupper($macAdresse);
 
