@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/modele/classes/TerminalEntreprise.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/terminal/TestDAOTerminalEntreprise.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/IdGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/IdGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/PersonneDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/PersonneDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Personnes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Personnes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/classes/Terminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Terminal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/terminal/TestDaoTerminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/terminal/TestDaoTerminal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/classes/TerminalEntreprise.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/TerminalEntreprise.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +97,7 @@
       <workItem from="1568253221465" duration="19920000" />
       <workItem from="1568841607093" duration="8497000" />
       <workItem from="1568903299903" duration="568000" />
-      <workItem from="1568904643335" duration="30945000" />
+      <workItem from="1568904643335" duration="33385000" />
     </task>
     <servers />
   </component>
