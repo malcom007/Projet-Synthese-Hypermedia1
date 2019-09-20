@@ -4,16 +4,16 @@ require_once '/../modele/classes/Database.php';
 require_once '/../modele/classes/Personnes.php';
 
 
-class TerminalDAO{
+class PersonneDAO{
 
     /***
      * Methode permettant d'ajouter une personne
      * @param $terminalO
      */
-    public static function create($terminalO){
+    public static function create($personneO){
         $db = Database::getInstance();
 
-        $request="INSERT INTO personnes (id,prenom,nom,numCell,	mail,password,typeCompte,) values (:id,:prenom,:nom,:numCell,:mail,:pwd,:typeCompte)";
+        $request="INSERT INTO personnes (idPersonne,prenom,nom,numCell,	mail,password,typeCompte) values (:id,:prenom,:nom,:numCell,:mail,:pwd,:typeCompte)";
 
         try{
 
@@ -26,13 +26,13 @@ class TerminalDAO{
             $pstm = $db->prepare($request);
 
             $pstm->execute(array(
-                ':id' => $terminalO->getId(),
-                ':prenom' => $terminalO->getPrenom(),
-                ':nom' => $terminalO->getNom(),
-                ':numCell' => $terminalO->getNumCell(),
-                ':mail' => $terminalO->getMail(),
-                ':pwd' => $terminalO->getPassword(),
-                ':typeCompte' => $terminalO->getTypeCompte(),
+                ':id' => $personneO->getId(),
+                ':prenom' => $personneO->getPrenom(),
+                ':nom' => $personneO->getNom(),
+                ':numCell' => $personneO->getNumCell(),
+                ':mail' => $personneO->getMail(),
+                ':pwd' => $personneO->getPassword(),
+                ':typeCompte' => $personneO->getTypeCompte(),
 
 
 
@@ -46,7 +46,7 @@ class TerminalDAO{
             Database::close();
 
             ?>
-            <script>console.log("Insertion complété du terminal avec l'ID:   <?=$terminalO->getIdTerminal()?>")</script>
+            <script>console.log("Insertion complété du terminal avec l'ID:   <?=$personneO->getIdTerminal()?>")</script>
             <?php
 
 
@@ -72,12 +72,12 @@ class TerminalDAO{
 
         //Si On ne saisit pas l'id, on retourne toute la liste
         if ($id==NULL){
-            $request="SELECT * FROM terminals";
+            $request="SELECT * FROM personnes";
         }
         else
-            $request="SELECT * FROM terminals WHERE idTerminal = :x";
+            $request="SELECT * FROM personnes WHERE idPersonne = :x";
 
-        $termTab= Array();
+        $personTab= Array();
 
         $db = Database::getInstance();
 
@@ -95,14 +95,15 @@ class TerminalDAO{
 
                 //Parcours de notre pstm tant qu'il y des données
                 while ($result = $pstmt->fetch(PDO::FETCH_OBJ)){
-                    //Creation d'un terminal
-                    //$terminal = new Terminal();
+
+                    //Creation d'une Personne
+                    $personne = new Personnes();
 
                     //Transfere des information d'objet vers un tableau
-                    $terminal->loadFromObjet($result);
+                    $personne->loadFromObjet($result);
 
                     //On insere chaque objet a la fin du tableau $termTab
-                    array_push($termTab,$terminal);
+                    array_push($personTab,$personne);
                 }
 
                 $pstmt->closeCursor();
@@ -112,11 +113,11 @@ class TerminalDAO{
         }
         catch (PDOException $ex){
             ?>
-            <!-- Affichage du message d'erreur au console terminal-->
+            <!-- Affichage du message d'erreur au console personne-->
             <script>console.log("Error createDAO:  <?= $ex->getMessage()?>")</script>
             <?php
         }
-        return $termTab;
+        return $personTab;
 
 
 
@@ -127,16 +128,14 @@ class TerminalDAO{
      * Methode permettant de supprimer un terminal, réserver au SyperAdmin
      * @param null $terminalObjet
      */
-    public static function delete($terminalObjet){
+    public static function delete(Personnes $personneObjet){
 
-        $request="DELETE FROM terminals WHERE idTerminal=:id";
-
-
+        $request="DELETE FROM personnes WHERE idPersonne=:id";
 
         $db = Database::getInstance();
 
         try {
-            if (is_null($terminalObjet)){
+            if (is_null($personneObjet)){
                 throw new PDOException("Aucun parametre fourni DAO ");
                 ?>
                 <!-- Affichage du message d'erreur au console terminal-->
@@ -146,7 +145,7 @@ class TerminalDAO{
                 //Preparation de la requette SQL pour l'execution(Tableau)
                 $pstm=$db->prepare($request);
                 //Execution de la requette préparer
-                $pstm->execute(array(":id"=>$terminalObjet->getIdTerminal()));
+                $pstm->execute(array(":id"=>$personneObjet->getId()));
 
                 //On arret le curseur
                 $pstm->closeCursor();
@@ -173,23 +172,30 @@ class TerminalDAO{
      * Methode permettant de faire une mise d'un terminal
      * @param $terminalOb
      */
-    public static function update($terminalOb){
-        $request="UPDATE terminals SET libelle=:lib, macAdress=:mac, prix=:prix WHERE idTerminal=:id";
+    public static function update(Personnes $personneOb){
+        $request="UPDATE personnes SET prenom=:prenom, nom=:nom, numCell=:numCell, mail=:mail,password=:password, typeCompte=:typeCompte,actived=:actived, dateModification=:dateModif  WHERE idPersonne=:id";
 
         $db=Database::getInstance();
 
         try {
             //Preparation de la requette
             $pstm=$db->prepare($request);
-            
 
+
+            //Association des valeur
+            $pstm->bindValue(":prenom", $personneOb->getPrenom(),PDO::PARAM_STR);
+            $pstm->bindValue(':nom', $personneOb->getNom(),PDO::PARAM_STR);
+            $pstm->bindValue(':numCell', $personneOb->getNumCell(),PDO::PARAM_STR);
+            $pstm->bindValue('mail', $personneOb->getMail(),PDO::PARAM_STR);
+            $pstm->bindValue(':password', $personneOb->getPassword(),PDO::PARAM_STR);
+            $pstm->bindValue(':typeCompte',$personneOb->getTypeCompte(),PDO::PARAM_INT);
+            $pstm->bindValue(':dateModif', $personneOb->getDateModification());
+            $pstm->bindValue(':actived', $personneOb->getActived(),PDO::PARAM_BOOL);
+
+            $pstm->bindValue(":id", $personneOb->getId());
 
             //Execution de la requette
-            $pstm->execute(array(':lib'=>$terminalOb->getLibelle(),
-                    ':mac'=>$terminalOb->getMacAdresse(),
-                    ':prix'=>$terminalOb->getPrix(),
-                    ':id'=>$terminalOb->getIdTerminal()
-            ));
+            $pstm->execute();
 
             $pstm->closeCursor();
             $pstm=Null;
