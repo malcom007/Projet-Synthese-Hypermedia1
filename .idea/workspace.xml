@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controleur/RequirePRGAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Acceuil dashboard.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/transporteur/TestDaoTransporteur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/style.accueil.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/PersonneDao.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/TerminalDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/TerminalDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/classes/Personnes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Personnes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/classes/Terminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Terminal.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/TestDAOTerminal.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/terminal/TestDaoTerminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/terminal/TestDaoTerminal.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,22 +40,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpServers">
-    <servers>
-      <server host="localhost" id="80db4a84-66a8-4fa9-8bac-e90432882b14" name="uwamp" />
-    </servers>
-  </component>
   <component name="ProjectId" id="1QiV5RgJS2uiS990M8nxdv4bMnl" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/git-bash.exe" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="last_opened_file_path" value="G:/Mon Drive/2. Cours/Cours 2019/1 Ete/Hypermedia 1/Projet Synthese/Dossier Partage" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\UwAmp\www\Projet-Synthese-Hypermedia1" />
-      <recent name="D:\UwAmp\www\Projet-Synthese-Hypermedia1\modele" />
-      <recent name="D:\UwAmp\www\Projet-Synthese-Hypermedia1\vue" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Mon Drive\2. Cours\Cours 2019\1 Ete\Hypermedia 1\Projet Synthese\Dossier Partage" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\controleur" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\vue\Personne" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -65,25 +68,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.TestDaoTransporteur.php">
-    <configuration name="Database.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:80/Projet-Synthese-Hypermedia1/modele/classes/Database.php">
+  <component name="RunManager" selected="JavaScript Debug.TestDaoPersonne.php">
+    <configuration name="TestDAOTerminal.php (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/TestDAOTerminal.php">
       <method v="2" />
     </configuration>
-    <configuration name="TestDaoTransporteur.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:80/Projet-Synthese-Hypermedia1/vue/transporteur/TestDaoTransporteur.php">
+    <configuration name="TestDAOTerminal.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Projet-Synthese-Hypermedia1/vue/TestDAOTerminal.php" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index..php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Projet-Synthese-Hypermedia1/index..php" useBuiltInWebServerPort="true">
+    <configuration name="TestDaoPersonne.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/Personne/TestDaoPersonne.php">
       <method v="2" />
     </configuration>
-    <configuration name="test.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:80/Projet-Synthese-Hypermedia1/test.php">
+    <configuration name="TestDaoTerminal.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/terminal/TestDaoTerminal.php">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.TestDaoTransporteur.php" />
-        <item itemvalue="JavaScript Debug.test.php" />
-        <item itemvalue="JavaScript Debug.Database.php" />
-        <item itemvalue="JavaScript Debug.index..php" />
+        <item itemvalue="JavaScript Debug.TestDaoPersonne.php" />
+        <item itemvalue="JavaScript Debug.TestDaoTerminal.php" />
+        <item itemvalue="JavaScript Debug.TestDAOTerminal.php (1)" />
+        <item itemvalue="JavaScript Debug.TestDAOTerminal.php" />
       </list>
     </recent_temporary>
   </component>
@@ -97,12 +100,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1568253219979</updated>
-      <workItem from="1568253221465" duration="62543000" />
-      <workItem from="1568727538831" duration="2540000" />
-      <workItem from="1568740539345" duration="14017000" />
-      <workItem from="1568755994640" duration="17749000" />
-      <workItem from="1568856755649" duration="5860000" />
-      <workItem from="1568946917615" duration="5417000" />
+      <workItem from="1568253221465" duration="19920000" />
+      <workItem from="1568841607093" duration="8497000" />
+      <workItem from="1568903299903" duration="568000" />
+      <workItem from="1568904643335" duration="18833000" />
     </task>
     <servers />
   </component>
@@ -112,31 +113,6 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
-        <entry key="1">
-          <value>
-            <State>
-              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="HEAD" />
-                      </list>
-                    </value>
-                  </entry>
-                  <entry key="structure">
-                    <value>
-                      <list>
-                        <option value="dir:D:/UwAmp/www/Projet-Synthese-Hypermedia1/vue" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
         <entry key="MAIN">
           <value>
             <State>
@@ -145,11 +121,6 @@
           </value>
         </entry>
       </map>
-    </option>
-    <option name="OPEN_TABS">
-      <set>
-        <option value="1" />
-      </set>
     </option>
   </component>
 </project>
