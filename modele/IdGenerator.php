@@ -1,4 +1,7 @@
 <?php
+// Include the bundled autoload from the Twilio PHP Helper Library
+require __DIR__ . '/config/twilio-php-master/Twilio/autoload.php';
+use Twilio\Rest\Client;
 
 
 class MyGenerator
@@ -68,6 +71,31 @@ class MyGenerator
         $expireDate =date("Y-m-d H:i:s",strtotime(date("Y-m-d H:i:s")." +30 minutes "));
 
         return  $expireDate;
+    }
+
+    public static function sendSMS($toNumber,$message){
+
+
+// Account SID and Auth Token from twilio.com/console
+        $account_sid = 'ACbd52466a1cf0349728604ac535bdb91a';
+        $auth_token = 'f1bbf2c2097ba4a40d379587b743a7e4';
+
+// In production, these should be environment variables. E.g.:
+// $auth_token = $_ENV["TWILIO_ACCOUNT_SID"]
+// A Twilio number you own with SMS capabilities
+
+        $twilio_number = "+14506004529";
+
+        $client = new Client($account_sid, $auth_token);
+
+        $client->messages->create(
+// Where to send a text message (your cell phone?)
+            $toNumber,
+            array(
+                'from' => $twilio_number,
+                'body' => $message,
+            )
+        );
     }
 
 }

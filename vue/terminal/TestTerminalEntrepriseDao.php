@@ -33,8 +33,12 @@ $monTerminal->setLibelle("Description produit");
 
 //$test1= TerminalEntrepriseDAO::create($monTerminal);
 
+$codeVerification = MyGenerator::getIdGenerated();
+$message="Veuillez saisir ce code de vérification pour terminer votre inscription chez SwipnGo :  ".$codeVerification;
 
-var_dump($monTerminal);
+$sms= MyGenerator::sendSMS('14384765156',$message);
+
+var_dump($sms);
 die();
 
 
