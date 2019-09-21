@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/modele/ContactsEntrsDAO.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modele/classes/ContactsEntrs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acceuil dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/contactEntre/TestPoste.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/PersonneDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/PersonneDAO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/classes/Terminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Terminal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/TerminalEntreprise.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/TerminalEntreprise.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.accueil.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +50,9 @@
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\UwAmp\www\Projet-Synthese-Hypermedia1\modele" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\Mon Drive\2. Cours\Cours 2019\1 Ete\Hypermedia 1\Projet Synthese\Dossier Partage" />
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\controleur" />
