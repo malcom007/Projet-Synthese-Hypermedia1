@@ -37,7 +37,7 @@ class InputValidation{
     }
 
     public static function passwordValidation(){
-        
+
     }
 
 }
