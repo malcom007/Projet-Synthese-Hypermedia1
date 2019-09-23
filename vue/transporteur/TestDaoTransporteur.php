@@ -1,11 +1,11 @@
 <?php
-require_once '../../modele/TransporteurDao.php';
+require_once '../../modele/TransporteurDAO.php';
 //$Dao = new TransporteurDao();
 //$test= TransporteurDao::findAll();
 
 //echo $tes->getIdTransporteur();
 
-$test= TransporteurDao::find("021558");
+$test= TransporteurDao::find("");
 var_dump($test);
 
 if (empty($test)){
@@ -19,12 +19,12 @@ if (empty($test)){
     }
 }
 var_dump($test);
+/*
+$Trans = new Transporteur();
 
-/*$perso = new Transporteur();
+$Trans->addTransporteur("social","","5142081205");
+var_dump($Trans);
 
-$perso->addtransporteur("social","","5142081205");
-var_dump($perso);
+$tran = TransporteurDAO::create($Trans);
 
-$tran = TransporteurDao::create($perso);
-
-var_dump($perso);*/
+var_dump($Trans);*/
