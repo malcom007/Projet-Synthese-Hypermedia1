@@ -23,6 +23,7 @@ $test=TerminalDAO::findById();
 if (empty($test)){
     echo "Aucune données";
 }else{
+    echo "Essaie";
     foreach ($test as $item){
         echo $item->getIdTerminal()."<br>";
         echo $item->getLibelle()."<br>";
