@@ -5,6 +5,13 @@
       <paths name="uWamp">
         <serverdata>
           <mappings>
+            <mapping deploy="\" local="$PROJECT_DIR$/../../.." web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="uWamp (project level)">
+        <serverdata>
+          <mappings>
             <mapping deploy="\" local="$PROJECT_DIR$/.." web="/" />
           </mappings>
         </serverdata>
