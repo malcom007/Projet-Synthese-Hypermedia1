@@ -3,7 +3,7 @@ require_once '../../modele/IdGenerator.php';
 
 class Terminal
 {
-    protected $_IdTerminal,$_Libelle,$_MacAdresse,$_Prix, $_DateAjout;
+    private $_IdTerminal,$_Libelle,$_MacAdresse,$_Prix, $_DateAjout;
 
 
 
@@ -58,13 +58,6 @@ class Terminal
         $this->_Prix=round($tableau['prix'],2);
 
     }
-
-
-
-
-
-
-
 
 
     /**
