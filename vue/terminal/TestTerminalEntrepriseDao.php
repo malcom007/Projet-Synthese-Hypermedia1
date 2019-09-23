@@ -5,61 +5,77 @@ require_once '../../modele/TerminalDAO.php';
 require_once '../../modele/TerminalEntrepriseDAO.php';
 require_once '../../modele/InputValidation.php';
 
+/****
+ *--------------------------------------------------------------------------------------------------------------
+ *                                              AJOUT TERMINAL ENTREPRISE
+ * --------------------------------------------------------------------------------------------------------------
+ */
 try{
-    $idVerify = TerminalEntrepriseDAO::findById('7522F1');
-    if (empty($idVerify)){
+    //Verification du terminal dans l'inventaire
+    $idTermininal = TerminalEntrepriseDAO::findById('7522F');
+
+    //Verification id du transporteur si enregistré
+    $idEntreprise = TransporteurDAO::find('00964B');
+    if (empty($idTermininal)){
         throw new Exception("Aucun terminal trouvé avec ce ID");
     }
 
-    $idTermininal= $idVerify[0]->getIdTerminal();
+    //On redefinit la variable $idTerminal pour ne garder que l'id du Terminal
+    $idTermininal= $idTermininal[0]->getIdTerminal();
+
+    if (empty($idEntreprise)){
+        throw new Exception("Aucun Transport trouvé avec ce ID");
+    }
+
+    //On redefinit la variable $idEntreprise pour ne garder que l'id de l'entreprise
+    $idEntreprise = $idEntreprise[0]->getIdTransporteur();
+    var_dump($idEntreprise);
+
+    //On un crée un objet Terminal Entreprise
+    $monTerminal = new TerminalEntreprise();
+
+    $monTerminal->addTerminal($idTermininal,$idEntreprise,"jea","125ages");
+
+    TerminalEntrepriseDAO::addTerminal($monTerminal);
+
 }
 catch (Exception $ex){
+
     echo $ex->getMessage();
 }
 
-var_dump($idVerify);
 
-$monTerminal = new TerminalEntreprise();
-
-
-
-$monTerminal->addTerminal($idTermininal,"Jean","jea","125ages");
-
-
-
-
-//Celui-ci proviendra de la base de donnée
-$monTerminal->setMacAdresse("A15d");
-$monTerminal->setLibelle("Description produit");
 
 //$test1= TerminalEntrepriseDAO::create($monTerminal);
 
 $codeVerification = MyGenerator::getIdGenerated();
 $message="Veuillez saisir ce code de vérification pour terminer votre inscription chez SwipnGo :  ".$codeVerification;
 
-$sms= MyGenerator::sendSMS('14384765156',$message);
-
-var_dump($sms);
-die();
 
 
 /****
  *--------------------------------------------------------------------------------------------------------------
- *                                              RECHERCHE PAR IDTERMINAL
+ *                                              RECHERCHE PAR IDTERMINAL and IDENTREPRISE
  * --------------------------------------------------------------------------------------------------------------
  */
-$test=TerminalDAO::findById();
+$test=TerminalEntrepriseDAO::findAllByIdEntreprise('00964B');
+
+var_dump($test);
+
+
+
 //S'il n'y a aucune donnée
 if (empty($test)){
-    echo "Aucune données";
+  echo "Aucune données";
 }else{
     foreach ($test as $item){
         echo $item->getIdTerminal()."<br>";
-        echo $item->getLibelle()."<br>";
+        echo $item->getLogin()."<br>";
         echo $item->getMacAdresse()."<br>";
+
     }
 }
-//var_dump($test);
+
 /****
  *--------------------------------------------------------------------------------------------------------------
  *                                              DELETE
@@ -67,7 +83,9 @@ if (empty($test)){
  */
 
 //Stockage  resulte de la recherche avec l'ID
-$terminal=TerminalDAO::findById('8122C3');
+$terminal=TerminalEntrepriseDAO::findByIdTerminalByIdEntreprise('7522F1', '00964B');
+
+var_dump($terminal);
 
 //A supprimer, juste pour le teste
 echo "<BR>OBJET RECUPERE DE LA BASE DE DONNÉE</br>";
@@ -81,13 +99,16 @@ if (!empty($terminal)){
 
 
     //On crée un objet qui servira pour le parametre de suppression
-    $toDelete = new Terminal();
+    $toDelete = new TerminalEntreprise();
 
     //On attribue l'idTerminal avec le tableau de Type Terminal
     $toDelete->setIdTerminal($terminal[0]->getIdTerminal());
+    $toDelete->setIdEntreprise($terminal[0]->getIdEntreprise());
+
+    var_dump($toDelete);
 
     //On supprimer l'objet
-    TerminalDAO::delete($toDelete);
+    TerminalEntrepriseDAO::delete($toDelete);
 
 
 }
@@ -99,7 +120,7 @@ if (!empty($terminal)){
  */
 
 //Stockage  resulte de la recherche avec l'ID
-$terminal=TerminalDAO::findById('936D80');
+$terminal=TerminalEntrepriseDAO::findByIdTerminalByIdEntreprise('7522F1', '1D4BA6');
 
 
 //A supprimer, juste pour le teste
@@ -114,17 +135,21 @@ if (!empty($terminal)){
 
 
     //On crée un objet qui servira de parametre pour la mise à jour
-    $toUpdate = new Terminal();
+    $toUpdate = new TerminalEntreprise();
 
     //On fait des Setter  avec les valeurs du tableau de Type Terminal
     $toUpdate->setIdTerminal($terminal[0]->getIdTerminal());
-    $toUpdate->setPrix(200.00);
-    $toUpdate->setMacAdresse("A452985");
-    $toUpdate->setLibelle("Mise a jour fait");
+    $toUpdate->setIdEntreprise($terminal[0]->getIdEntreprise());
+    $toUpdate->setStatut(0);
+    $hashPwd = MyGenerator::getPasswordHached('Malcom');
+
+    $toUpdate->setPassword($hashPwd);
+
+    var_dump($toUpdate);
 
 
     //On supprimer l'objet
-    TerminalDAO::update($toUpdate);
+    TerminalEntrepriseDAO::update($toUpdate);
     echo "Completé";
 
 
