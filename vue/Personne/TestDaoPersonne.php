@@ -6,8 +6,8 @@ require_once '../../modele/InputValidation.php';
 
 //$maPersonne = new Personnes();
 
-$mail=InputValidation::phoneValidation('450 209 4445');
-var_dump($mail);
+
+
 
 
 
@@ -17,7 +17,7 @@ var_dump($mail);
 //echo $hashPwd."<br/>";
 
 
-//$maPersonne->createNewPersonWeb("Marie","Claude","4502094447","malcom@live.com",$hashPwd,1);
+//$maPersonne->createNewPersonWeb("Pepe","Jena","4507824455","malcom@live.com",$hashPwd,1);
 
 //var_dump($maPersonne);
 
