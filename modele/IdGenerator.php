@@ -73,6 +73,14 @@ class MyGenerator
         return  $expireDate;
     }
 
+
+    /***
+     * Methode permettant d'envoyer des SMS
+     * @param $toNumber
+     * @param $message
+     * @throws \Twilio\Exceptions\ConfigurationException
+     * @throws \Twilio\Exceptions\TwilioException
+     */
     public static function sendSMS($toNumber,$message){
 
 
