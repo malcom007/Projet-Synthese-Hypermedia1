@@ -2,8 +2,14 @@
 //
 //require_once '../../modele/IdGenerator.php';
 require_once '../../modele/PersonneDAO.php';
+require_once '../../modele/InputValidation.php';
 
 //$maPersonne = new Personnes();
+
+$mail=InputValidation::phoneValidation('450 209 4445');
+var_dump($mail);
+
+
 
 
 //$hashPwd = MyGenerator::getPasswordHached("Malcom");
