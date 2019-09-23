@@ -3,6 +3,7 @@
 
 require_once '../../modele/TerminalDAO.php';
 require_once '../../modele/TerminalEntrepriseDAO.php';
+require_once '../../modele/InputValidation.php';
 
 try{
     $idVerify = TerminalEntrepriseDAO::findById('7522F1');
