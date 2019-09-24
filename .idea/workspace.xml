@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/modele/AdminDAO.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modele/classes/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/Personne/TestAdminDAO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/InputValidation.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/InputValidation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/TerminalDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/TerminalDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/TerminalEntrepriseDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/TerminalEntrepriseDAO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/TransporteurDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/TransporteurDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Terminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Terminal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/TerminalEntreprise.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/TerminalEntreprise.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/terminal/TestDaoTerminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/terminal/TestDaoTerminal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/terminal/TestTerminalEntrepriseDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/terminal/TestTerminalEntrepriseDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/transporteur/TestDaoTransporteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/transporteur/TestDaoTransporteur.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,12 +42,15 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Projet" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele" />
       <recent name="G:\Mon Drive\2. Cours\Cours 2019\1 Ete\Hypermedia 1\Projet Synthese\Dossier Partage" />
@@ -71,8 +70,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.TestTerminalEntrepriseDao.php">
-    <configuration name="TestDaoPersonne.php (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/Projet-Synthese-Hypermedia1/vue/Personne/TestDaoPersonne.php">
+  <component name="RunManager" selected="JavaScript Debug.TestAdminDAO.php">
+    <configuration name="TestAdminDAO.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/Personne/TestAdminDAO.php">
       <method v="2" />
     </configuration>
     <configuration name="TestDaoPersonne.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/Personne/TestDaoPersonne.php">
@@ -89,11 +88,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.TestAdminDAO.php" />
         <item itemvalue="JavaScript Debug.TestTerminalEntrepriseDao.php" />
         <item itemvalue="JavaScript Debug.TestDaoTerminal.php" />
         <item itemvalue="JavaScript Debug.TestDaoTransporteur.php" />
         <item itemvalue="JavaScript Debug.TestDaoPersonne.php" />
-        <item itemvalue="JavaScript Debug.TestDaoPersonne.php (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -111,7 +110,7 @@
       <workItem from="1568841607093" duration="8497000" />
       <workItem from="1568903299903" duration="568000" />
       <workItem from="1568904643335" duration="42547000" />
-      <workItem from="1569162963493" duration="27989000" />
+      <workItem from="1569162963493" duration="45279000" />
     </task>
     <task id="LOCAL-00001" summary="Delete some attribut">
       <created>1569012591306</created>
