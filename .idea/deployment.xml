@@ -2,10 +2,10 @@
 <project version="4">
   <component name="PublishConfigData" serverName="uWamp">
     <serverData>
-      <paths name="uWamp">
+      <paths name="uWamp (project level)">
         <serverdata>
           <mappings>
-            <mapping deploy="\" local="$PROJECT_DIR$/.." web="/" />
+            <mapping deploy="\" local="C:" web="/" />
           </mappings>
         </serverdata>
       </paths>

@@ -21,44 +21,28 @@ class TerminalEntreprise extends Terminal {
     {
     }
 
+    public function loadFromObjet( $obj)
+    {
+
+        $this->_IdEntreprise = $obj->idEntreprise;
+        $this->setIdTerminal($obj->idTerminal);
+        $this->setMacAdresse($obj->macAdress);
+        $this->setLibelle($obj->libelle);
+        $this->_Login=$obj->login;
+        $this->_Password=$obj->password;
+        $this->_Statut=$obj->statut;
+        $this->_DateActivation=$obj->dateActivation;
+        $this->_DateModification=$obj->dateModification;
+
+    }
+
     /***
      * ----------------------------------------------------------------------------------------------
      *                                     GETTER AND SETTER
      * ----------------------------------------------------------------------------------------------
      */
 
-    /**
-     * @return mixed
-     */
-    public function getIdTerminal()
-    {
-        return $this->getIdTerminal();
-    }
 
-    /**
-     * @param mixed $IdTerminal
-     */
-    public function setIdTerminal($IdTerminal)
-    {
-        $this->_IdTerminal=$IdTerminal ;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMacAdresse()
-    {
-        return $this->getMacAdresse();
-    }
-
-    /**
-     * En provenance de la base
-     * @param mixed $MacAdresse
-     */
-    public function setMacAdresse($macAdresse)
-    {
-        $this->_MacAdresse=$macAdresse;
-    }
 
     /**
      * @return mixed
@@ -156,21 +140,9 @@ class TerminalEntreprise extends Terminal {
         $this->_DateModification = $DateModification;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getLibelle()
-    {
-        return $this->_Libelle;
-    }
 
-    /**
-     * @param mixed $Libelle
-     */
-    public function setLibelle($Libelle)
-    {
-        $this->_Libelle = $Libelle;
-    }
+
+
 
 
 
