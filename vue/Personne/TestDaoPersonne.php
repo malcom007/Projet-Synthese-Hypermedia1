@@ -4,39 +4,63 @@
 require_once '../../modele/PersonneDAO.php';
 require_once '../../modele/InputValidation.php';
 
-//$maPersonne = new Personnes();
+/*$maPersonne = new Personnes();
+
+
+try {
+
+    $name = InputValidation::nameValidation("jean");
+    $lasName = InputValidation::nameValidation('Cloclo');
+
+    if (!$name || !$lasName){
+        throw new Exception("Format de nom invalide, minimum de 4 caractères et uniquemment de lettres");
+    }
+
+    $phone = InputValidation::phoneValidation("450 777 5588");
+
+    if (!$phone){
+        throw new Exception("Format telephone invalide, modele accepté:   ### ### ####");
+    }
+
+    $email = InputValidation::emailValidation("malcom@live.ca");
+
+    if (!$email){
+        throw new Exception("Format mail invalide, modele accepté:   yourmail@sample.com");
+    }
+
+    $typeCompte = 3;
+
+    if ($typeCompte<1 || $typeCompte >3){
+        throw new Exception("Aucun type de compte ne compte");
+    }
+
+    $hashPwd = MyGenerator::getPasswordHached("Malcom");
+    var_dump($name,$lasName,$name,$phone,$email, $hashPwd);
+
+}
+catch (Exception $ex){
+?>
+    <script>console.log("Erreur  :    <?= $ex->getMessage()?>// ")</script>
+<?php
+}
 
 
 
 
+$maPersonne->createNewPersonWeb($name,$lasName,$phone,$email,$hashPwd,$typeCompte);
 
 
+$mapers=PersonneDAO::create($maPersonne);
 
-//$hashPwd = MyGenerator::getPasswordHached("Malcom");
+var_dump($mapers);
 
-//echo $hashPwd."<br/>";
-
-
-//$maPersonne->createNewPersonWeb("Pepe","Jena","4507824455","malcom@live.com",$hashPwd,1);
-
-//var_dump($maPersonne);
-
-//echo MyGenerator::getTodayPlus30Minutes();
-
-
-
-
-//$mapers=PersonneDAO::create($maPersonne);
-
-//var_dump($mapers);
-
-
+*/
 /****
  *--------------------------------------------------------------------------------------------------------------
  *                                              RECHERCHE PAR IDTERMINAL
  * --------------------------------------------------------------------------------------------------------------
  */
-$test=PersonneDAO::findById('3f9494');
+/*$test=PersonneDAO::findById('3f9494');
 var_dump($test);
 //S'il n'y a aucune donnée
 if (empty($test)){
@@ -47,7 +71,7 @@ if (empty($test)){
         echo $item->getPrenom()."<br>";
         echo $item->getPassword()."<br>";
     }
-}
+}*/
 //var_dump($test);
 /****
  *--------------------------------------------------------------------------------------------------------------
