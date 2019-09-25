@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/modele/AdressDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modele/classes/Adresse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modele/config/AdressDao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/Adress/testAdresse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/IdGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/IdGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/terminal/TestTerminalEntrepriseDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/terminal/TestTerminalEntrepriseDao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/ContactsEntrsDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/ContactsEntrsDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/PersonneDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/PersonneDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/classes/ContactsEntrs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/ContactsEntrs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/contactEntre/TestPoste.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/contactEntre/TestPoste.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +52,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\UwAmp\www\Projet-Synthese-Hypermedia1\modele" />
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele" />
       <recent name="G:\Mon Drive\2. Cours\Cours 2019\1 Ete\Hypermedia 1\Projet Synthese\Dossier Partage" />
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\controleur" />
@@ -63,29 +71,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.TestTerminalEntrepriseDao.php">
-    <configuration name="TestDAOTerminalEntreprise.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/terminal/TestDAOTerminalEntreprise.php">
+  <component name="RunManager" selected="JavaScript Debug.TestPoste.php">
+    <configuration name="TestDaoPersonne.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:80/Projet-Synthese-Hypermedia1/vue/Personne/TestDaoPersonne.php">
       <method v="2" />
     </configuration>
-    <configuration name="TestDAOTerminal.php (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/TestDAOTerminal.php">
+    <configuration name="TestDaoTransporteur.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:80/Projet-Synthese-Hypermedia1/vue/transporteur/TestDaoTransporteur.php">
       <method v="2" />
     </configuration>
-    <configuration name="TestDaoPersonne.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/Personne/TestDaoPersonne.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="TestDaoTerminal.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/terminal/TestDaoTerminal.php">
+    <configuration name="TestPoste.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:80/Projet-Synthese-Hypermedia1/vue/contactEntre/TestPoste.php">
       <method v="2" />
     </configuration>
     <configuration name="TestTerminalEntrepriseDao.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/terminal/TestTerminalEntrepriseDao.php">
       <method v="2" />
     </configuration>
+    <configuration name="TransporteurDAO.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:80/Projet-Synthese-Hypermedia1/modele/TransporteurDAO.php">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.TestTerminalEntrepriseDao.php" />
-        <item itemvalue="JavaScript Debug.TestDAOTerminalEntreprise.php" />
+        <item itemvalue="JavaScript Debug.TestPoste.php" />
         <item itemvalue="JavaScript Debug.TestDaoPersonne.php" />
-        <item itemvalue="JavaScript Debug.TestDaoTerminal.php" />
-        <item itemvalue="JavaScript Debug.TestDAOTerminal.php (1)" />
+        <item itemvalue="JavaScript Debug.TestDaoTransporteur.php" />
+        <item itemvalue="JavaScript Debug.TransporteurDAO.php" />
+        <item itemvalue="JavaScript Debug.TestTerminalEntrepriseDao.php" />
       </list>
     </recent_temporary>
   </component>
@@ -103,6 +111,9 @@
       <workItem from="1568841607093" duration="8497000" />
       <workItem from="1568903299903" duration="568000" />
       <workItem from="1568904643335" duration="41051000" />
+      <workItem from="1569207914898" duration="22969000" />
+      <workItem from="1569328000878" duration="47000" />
+      <workItem from="1569345650312" duration="11547000" />
     </task>
     <task id="LOCAL-00001" summary="Delete some attribut">
       <created>1569012591306</created>

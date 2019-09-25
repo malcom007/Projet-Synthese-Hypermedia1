@@ -3,26 +3,27 @@
 //require_once '../../modele/IdGenerator.php';
 require_once '../../modele/PersonneDAO.php';
 
-//$maPersonne = new Personnes();
+$maPersonne = new Personnes();
 
 
-//$hashPwd = MyGenerator::getPasswordHached("Malcom");
+$hashPwd = MyGenerator::getPasswordHached("Malcom");
 
-//echo $hashPwd."<br/>";
-
-
-//$maPersonne->createNewPersonWeb("Marie","Claude","4502094447","malcom@live.com",$hashPwd,1);
-
-//var_dump($maPersonne);
-
-//echo MyGenerator::getTodayPlus30Minutes();
+echo $hashPwd."<br/>";
 
 
+$maPersonne->createNewPersonWeb("Muto","udkke","51252350","ruskov@live.com",$hashPwd,2);
 
 
-//$mapers=PersonneDAO::create($maPersonne);
+var_dump($maPersonne);
 
-//var_dump($mapers);
+echo MyGenerator::getTodayPlus30Minutes();
+
+
+
+$mapers=PersonneDAO::create($maPersonne);
+
+die(); 'echo per';
+var_dump($mapers);
 
 
 /****
@@ -30,7 +31,8 @@ require_once '../../modele/PersonneDAO.php';
  *                                              RECHERCHE PAR IDTERMINAL
  * --------------------------------------------------------------------------------------------------------------
  */
-$test=PersonneDAO::findById('3f9494');
+/*
+$test=PersonneDAO::findById('');
 var_dump($test);
 //S'il n'y a aucune donnée
 if (empty($test)){
@@ -42,13 +44,14 @@ if (empty($test)){
         echo $item->getPassword()."<br>";
     }
 }
-//var_dump($test);
+var_dump($test);
+*/
 /****
  *--------------------------------------------------------------------------------------------------------------
  *                                              DELETE
  * --------------------------------------------------------------------------------------------------------------
  */
-
+/*
 ////Stockage  resulte de la recherche avec l'ID
 $personne=PersonneDAO::findById('7AF0AD');
 //
@@ -73,13 +76,13 @@ $toDelete->setId($personne[0]->getId());
 //
 //
 }
-
+*/
 /****
  *--------------------------------------------------------------------------------------------------------------
  *                                              UPDATE TERMINAL
  * --------------------------------------------------------------------------------------------------------------
  */
-
+/*
 ////Stockage  resulte de la recherche avec l'ID
 $personne=PersonneDAO::findById('3f9494');
 //
@@ -122,7 +125,7 @@ if (!empty($personne)){
 //
 //
 //
-
+*/
 
 
 
@@ -136,6 +139,7 @@ if (!empty($personne)){
  *                      HACHAGE DU MOT PASS ET VERIFICATION
  * --------------------------------------------------------------------------
  */
+/*
 //on crypte le motDePass pour insérer dans la base de données
 $hashPwd= crypt('jeaneu','$1$MK1!Dw8#k-% ');
 
@@ -152,3 +156,4 @@ if (password_verify('malcom', $hashPwd)) {
 
 
 }
+*/

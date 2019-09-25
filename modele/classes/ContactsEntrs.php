@@ -1,24 +1,25 @@
 <?php
-
+require_once '../../modele/classes/Personnes.php';
 
 class ContactsEntrs extends  Personnes
 {
     protected $_NumeroPoste;
 
-    public function createcontact($prenom,$nom,$numCell,$email,$password,$typeCompte,$numroposte)
-    { $today= MyGenerator::getDateNow();
+    public function loadFromObjet($obj)
+    {
+        $this->setNom($obj->nom);
+        $this->setPrenom($obj->prenom);
+        $this->setMail($obj->mail);
+        $this->setDateActivation($obj->dateActivation);
+        $this->setDateModification($obj->dateModification);
+        $this->setActived($obj->actived);
+        $this->setNumCell($obj->numCell);
+        $this->setId($obj->idPersonne);
+        $this->_NumeroPoste = $obj->numPoste;
 
-        $this->setId(MyGenerator::getIdGenerated());
-        $this->setPrenom($prenom);
-        $this->setNom($nom);
-        $this->setNumCell($numCell);
-        $this->setMail($email);
-        $this->setPassword($password);
-        $this->setTypeCompte($typeCompte);
-        $this->setDateActivation($today);
-        $this->setDateModification($today);
-        $this->_NumeroPoste = $numroposte;
+
     }
+
 
     /**
      * @return mixed
@@ -35,5 +36,8 @@ class ContactsEntrs extends  Personnes
     {
         $this->_NumeroPoste = $NumeroPoste;
     }
+
+
+
 
 }
