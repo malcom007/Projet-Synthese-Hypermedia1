@@ -63,12 +63,14 @@ class TerminalDAO{
     {
         $request="";
 
+
+
         //Si On ne saisit pas l'id, on retourne toute la liste
         if ($id==NULL){
             $request="SELECT * FROM terminals";
         }
         else
-            $request="SELECT * FROM entrepriseterminal  WHERE idTerminal = :x";
+            $request="SELECT * FROM terminals  WHERE idTerminal = :x";
 
         $termTab= Array();
 
@@ -84,7 +86,10 @@ class TerminalDAO{
             //Preparation de la requette SQL pour l'execution(Tableau)
                 $pstmt = $db->prepare($request);
 
-                $pstmt->execute(array(':x' => $id));
+                $pstmt->bindValue(':x', $id);
+                $pstmt->execute();
+
+
 
                 //Parcours de notre pstm tant qu'il y des données
                 while ($result = $pstmt->fetch(PDO::FETCH_OBJ)){
@@ -94,6 +99,8 @@ class TerminalDAO{
 
                     //Transfere des information d'objet vers un tableau
                     $terminal->loadFromObjet($result);
+
+
 
                     //On insere chaque objet a la fin du tableau $termTab
                     array_push($termTab,$terminal);

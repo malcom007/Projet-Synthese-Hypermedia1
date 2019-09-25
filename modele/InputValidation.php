@@ -15,7 +15,7 @@ class InputValidation{
     //Methode permettant de
     public static function nameValidation($name){
 
-        if (!preg_match('/^[a-zA-Z\s]{4,50}+$/',$name)){
+        if (!preg_match('/^[a-zA-Z\s]{2,50}+$/',$name)){
             return false;
         }else{
             //retrait des espace

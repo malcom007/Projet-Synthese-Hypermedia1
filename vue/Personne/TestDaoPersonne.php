@@ -35,7 +35,7 @@ try {
     }
 
     $hashPwd = MyGenerator::getPasswordHached("Malcom");
-    var_dump($name,$lasName,$name,$phone,$email, $hashPwd);
+
 
 }
 catch (Exception $ex){

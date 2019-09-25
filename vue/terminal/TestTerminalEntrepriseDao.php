@@ -12,19 +12,23 @@ require_once '../../modele/InputValidation.php';
  */
 try{
     //Verification du terminal dans l'inventaire
-    $idTermininal = TerminalEntrepriseDAO::findById('7522F');
+    $idTermininal = TerminalDAO::findById('10db98');
+
+    var_dump($idTermininal);
+
+    if (empty($idTermininal)){
+        throw new Exception("Aucun terminal trouvé avec ce ID ");
+    }
 
     //Verification id du transporteur si enregistré
     $idEntreprise = TransporteurDAO::find('00964B');
-    if (empty($idTermininal)){
-        throw new Exception("Aucun terminal trouvé avec ce ID");
-    }
+
 
     //On redefinit la variable $idTerminal pour ne garder que l'id du Terminal
     $idTermininal= $idTermininal[0]->getIdTerminal();
 
     if (empty($idEntreprise)){
-        throw new Exception("Aucun Transport trouvé avec ce ID");
+        throw new Exception("Aucun Transport trouvé avec ce ID ");
     }
 
     //On redefinit la variable $idEntreprise pour ne garder que l'id de l'entreprise
@@ -42,6 +46,7 @@ try{
 catch (Exception $ex){
 
     echo $ex->getMessage();
+    exit();
 }
 
 

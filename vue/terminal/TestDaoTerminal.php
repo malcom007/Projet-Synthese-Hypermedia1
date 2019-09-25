@@ -5,7 +5,7 @@ require_once '../../modele/TerminalDAO.php';
 
 $monTerminal = new Terminal();
 
-$monTerminal->addTerminalInventory("Termin","A5njd85",250);
+$monTerminal->addTerminalInventory("Termin1","Adlod150",350);
 
 $test1= TerminalDAO::create($monTerminal);
 
