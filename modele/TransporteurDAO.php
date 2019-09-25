@@ -16,7 +16,7 @@ class TransporteurDAO
             $pstm = $db->prepare($request);
             $pstm->bindValue(':q',$transport->getIdTransporteur());
             $pstm->bindValue(':w', $transport->getRaisonSocial());
-            $pstm->bindValue(':e',$transport->NUll);
+            $pstm->bindValue(':e',null);
             $pstm->bindValue(':r',$transport->getTelephone());
             $pstm->bindValue(':t',$transport->getDateCreation());
             $pstm->bindValue(':y',$transport->getDateModification());
