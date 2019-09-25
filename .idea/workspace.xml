@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/modele/AdressDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modele/classes/Adresse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modele/config/AdressDao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/Adress/testAdresse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/ContactsEntrsDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/ContactsEntrsDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/PersonneDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/PersonneDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/ContactsEntrs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/ContactsEntrs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/contactEntre/TestPoste.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/contactEntre/TestPoste.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/transporteur/TestDaoTransporteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/transporteur/TestDaoTransporteur.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,8 +83,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.TestPoste.php" />
-        <item itemvalue="JavaScript Debug.TestDaoPersonne.php" />
         <item itemvalue="JavaScript Debug.TestDaoTransporteur.php" />
+        <item itemvalue="JavaScript Debug.TestDaoPersonne.php" />
         <item itemvalue="JavaScript Debug.TransporteurDAO.php" />
         <item itemvalue="JavaScript Debug.TestTerminalEntrepriseDao.php" />
       </list>
@@ -113,7 +106,8 @@
       <workItem from="1568904643335" duration="41051000" />
       <workItem from="1569207914898" duration="22969000" />
       <workItem from="1569328000878" duration="47000" />
-      <workItem from="1569345650312" duration="11547000" />
+      <workItem from="1569345650312" duration="12595000" />
+      <workItem from="1569426262728" duration="3229000" />
     </task>
     <task id="LOCAL-00001" summary="Delete some attribut">
       <created>1569012591306</created>

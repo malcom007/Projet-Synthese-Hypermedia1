@@ -35,10 +35,6 @@ if (!empty($contacte)) {
 //
 //    //On crée un objet qui servira de parametre pour la mise à jour
     $toUpdate = new ContactsEntrs();
-//
-//    //On fait des Setter  avec les valeurs du tableau de Type Terminal
-    $var = '243';
-    $float_var = floatval($var);
     $toUpdate->setNumeroPoste(243);
 
     var_dump($toUpdate);

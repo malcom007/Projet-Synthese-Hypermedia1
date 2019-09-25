@@ -19,7 +19,7 @@ if (empty($test)){
     }
 }
 var_dump($test);
-/*
+
 $Trans = new Transporteur();
 
 $Trans->addTransporteur("social","","5142081205");
@@ -27,4 +27,4 @@ var_dump($Trans);
 
 $tran = TransporteurDAO::create($Trans);
 
-var_dump($Trans);*/
+var_dump($Trans);
