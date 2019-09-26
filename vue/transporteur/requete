@@ -1,0 +1,12 @@
+SELECT SUM(credit) FROM `termicartes` WHERE `dateTransaction` BETWEEN '2019-09-24' AND '2019-09-26' //pour recuperer le solde a payer
+
+SELECT `credit` FROM `termicartes` WHERE MONTH(dateTransaction)=MONTH(NOW())// POUR MOIS
+
+SELECT `credit` FROM `termicartes` WHERE DAYOFWEEK(dateTransaction)=DAYOFWEEK(NOW())// PAR JOUR
+
+SELECT * FROM `termicartes` WHERE DAYOFMONTH(dateTransaction)>=DAYOFMONTH(NOW())-7 //POUR UNE SEMAINE
+
+SELECT * FROM `termicartes` WHERE DAYOFMONTH(dateTransaction)>=DAYOFMONTH(NOW())-14 // POUR 2 SEMAINES
+
+SELECT * FROM `termicartes` WHERE YEAR(dateTransaction)=YEAR(NOW()) // POUR L'ANNÉE EN COURS
+SELECT SUM(credit), idTerminal FROM `termicartes` GROUP BY idTerminal// PAR TERMINAL
