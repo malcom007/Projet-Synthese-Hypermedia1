@@ -8,17 +8,17 @@ require_once '../../modele/TransporteurDAO.php';
 $test= TransporteurDao::find("");
 var_dump($test);
 
-//if (empty($test)){
-//    echo "Aucune données";
-//}else{
-//   foreach ($test as $item){
-//       echo $item->getIdtransporteur()."<br>";
-//       echo $item->getRaisonSocial()."<br>";
-//       echo $item->getTelephone()."<br>";
-//
-//    }
-//}
-//var_dump($test);
+if (empty($test)){
+    echo "Aucune données";
+}else{
+   foreach ($test as $item){
+       echo $item->getIdtransporteur()."<br>";
+       echo $item->getRaisonSocial()."<br>";
+       echo $item->getTelephone()."<br>";
+
+    }
+}
+var_dump($test);
 
 $Trans = new Transporteur();
 

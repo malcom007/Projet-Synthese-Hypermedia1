@@ -2,6 +2,7 @@
 
 require_once '/../modele/classes/Database.php';
 require_once '/../modele/classes/Personnes.php';
+require_once '../../modele/ContactsEntrsDAO.php';
 
 
 class PersonneDAO{
@@ -10,12 +11,16 @@ class PersonneDAO{
      * Methode permettant d'ajouter une personne
      * @param $terminalO
      */
-    public static function create($personneO){
+    public static function create(Personnes $personneO){
         $db = Database::getInstance();
+
+
 
         $request="INSERT INTO personnes (idPersonne,prenom,nom,numCell,	mail,password,typeCompte) values (:id,:prenom,:nom,:numCell,:mail,:pwd,:typeCompte)";
 
         try{
+
+
 
             //On s'assure que la connexion n'est pas null
             if (is_null($db)){
@@ -25,25 +30,33 @@ class PersonneDAO{
             //Preparation de la requette SQL pour l'execution(Tableau)
             $pstm = $db->prepare($request);
 
-            $pstm->execute(array(
-                ':id' => $personneO->getId(),
-                ':prenom' => $personneO->getPrenom(),
-                ':nom' => $personneO->getNom(),
-                ':numCell' => $personneO->getNumCell(),
-                ':mail' => $personneO->getMail(),
-                ':pwd' => $personneO->getPassword(),
-                ':typeCompte' => $personneO->getTypeCompte(),
+            $typeCompte = $personneO->getTypeCompte();
 
 
 
-            ));
 
-            $pstm->closeCursor();
+            $pstm->bindValue(':id', $personneO->getId());
+            $pstm->bindValue(':prenom',$personneO->getPrenom());
+            $pstm->bindValue(':nom', $personneO->getNom());
+            $pstm->bindValue(':numCell', $personneO->getNumCell());
+            $pstm->bindValue(':mail', $personneO->getMail());
+            $pstm->bindValue(':pwd', $personneO->getPassword());
+            $pstm->bindValue(':typeCompte', $typeCompte);
+
+
+            $pstm->execute();
 
             $pstm= NULL;
-
             //Deconnexion a la base de donnée
             Database::close();
+
+            if ($typeCompte==2){
+                echo 'Hola type '.$typeCompte;
+                var_dump($typeCompte);
+                ContactsEntrsDAO::addContact($personneO->getId());
+            }
+
+
 
             ?>
             <script>console.log("Insertion complété du terminal avec l'ID:   <?=$personneO->getIdTerminal()?>")</script>
