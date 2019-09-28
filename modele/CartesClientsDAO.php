@@ -1,6 +1,8 @@
 <?php
 
-require_once './classes/CartesClients.php';
+
+require_once '/../modele/classes/CartesClients.php';
+require_once '/../modele/classes/Database.php';
 
 class CartesClientsDAO extends CartesDAO
 {

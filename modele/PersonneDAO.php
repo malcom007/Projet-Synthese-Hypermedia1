@@ -13,7 +13,7 @@ class PersonneDAO{
      */
     public static function create(Personnes $personneO){
         $db = Database::getInstance();
-
+        var_dump($db->errorInfo());
 
 
         $request="INSERT INTO personnes (idPersonne,prenom,nom,numCell,	mail,password,typeCompte) values (:id,:prenom,:nom,:numCell,:mail,:pwd,:typeCompte)";
@@ -31,10 +31,6 @@ class PersonneDAO{
             $pstm = $db->prepare($request);
 
             $typeCompte = $personneO->getTypeCompte();
-
-
-
-
             $pstm->bindValue(':id', $personneO->getId());
             $pstm->bindValue(':prenom',$personneO->getPrenom());
             $pstm->bindValue(':nom', $personneO->getNom());
@@ -42,8 +38,6 @@ class PersonneDAO{
             $pstm->bindValue(':mail', $personneO->getMail());
             $pstm->bindValue(':pwd', $personneO->getPassword());
             $pstm->bindValue(':typeCompte', $typeCompte);
-
-
             $pstm->execute();
 
             $pstm= NULL;
@@ -55,14 +49,9 @@ class PersonneDAO{
                 var_dump($typeCompte);
                 ContactsEntrsDAO::addContact($personneO->getId());
             }
-
-
-
             ?>
             <script>console.log("Insertion complété du terminal avec l'ID:   <?=$personneO->getIdTerminal()?>")</script>
             <?php
-
-
 
         }
         catch (PDOException $ex){

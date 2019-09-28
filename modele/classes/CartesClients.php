@@ -28,16 +28,6 @@ class CartesClients extends Cartes
         $this->_dateExpiration = MyGenerator::getDate2YearLater();
     }
 
-
-    /*
-    public function addTitre($titre){
-       $this->_nbreTitre+=$titre;
-    }
-    public function removeTitre($titre){
-        $this->_nbreTitre-=$titre;
-    }
-
-
     /**
      * @return mixed
      */
