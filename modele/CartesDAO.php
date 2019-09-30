@@ -16,7 +16,7 @@ class CartesDAO
         //etablir la connection
         $db = Database::getInstance();
         var_dump($db->errorInfo());
-        // $request="INSERT INTO personnes (idPersonne,prenom,nom,numCell,	mail,password,typeCompte) values (:id,:prenom,:nom,:numCell,:mail,:pwd,:typeCompte)";
+
         $request = "INSERT INTO cartes VALUES (:id,:lib,:dAj)";
         try {
             if (is_null($db)) {
@@ -38,6 +38,7 @@ class CartesDAO
             $exception->getMessage();
         }
     }
+
 
     /**
      *Rechercher toutes les cartes existantes dans l'inventaire
