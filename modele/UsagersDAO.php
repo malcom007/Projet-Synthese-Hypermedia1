@@ -1,6 +1,7 @@
 <?php
-
-
+require_once '/../modele/classes/Database.php';
+require_once '/../modele/classes/Usagers.php';
+require_once 'PersonneDAO.php';
 class UsagersDAO extends PersonneDAO
 {
     /**
@@ -98,7 +99,7 @@ class UsagersDAO extends PersonneDAO
      */
     public static function update(Usagers $usagerObjet)
     {
-        $request = "UPDATE usagers SET prenom=:prenom, nom=:nom, numCell=:numCell, mail=:mail, password=:password, typeCompte=:typeCompte, actived=:actived, dateModification=:dateModif  WHERE idUsager=:id";
+        $request = "UPDATE usagers SET prenom=:prenom, nom=:nom, numCell=:numCell, mail=:mail, password=:password, typeCompte=:typeCompte, actived=:actived, dateActivation=:dateActiv ,dateModification=:dateModif  WHERE idUsager=:id";
 
         $db = Database::getInstance();
 
@@ -114,6 +115,7 @@ class UsagersDAO extends PersonneDAO
             $pstm->bindValue('mail', $usagerObjet->getMail(), PDO::PARAM_STR);
             $pstm->bindValue(':password', $usagerObjet->getPassword(), PDO::PARAM_STR);
             $pstm->bindValue(':typeCompte', $usagerObjet->getTypeCompte(), PDO::PARAM_INT);
+            $pstm->bindValue(':dateActiv', $usagerObjet->getDateActivation());
             $pstm->bindValue(':dateModif', $usagerObjet->getDateModification());
             $pstm->bindValue(':actived', $usagerObjet->getActived(), PDO::PARAM_BOOL);
             $pstm->bindValue(":id", $usagerObjet->getIdUsager());

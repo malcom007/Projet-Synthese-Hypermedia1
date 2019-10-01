@@ -1,21 +1,29 @@
 <?php
 
-require_once './classes/Cartes.php';
-require_once './classes/Database.php';
+require_once '/../modele/classes/Cartes.php';
+require_once '/../modele/classes/Database.php';
 
+//require_once '/../modele/classes/Database.php';
+//require_once '/../modele/classes/Personnes.php';
 class CartesDAO
 {
     /**
      * @param $carte
      * Creer une nouvelle Carte dans la BD dans l'inventaire
      */
-    public function create($carte)
+    public function create(Cartes $carte)
     {
-
+        //etablir la connection
         $db = Database::getInstance();
+        var_dump($db->errorInfo());
 
+        $request = "INSERT INTO cartes VALUES (:id,:lib,:dAj)";
         try {
-            $pstmt = $db->prepare("INSERT INTO cartes (idCarte,libelle,dateAjout) VALUES (:id,:lib,:dAj)");
+            if (is_null($db)) {
+                throw new PDOException("Impossible d'insérer");
+            }
+
+            $pstmt = $db->prepare($request);
             $pstmt->bindValue(':id', $carte->getIdCarte());
             $pstmt->bindValue(':lib', $carte->getLibelle());
             $pstmt->bindValue(':dAj', $carte->getDateAjout());
@@ -30,6 +38,7 @@ class CartesDAO
             $exception->getMessage();
         }
     }
+
 
     /**
      *Rechercher toutes les cartes existantes dans l'inventaire

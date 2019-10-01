@@ -12,7 +12,7 @@ class Transporteur
     public function addTransporteur($RaisonSocial,$idAdresse,$telephone)
     {
 
-        $this->_IdTransporteur= strtoupper(MyGenerator::getIdGenerated());
+        $this->_IdTransporteur = MyGenerator::getIdGenerated();
         $this->_RaisonSocial=$RaisonSocial;
         $this->_IdAdresse=$idAdresse;
         $this->_Telephone=$telephone;
