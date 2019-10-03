@@ -1,11 +1,12 @@
 <?php
 
 
-require_once '/../modele/classes/CartesClients.php';
+require_once '/../modele/classes/CarteUsagers.php';
 require_once '/../modele/classes/Database.php';
 
-class CartesClientsDAO extends CartesDAO
+class CartesUsagersDAO extends CartesDAO
 {
+
 
 
     public function update($carte)
@@ -36,11 +37,12 @@ class CartesClientsDAO extends CartesDAO
      * @param $id
      * Rechercher les cartes activés
      **/
-    public function findByStatut($statut = 1)
+    public function findByStatut()
     {
         $db = Database::getInstance();
         $listeCartesActives = array();
         try {
+
             $pstmt = $db->prepare("SELECT * FROM Cartesusagers WHERE statut =1");
             $pstmt->execute();
             while ($result = $pstmt->fetch(PDO::FETCH_OBJ)) {

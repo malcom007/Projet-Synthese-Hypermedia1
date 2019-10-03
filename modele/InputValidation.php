@@ -2,7 +2,9 @@
 
 require_once 'IdGenerator.php';
 
-class InputValidation{
+class
+InputValidation
+{
 
     public static function emailValidation($email){
             //retrait des espace

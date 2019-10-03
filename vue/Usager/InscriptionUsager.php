@@ -127,7 +127,7 @@
             <h1>S'inscrire</h1>
             <p>Veuillez renseigner ce formulaire pour vous creer un compte.</p>
             <hr>
-
+            <input type="hidden" name="typeCompte" value="3">
             <label for="prenoms"><b>Prenoms *</b></label>
             <input type="text" placeholder="Entrez vos prenoms" name="prenoms" required>
 
@@ -150,12 +150,11 @@
                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
             </label>
 
-            <p>en creant un compte chez nous vous accepter les termes de notre <a href="#" style="color:dodgerblue">contrat</a>.
+            <p>en creant un compte chez nous vous acceptez les termes de notre <a href="#" style="color:dodgerblue">contrat</a>.
             </p>
 
             <div class="clearfix">
-                <button type="button" id="id01" class="cancelbtn" data-dismiss="modal"
-                ">Annuler</button>
+                <button type="button" id="id01" class="cancelbtn" data-dismiss="modal">Annuler</button>
                 <button type="submit" class="signupbtn">S'inscrire</button>
             </div>
         </div>

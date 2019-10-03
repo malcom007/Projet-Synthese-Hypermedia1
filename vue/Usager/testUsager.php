@@ -1,7 +1,7 @@
 <?php
 
 require_once '../../modele/CartesDAO.php';
-require_once '../../modele/CartesClientsDAO.php';
+require_once '../../modele/CartesUsagersDAO.php';
 require_once '../../modele/AdminDAO.php';
 require_once '../../modele/UsagersDAO.php';
 

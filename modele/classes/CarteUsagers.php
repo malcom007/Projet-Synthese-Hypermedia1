@@ -2,12 +2,12 @@
 
 require_once 'Cartes.php';
 
-class CartesClients extends Cartes
+class CarteUsagers extends Cartes
 {
     private $_nbreTitre, $_statut, $_dateExpiration, $_dateActivation;
 
     /**
-     * CartesClients constructor.
+     * CarteUsagers constructor.
      * @param $_nbreTitre
      */
     public function __construct()

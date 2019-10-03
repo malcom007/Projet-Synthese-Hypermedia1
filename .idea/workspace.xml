@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="mon premier commit:creation des classes usagers et cartes">
-      <change afterPath="$PROJECT_DIR$/vue/Usager/inscription.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/Usager/testForm.php" afterDir="false" />
+    <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="requete create CarteDAO et usagerDAO non finalise">
+      <change afterPath="$PROJECT_DIR$/vue/Usager/newTestUsager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/CartesClientsDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/CartesClientsDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/CartesClientsDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/CartesUsagersDAO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/CartesDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/CartesDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/InputValidation.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/InputValidation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/PersonneDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/PersonneDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/UsagerCartesDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/UsagerCartesDAO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/UsagersDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/UsagersDAO.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/classes/Cartes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Cartes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/CartesClients.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/CartesClients.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Transporteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Transporteur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/config/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/config/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/classes/CartesClients.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/CarteUsagers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/classes/Usagers.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/Usagers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/Usager/InscriptionUsager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/Usager/InscriptionUsager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/Usager/testUsager.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/Usager/testUsager.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -43,52 +44,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele/classes/CartesClients.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vue/Usager/testUsager.php">
+        <entry file="file://$PROJECT_DIR$/vue/Usager/newTestUsager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+            <state relative-caret-position="-170">
+              <caret line="8" column="100" selection-start-line="8" selection-start-column="100" selection-end-line="8" selection-end-column="100" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/terminal/TestDaoTerminal.php">
+        <entry file="file://$PROJECT_DIR$/modele/classes/CarteUsagers.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="391">
+              <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/terminal/TestDAOTerminalEntreprise.php">
+        <entry file="file://$PROJECT_DIR$/modele/CartesUsagersDAO.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php">
           <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele/CartesDAO.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-            </state>
-          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modele/UsagersDAO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            <state relative-caret-position="595">
+              <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -96,17 +88,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modele/PersonneDAO.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" selection-end-column="27" />
+            <state relative-caret-position="685">
+              <caret line="132" column="5" lean-forward="true" selection-start-line="76" selection-start-column="3" selection-end-line="132" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele/AdminDAO.php">
+        <entry file="file://$PROJECT_DIR$/modele/classes/Personnes.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modele/classes/Usagers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="79" lean-forward="true" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -131,18 +132,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/modele/UsagerCartesDAO.php" />
         <option value="$PROJECT_DIR$/vue/Usager/testForm.php" />
         <option value="$PROJECT_DIR$/vue/Usager/inscription.php" />
         <option value="$PROJECT_DIR$/modele/classes/Transporteur.php" />
         <option value="$PROJECT_DIR$/modele/classes/CartesClients.php" />
-        <option value="$PROJECT_DIR$/modele/classes/Cartes.php" />
-        <option value="$PROJECT_DIR$/modele/CartesClientsDAO.php" />
         <option value="$PROJECT_DIR$/modele/config/Config.php" />
-        <option value="$PROJECT_DIR$/modele/UsagersDAO.php" />
-        <option value="$PROJECT_DIR$/modele/PersonneDAO.php" />
-        <option value="$PROJECT_DIR$/modele/CartesDAO.php" />
         <option value="$PROJECT_DIR$/vue/Usager/testUsager.php" />
+        <option value="$PROJECT_DIR$/modele/UsagerCartesDAO.php" />
+        <option value="$PROJECT_DIR$/modele/classes/CarteUsagers.php" />
+        <option value="$PROJECT_DIR$/modele/PersonneDAO.php" />
+        <option value="$PROJECT_DIR$/vue/Usager/InscriptionUsager.php" />
+        <option value="$PROJECT_DIR$/modele/CartesClientsDAO.php" />
+        <option value="$PROJECT_DIR$/modele/InputValidation.php" />
+        <option value="$PROJECT_DIR$/modele/classes/Cartes.php" />
+        <option value="$PROJECT_DIR$/modele/CartesDAO.php" />
+        <option value="$PROJECT_DIR$/modele/CartesUsagersDAO.php" />
+        <option value="$PROJECT_DIR$/modele/UsagersDAO.php" />
+        <option value="$PROJECT_DIR$/vue/Usager/newTestUsager.php" />
       </list>
     </option>
   </component>
@@ -321,7 +327,11 @@
       <workItem from="1569162963493" duration="45279000" />
       <workItem from="1569508174483" duration="6669000" />
       <workItem from="1569537475526" duration="10846000" />
-      <workItem from="1569634410500" duration="11804000" />
+      <workItem from="1569634410500" duration="18885000" />
+      <workItem from="1569874093570" duration="4886000" />
+      <workItem from="1569938439125" duration="11086000" />
+      <workItem from="1570042485705" duration="599000" />
+      <workItem from="1570109084454" duration="4267000" />
     </task>
     <task id="LOCAL-00001" summary="Delete some attribut">
       <created>1569012591306</created>
@@ -344,21 +354,35 @@
       <option name="project" value="LOCAL" />
       <updated>1569513366689</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="requete create CarteDAO et usagerDAO">
+      <created>1569672322848</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569672322848</updated>
+    </task>
+    <task id="LOCAL-00005" summary="requete create CarteDAO et usagerDAO">
+      <created>1569840518332</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1569840518337</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30271000" />
+    <option name="totallyTimeSpent" value="58190000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28446388" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3621444" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989059" visible="true" weight="0.32932165" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4989059" weight="0.32822758" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -439,7 +463,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Delete some attribut" />
     <MESSAGE value="mon premier commit:creation des classes usagers et cartes" />
-    <option name="LAST_COMMIT_MESSAGE" value="mon premier commit:creation des classes usagers et cartes" />
+    <MESSAGE value="requete create CarteDAO et usagerDAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="requete create CarteDAO et usagerDAO" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -467,62 +492,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/Usager/EtapesASuivrePourCreerUnsiteEnMVC2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/Dossiers/420-B16-RO TECHNIQUES DE DVELOPPEMENT D'APPLICATIONS/projets de session/Projet-Synthese-Hypermedia1/modele/classes/testUsagerCarte.php" />
-    <entry file="file://$PROJECT_DIR$/modele/UsagerCartesDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style/style.accueil.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/Usager/AjouterCarte.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/Usager/testForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/Usager/InscriptionUsager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="125" column="31" lean-forward="true" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/Usager/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1445">
-          <caret line="202" column="7" lean-forward="true" selection-start-line="202" selection-start-column="7" selection-end-line="202" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#4;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#4;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/Usager/AccueilUsager.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/Usager/AchatCredit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modele/classes/ContactsEntrs.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -552,13 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modele/classes/UsagerCartes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-834">
-          <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue/transporteur/requete">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -576,20 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modele/classes/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/classes/Usagers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue/Personne/TestAdminDAO.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -597,31 +548,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modele/CartesClientsDAO.php">
+    <entry file="file://$PROJECT_DIR$/vue/Usager/AccueilUsager.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/Usager/AchatCredit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/Usager/EtapesASuivrePourCreerUnsiteEnMVC2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/Usager/LogoutUsager.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/Usager/testForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modele/classes/Personnes.php">
+    <entry file="file://$PROJECT_DIR$/vue/Usager/AjouterCarte.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-425">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/terminal/TestTerminalEntrepriseDao.php">
+    <entry file="file://$PROJECT_DIR$/vue/Usager/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+        <state relative-caret-position="3128">
+          <caret line="184" column="9" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modele/classes/Cartes.php">
+    <entry file="file://$PROJECT_DIR$/vue/Usager/InscriptionUsager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        <state relative-caret-position="2618">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/Usager/LogginUsager.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/UsagerCartesDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/classes/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -632,8 +620,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/terminal/TestDAOTerminalEntreprise.php">
+    <entry file="file://$PROJECT_DIR$/modele/InputValidation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/classes/UsagerCartes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/transporteur/TestDaoTransporteur.php">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/terminal/TestTerminalEntrepriseDao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modele/config/Config.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -642,52 +651,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/terminal/TestDaoTerminal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modele/classes/Database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/classes/CartesClients.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/PersonneDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/CartesDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/UsagersDAO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="426">
+          <caret line="38" column="4" lean-forward="true" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/Usager/testUsager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+        <state relative-caret-position="386">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/CartesDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="94" column="13" selection-start-line="94" selection-start-column="13" selection-end-line="94" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/classes/Cartes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/classes/CarteUsagers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/CartesUsagersDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/classes/Personnes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/classes/Usagers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="79" lean-forward="true" selection-start-line="17" selection-start-column="79" selection-end-line="17" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/PersonneDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="132" column="5" lean-forward="true" selection-start-line="76" selection-start-column="3" selection-end-line="132" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/UsagersDAO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/terminal/TestDAOTerminalEntreprise.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/terminal/TestDaoTerminal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="3" lean-forward="true" selection-start-line="15" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/Usager/newTestUsager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="8" column="100" selection-start-line="8" selection-start-column="100" selection-end-line="8" selection-end-column="100" />
         </state>
       </provider>
     </entry>

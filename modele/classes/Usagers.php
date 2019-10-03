@@ -21,7 +21,7 @@ class Usagers extends Personnes
 
     }
 
-    public function addCarte(CartesClients $carteClient)
+    public function addCarte(CarteUsagers $carteClient)
     {
 
         $count = count($this->_listeCarte);

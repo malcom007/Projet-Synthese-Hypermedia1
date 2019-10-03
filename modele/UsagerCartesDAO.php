@@ -56,7 +56,7 @@ class UsagerCartesDAO
             $pstmt = NULL;
             Database::close();
             ?>
-            <script>console.log("Insertion complété l'ID:   <?=$transaction->getDateTransaction()?>")</script>
+            <script>console.log("titre ajouté avec succes complété l'ID:   <?=$transaction->getDateTransaction()?>")</script>
             <?php
         } catch (PDOException $exception) {
             $exception->getMessage();
