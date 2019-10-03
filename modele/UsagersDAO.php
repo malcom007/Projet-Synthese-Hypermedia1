@@ -1,7 +1,7 @@
 <?php
 require_once '/../modele/classes/Database.php';
 require_once '/../modele/classes/Usagers.php';
-
+require_once '/../modele/classes/CarteUsagers.php';
 require_once 'PersonneDAO.php';
 class UsagersDAO extends PersonneDAO
 {
@@ -12,8 +12,7 @@ class UsagersDAO extends PersonneDAO
 
     public static function findByCell($cell)
     {
-
-        $request = "SELECT * FROM personnes WHERE numCell = :x";
+        $request = "SELECT * FROM personnes WHERE numCell = :x AND typeCompte =3";
 
         $db = Database::getInstance();
         try {
@@ -26,7 +25,15 @@ class UsagersDAO extends PersonneDAO
 
             if ($result = $pstmt->fetch(PDO::FETCH_OBJ)) {
                 $usager = new Usagers();
+                $usager->setPrenom($result->prenom);
+                $usager->setNom($result->nom);
                 $usager->setNumCell($result->numCell);
+                $usager->setMail($result->mail);
+                $usager->setPassword($result->password);
+                $usager->setActived($result->actived);
+                $usager->setDateActivation($result->dateActivation);
+                $usager->setDateModification($result->dateModification);
+
                 $pstmt->closeCursor();
                 return $usager;
 
@@ -43,21 +50,6 @@ class UsagersDAO extends PersonneDAO
 
 
     }
-
-
-
-
-
-
-    /**
-     * @param null $id
-     * trouver un usager par son id
-     */
-
-
-    /**
-     * @param Usagers $usagerObjet
-     */
 
 
 

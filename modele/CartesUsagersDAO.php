@@ -61,5 +61,55 @@ class CartesUsagersDAO extends CartesDAO
 
     }
 
+    public function findByUsager(Usagers $usager)
+    {
+        $db = Database::getInstance();
+
+        try {
+
+            $pstmt = $db->prepare("SELECT * FROM Cartesusagers WHERE idUsager =':x'");
+            $pstmt->execute(array(':x' => $usager->getId()));
+            if ($result = $pstmt->fetch(PDO::FETCH_OBJ)) {
+                $carte = new CarteUsagers();
+                $carte->loadFromObject($result);
+                $pstmt->closeCursor();
+                $pstmt = NULL;
+                return $carte;
+            }
+            $pstmt->closeCursor();
+            $pstmt = NULL;
+            Database::close();
+
+        } catch (PDOException $exception) {
+            $exception->getMessage();
+        }
+        return NULL;
+
+    }
+
+    public static function addUsager(Usagers $usager)
+    {
+        $request = "INSERT INTO cartesusagers (idUsager) values (':idUsager') ";
+        $db = Database::getInstance();
+
+        try {
+            if (is_null($db)) {
+                throw new PDOException("Impossible d'effectuer une requete de recherche verifier la connexion");
+            }
+            $pstmt = $db->prepare($request);
+            $pstmt->bindValue(':idUsager', $usager->getIdUsager());
+            $pstmt->execute();
+            $pstmt->closeCursor();
+            $pstmt = NULL;
+            Database::close();
+            ?>
+            <script>console.log("Insertion complété l'ID:   <?=$usager->getIdUsager()?>")</script>
+            <?php
+        } catch (PDOException $exception) {
+            $exception->getMessage();
+        }
+
+    }
+
 
 }

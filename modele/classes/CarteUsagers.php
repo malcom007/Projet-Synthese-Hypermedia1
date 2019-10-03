@@ -28,6 +28,24 @@ class CarteUsagers extends Cartes
         $this->_dateExpiration = MyGenerator::getDate2YearLater();
     }
 
+    public function loadFromArray($tableau)
+    {
+        parent::loadFromArray();
+        $this->_nbreTitre = $tableau['nbreTitre'];
+        $this->_statut = $tableau['statut'];
+        $this->_dateActivation = $tableau['dateActivation'];
+        $this->_dateExpiration = $tableau['dateExpiration'];
+    }
+
+    public function loadFromObject($obj)
+    {
+        parent::loadFromObject();
+        $this->_nbreTitre = $obj->nbreTitre;
+        $this->_statut = $obj->libelle;
+        $this->_dateActivation = $obj->dateActivation;
+        $this->_dateExpiration = $obj->dateExpiration;
+    }
+
     /**
      * @return mixed
      */

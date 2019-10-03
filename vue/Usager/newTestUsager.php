@@ -5,7 +5,7 @@ require_once '../../modele/UsagersDAO.php';
 
 /****
  *--------------------------------------------------------------------------------------------------------------
- *                                              CREER DES CARTES ET LES IBSERER DANS LA TABLE CARTES
+ *                                              CREER DES CARTES ET LES INSERER,SUPPRIMER DANS LA TABLE CARTES
  * --------------------------------------------------------------------------------------------------------------
  */
 /*
@@ -63,7 +63,7 @@ if(empty($listeCartes)){
     <?php
 }
 else{
-    //trouver l,objer carte
+    //trouver l'objet carte
     $carte= new Cartes();
     //recuperer l'id
     $carte->setIdCarte($listeCartes[0]->getIdCarte());
@@ -83,13 +83,13 @@ else{
 
 //creer un usager
 $usager1 = new Usagers();
-$usager1->createNewUsager("Awa", "diouf", "514 555 0000", "awa@diouf.name", "awadiouf");
+$usager1->createNewUsager("birima", "sall", "514 555 0000", "awa@diouf.name", "awadiouf");
 echo '<pre>';
 var_dump($usager1);
 echo '<pre>';
 
 $usager2 = new Usagers();
-$usager2->createNewUsager("Aida", "Ba", "514 444 0000", "aida@ba.name", "aidaba");
+$usager2->createNewUsager("birima", "sall", "450 444 0000", "aida@ba.name", "aidaba");
 echo '<pre>';
 var_dump($usager2);
 echo '<pre>';
@@ -99,7 +99,7 @@ echo '<pre>';
 var_dump($usager3);
 echo '<pre>';
 $usager4 = new Usagers();
-$usager4->createNewUsager("tata", "dieng", "450 333 0000", "tata@dieng.name", "tatadieng");
+$usager4->createNewUsager("birima sall", "dieng", "450 333 3333", "tata@dieng.name", "tatadieng");
 echo '<pre>';
 var_dump($usager4);
 echo '<pre>';
@@ -111,6 +111,7 @@ echo '<pre>';
  * --------------------------------------------------------------------------------------------------------------
  */
 //Inserer les Usagers dans la BD
+/*
 //pour creer un usager
 $usagerO = new UsagersDAO();
 //d'abord verifier si le numero existe dans la bd
@@ -151,3 +152,16 @@ $usagerO2->create($usager3);
 echo '<pre>';
 var_dump($usagerO2);
 echo '<pre>';
+*/
+/****
+ *--------------------------------------------------------------------------------------------------------------
+ *                                              AJOUTER UNE CARTE A UN USAGER
+ * --------------------------------------------------------------------------------------------------------------
+ */
+
+
+/****
+ *--------------------------------------------------------------------------------------------------------------
+ *                                              AJOUTER DES TITRES A UNE CARTE d'UN USAGER
+ * --------------------------------------------------------------------------------------------------------------
+ */
