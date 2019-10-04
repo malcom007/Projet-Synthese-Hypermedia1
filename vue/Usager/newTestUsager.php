@@ -1,6 +1,6 @@
 <?php
 require_once '../../modele/CartesDAO.php';
-require_once '../../modele/UsagersDAO.php';
+require_once '../../modele/CartesUsagersDAO.php';
 
 
 /****
@@ -80,7 +80,7 @@ else{
  *                                              CREER DES USAGERS
  * --------------------------------------------------------------------------------------------------------------
  */
-
+/*
 //creer un usager
 $usager1 = new Usagers();
 $usager1->createNewUsager("birima", "sall", "514 555 0000", "awa@diouf.name", "awadiouf");
@@ -103,7 +103,7 @@ $usager4->createNewUsager("birima sall", "dieng", "450 333 3333", "tata@dieng.na
 echo '<pre>';
 var_dump($usager4);
 echo '<pre>';
-
+*/
 
 /****
  *--------------------------------------------------------------------------------------------------------------
@@ -158,6 +158,21 @@ echo '<pre>';
  *                                              AJOUTER UNE CARTE A UN USAGER
  * --------------------------------------------------------------------------------------------------------------
  */
+//cherche une carte
+
+$carte = CartesUsagersDAO::findById("040372");
+if (empty($carte)) {
+    ?>
+    <script> console.log("cette carte n'existe pas ")</script>
+    <?php
+}
+$carte = CartesUsagersDAO::findByUsager("583e2e");
+if (empty($carte)) {
+    ?>
+    <script> console.log("cette usager n'existe pas ")</script>
+    <?php
+    $carte = CartesUsagersDAO::addUsager("583e2e");
+}
 
 
 /****

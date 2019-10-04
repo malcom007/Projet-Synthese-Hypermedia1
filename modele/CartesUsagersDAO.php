@@ -8,8 +8,7 @@ class CartesUsagersDAO extends CartesDAO
 {
 
 
-
-    public function update($carte)
+    public static function update($carte)
     {
         $request = "UPDATE cartesusagers SET idUsager=':idusager', nbreTitre=':nbreTitre', statut=':stat', dateExpiration=':dexp', dateActivation='dact'";
         $db = Database::getInstance();
@@ -37,7 +36,7 @@ class CartesUsagersDAO extends CartesDAO
      * @param $id
      * Rechercher les cartes activés
      **/
-    public function findByStatut()
+    public static function findByStatut()
     {
         $db = Database::getInstance();
         $listeCartesActives = array();
@@ -61,14 +60,14 @@ class CartesUsagersDAO extends CartesDAO
 
     }
 
-    public function findByUsager(Usagers $usager)
+    public static function findByUsager($usager)
     {
         $db = Database::getInstance();
 
         try {
 
-            $pstmt = $db->prepare("SELECT * FROM Cartesusagers WHERE idUsager =':x'");
-            $pstmt->execute(array(':x' => $usager->getId()));
+            $pstmt = $db->prepare("SELECT * FROM Cartesusagers WHERE idUsager =:x");
+            $pstmt->execute(array(':x' => $usager));
             if ($result = $pstmt->fetch(PDO::FETCH_OBJ)) {
                 $carte = new CarteUsagers();
                 $carte->loadFromObject($result);
@@ -87,9 +86,9 @@ class CartesUsagersDAO extends CartesDAO
 
     }
 
-    public static function addUsager(Usagers $usager)
+    public static function addUsager($usager)
     {
-        $request = "INSERT INTO cartesusagers (idUsager) values (':idUsager') ";
+        $request = "INSERT INTO cartesusagers (idUsager) values (:x) ";
         $db = Database::getInstance();
 
         try {
@@ -97,7 +96,7 @@ class CartesUsagersDAO extends CartesDAO
                 throw new PDOException("Impossible d'effectuer une requete de recherche verifier la connexion");
             }
             $pstmt = $db->prepare($request);
-            $pstmt->bindValue(':idUsager', $usager->getIdUsager());
+            $pstmt->bindValue(':x', $usager);
             $pstmt->execute();
             $pstmt->closeCursor();
             $pstmt = NULL;
