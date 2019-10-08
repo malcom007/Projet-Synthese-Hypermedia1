@@ -127,35 +127,36 @@
             <h1>S'inscrire</h1>
             <p>Veuillez renseigner ce formulaire pour vous creer un compte.</p>
             <hr>
-
+            <input type="hidden" name="typeCompte" value="3">
             <label for="prenoms"><b>Prenoms *</b></label>
-            <input type="text" placeholder="Entrez vos prenoms" name="prenoms" required>
+            <input type="text" placeholder="Entrez vos prenoms" name="prenoms" onfocus="this.value=''" required>
 
             <label for="nom"><b>Nom *</b></label>
-            <input type="text" placeholder="Entrez votre nom" name="nom" required>
+            <input type="text" placeholder="Entrez votre nom" name="nom" onfocus="this.value=''" required>
 
             <label for="numCel"><b>Cellulaire *</b></label>
-            <input type="text" placeholder="Entrez votre numero de cellulaire" name="numCel" required>
+            <input type="text" placeholder="Entrez votre numero de cellulaire" name="numCel" onfocus="this.value=''"
+                   required>
 
             <label for="email"><b>Email</b></label>
-            <input type="email" placeholder="Entrez votre Email" name="email">
+            <input type="email" placeholder="Entrez votre Email" onfocus="this.value=''" name="email">
 
             <label for="psw"><b>Mot de passe *</b></label>
-            <input type="password" placeholder="Entrez votre Password" name="psw" required>
+            <input type="password" placeholder="Entrez votre Password" name="psw" onfocus="this.value=''" required>
 
             <label for="psw-repeat"><b>Repeter votre mot de passe *</b></label>
-            <input type="password" placeholder="Repetez votre Password" name="psw-repeat" required>
+            <input type="password" placeholder="Repetez votre Password" name="psw-repeat" onfocus="this.value=''"
+                   required>
 
             <label>
                 <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
             </label>
 
-            <p>en creant un compte chez nous vous accepter les termes de notre <a href="#" style="color:dodgerblue">contrat</a>.
+            <p>en creant un compte chez nous vous acceptez les termes de notre <a href="#" style="color:dodgerblue">contrat</a>.
             </p>
 
             <div class="clearfix">
-                <button type="button" id="id01" class="cancelbtn" data-dismiss="modal"
-                ">Annuler</button>
+                <button type="button" id="id01" class="cancelbtn" data-dismiss="modal">Annuler</button>
                 <button type="submit" class="signupbtn">S'inscrire</button>
             </div>
         </div>

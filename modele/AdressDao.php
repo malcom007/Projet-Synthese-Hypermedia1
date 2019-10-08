@@ -1,6 +1,6 @@
 <?php
 
-
+require_once '/../modele/classes/Database.php';
 class AdressDao
 {
     public static function addAdress(Adresse $adresso){
@@ -8,7 +8,7 @@ class AdressDao
 
 
 
-        $request="INSERT INTO adresse  (idAdresse,rue,quartier,commune,ville,codePostal,Pays) values (:q,:w,:e,:r,:t,:y,:u)";
+        $request="INSERT INTO adresses  (idAdresse,rue,quartier,commune,ville,codePostal,Pays) values (:q,:w,:e,:r,:t,:y,:u)";
 
         try{
             //On s'assure que la connexion n'est pas null
