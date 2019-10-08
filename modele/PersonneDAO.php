@@ -3,6 +3,7 @@
 require_once '/../modele/classes/Database.php';
 require_once '/../modele/classes/Personnes.php';
 require_once '../../modele/ContactsEntrsDAO.php';
+require_once '../../modele/UsagersDAO.php';
 
 
 class PersonneDAO{
@@ -48,6 +49,11 @@ class PersonneDAO{
                 echo 'Hola type '.$typeCompte;
                 var_dump($typeCompte);
                 ContactsEntrsDAO::addContact($personneO->getId());
+            }
+            if ($typeCompte == 3) {
+                echo 'Hola type ' . $typeCompte;
+                var_dump($typeCompte);
+                UsagersDAO::create($personneO->getId());
             }
             ?>
             <script>console.log("Insertion complété du terminal avec l'ID:   <?=$personneO->getIdTerminal()?>")</script>

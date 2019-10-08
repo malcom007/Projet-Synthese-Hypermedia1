@@ -39,64 +39,74 @@ class CartesDAO
         }
     }
 
-
-    /**
-     *Rechercher toutes les cartes existantes dans l'inventaire
-     */
-    public function findAll()
-    {
-        $db = Database::getInstance();
-        $listeCartes = array();
-
-        try {
-            $pstmt = $db->prepare("SELECT * FROM Cartes");
-            $pstmt->execute();
-            while ($result = $pstmt->fetch(PDO::FETCH_OBJ)) {
-                $carte = new Cartes();
-                $carte->loadFromObject($result);
-                array_push($listeCartes, $carte);
-            }
-            $pstmt->closeCursor();
-            $pstmt = NULL;
-            Database::close();
-
-        } catch (PDOException $exception) {
-            $exception->getMessage();
-        }
-        return $listeCartes;
-    }
-
     /**
      * @param $id
      * Rechercher une carte par son Id
      */
-    public function findById($id)
+    public function findById($id = null)
     {
-
+        $request = "";
+        if ($id == NULL) {
+            $request = "SELECT * FROM Cartes";
+        } else {
+            $request = "SELECT * FROM Cartes WHERE idCarte =:id";
+        }
+        $listeCartes = array();
         $db = Database::getInstance();
 
         try {
-            $pstmt = $db->prepare("SELECT * FROM Cartes WHERE idCarte =:id");
-            $pstmt->execute(array(':id' => $id));
-            $result = $pstmt->fetch(PDO::FETCH_OBJ);
-            if ($result) {
-                $carte = new Cartes();
-                $carte->loadFromObject($result);
-                $pstmt = NULL;
-                Database::close();
-                return $carte;
+            if (is_null($db)) {
+                throw new PDOException("Verifier la connexion! recherche impossible");
             }
+            $pstmt = $db->prepare($request);
+            $pstmt->execute(array(':id' => $id));
+            while ($result = $pstmt->fetch(PDO::FETCH_OBJ)) {
+                $carte = new Cartes();
+                var_dump($result);
+                $carte->loadFromObject($result);
+                array_push($listeCartes, $carte);
+            }
+            $pstmt = NULL;
+            Database::close();
 
         } catch (PDOException $exception) {
-            $exception->getMessage();
+            ?>
+            <!-- Affichage du message d'erreur au console personne-->
+            <script>console.log("Error:  <?= $exception->getMessage()?>")</script>
+            <?php
+
         }
+        return $listeCartes;
 
     }
 
     public function delete($carte)
     {
+        $request = "DELETE FROM cartes where idCarte = :id";
+        $db = Database::getInstance();
+        try {
+            if (is_null($carte)) {
+                throw new PDOException("la carte n'existe pas");
+                ?>
+                <!-- Affichage du message d'erreur au console terminal-->
+                <script>console.log("Impossible de supprimer, id inexistant")</script>
+                <?php
+            }
+            $pstm = $db->prepare($request);
+            $pstm->execute(array(":id" => $carte->getIdCarte()));
+            $pstm->closeCursor();
+            $pstm = NULL;
+            Database::close();
+
+        } catch (PDOException $ex) {
+            ?>
+            <script> console.log("Impossible de supprimer <?= $ex->getMessage()?>")</script>
+            <?php
+        }
 
     }
+
+
 
 
 }
