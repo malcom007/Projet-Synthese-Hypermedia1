@@ -5,7 +5,7 @@ require_once '/../modele/classes/Adresse.php';
 
 class TransporteurDAO
 {
-    public static function create(Adresse $adresso,Transporteur $transport)
+    public static function create(Adresse $adresso, Transporteur $transport)
     {
         $db = Database::getInstance();
         $request = "INSERT INTO adresses  (idAdresse,rue,quartier,commune,ville,codePostal,Pays) values (:q,:w,:e,:r,:t,:y,:u)";
@@ -27,7 +27,7 @@ class TransporteurDAO
             $pstm->bindValue(':u', $adresso->getPays());
 
             $pstm->execute();
-            $last_id_insert=$adresso->getIdAdresses();
+            $last_id_insert = $adresso->getIdAdresses();
             $pstm = NULL;
             //Deconnexion a la base de donnée
             Database::close();
@@ -36,9 +36,8 @@ class TransporteurDAO
             <script>console.log("Insertion complété du terminal avec l'ID:   <?=$adresso->getIdAdresses()?>")</script>
             <?php
 
-        
 
-        $request = "INSERT INTO transporteurs (idTransporteur,RaisonSociale,idAdresse,telephone,datecreation,dateModification) values (:q,:w,:e,:r,:t,:y)";
+            $request = "INSERT INTO transporteurs (idTransporteur,RaisonSociale,idAdresse,telephone,datecreation,dateModification) values (:q,:w,:e,:r,:t,:y)";
 
             //On s'assure que la connexion n'est pas null
             if (is_null($db)) {
@@ -67,26 +66,25 @@ class TransporteurDAO
         }
     }
 
-    public static function find($id=NULL)
+    public static function find($id = NULL)
     {
-        $request="";
+        $request = "";
 
         //Si On ne saisit pas l'id, on retourne toute la liste
-        if ($id==NULL){
-            $request="SELECT * FROM transporteurs";
-        }
-        else
-            $request="SELECT * FROM transporteurs WHERE idTransporteur  = :x";
+        if ($id == NULL) {
+            $request = "SELECT * FROM transporteurs";
+        } else
+            $request = "SELECT * FROM transporteurs WHERE idTransporteur  = :x";
 
-        $transp= Array();
+        $transp = Array();
 
         $db = Database::getInstance();
 
 
-        try{
+        try {
 
             //On s'assure que la connexion n'est pas null
-            if (is_null($db)){
+            if (is_null($db)) {
                 throw new PDOException("Impossible d'effectuer une requette de recherche verifier la connexion");
             }
             //Preparation de la requette SQL pour l'execution(Tableau)
@@ -95,7 +93,7 @@ class TransporteurDAO
             $pstmt->execute(array(':x' => $id));
 
             //Parcours de notre pstm tant qu'il y des données
-            while ($result = $pstmt->fetch(PDO::FETCH_OBJ)){
+            while ($result = $pstmt->fetch(PDO::FETCH_OBJ)) {
                 //Creation d'un terminal
                 $transpor = new Transporteur();
 
@@ -103,15 +101,14 @@ class TransporteurDAO
                 $transpor->loadFromObjet($result);
 
                 //On insere chaque objet a la fin du tableau $termTab
-                array_push($transp,$transpor);
+                array_push($transp, $transpor);
             }
 
             $pstmt->closeCursor();
-            $pstmt= NULL;
+            $pstmt = NULL;
 
 
-        }
-        catch (PDOException $ex){
+        } catch (PDOException $ex) {
             ?>
             <!-- Affichage du message d'erreur au console terminal-->
             <script>console.log("Error createDAO:  <?= $ex->getMessage()?>")</script>
@@ -120,4 +117,31 @@ class TransporteurDAO
         return $transp;
     }
 
+    public static function delete($transporteuObjet)
+    {
+        $request = "DELETE FROM transporteurs where idTransporteur=:x ";
+        $db = database::getInstance();
+        try {
+            if (is_null($transporteuObjet)) {
+                throw new PDOException("aucun parametre fourni dao");
+                ?>
+                <!-- Affichage du message d'erreur au console -->
+                <script>console.log("Impossible de supprimer, aucun parametre")</script>
+                <?php
+            } else {
+                $pstm = $db->prepare($request);
+                $pstm->bindValue(':x', $transporteuObjet->getIdTransporteur());
+                //$pstm->bindValue(':y', $transporteuObjet->getIdAdresse());
+                $pstm->execute();
+                $pstm->closeCursor();
+                $pstm = null;
+                database::close();
+            }
+
+        } catch (PDOException $ex) {
+            ?>
+            <script> console.log("Impossible de supprimer <?= $ex->getMessage()?>")</script>
+            <?php
+        }
+    }
 }
