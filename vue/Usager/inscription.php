@@ -92,7 +92,7 @@
         <label for="nom"><b>Nom *</b></label>
         <p><input placeholder="Nom..." oninput="this.className = ''" name="lname" required></p>
         <label for="email"><b>Email</b></label>
-        <p><input placeholder="E-mail..." oninput="this.className = ''" name="email" required></p>
+        <p><input type="email" placeholder="E-mail..." oninput="this.className = ''" name="email" required></p>
         <label for="numCel"><b>Cellulaire *</b></label>
         <p><input placeholder="cellulaire..." oninput="this.className = ''" name="phone" required></p>
     </div>

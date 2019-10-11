@@ -225,6 +225,60 @@ class PersonneDAO{
 
     }
 
+    public static function connexion($username){
+
+        $request = "SELECT * FROM personnes where numCell=:username ";
+
+        try {
+
+            if (is_null($username) ){
+                throw new PDOException("Champs vide!!! Impossible d'effectuer une requette de connexion de la Personne");
+            }
+                $db=Database::getInstance();
+
+                //Preparation de la requette
+                $pstm=$db->prepare($request);
+
+                //Association des valeur
+                $pstm->bindValue(':username', $username);
+
+
+                //Exécution de la requette
+                $pstm->execute();
+
+                $personTab= Array();
+
+                //Parcours de notre pstm tant qu'il y des données
+                while ($result = $pstm->fetch(PDO::FETCH_OBJ)){
+
+                    //Creation d'une Personne
+                    $personne = new Personnes();
+
+                    //Transfere des information d'objet vers un tableau
+                    $personne->loadFromObjet($result);
+
+                    //On insere chaque objet a la fin du tableau $termTab
+                    array_push($personTab,$personne);
+                }
+
+            $pstm->closeCursor();
+            $pstm= NULL;
+
+            return $personTab;
+
+
+
+
+        }
+        catch (PDOException $ex){
+            ?>
+            <script> console.error("Error Personne Connexion:  <?= $ex->getMessage()?>")</script>
+            <?php
+        }
+
+
+    }
+
 }
 
 

@@ -68,7 +68,7 @@ class TerminalDAO{
             $request="SELECT * FROM terminals";
         }
         else
-            $request="SELECT * FROM terminals WHERE idTerminal = :x";
+            $request="SELECT * FROM entrepriseterminal  WHERE idTerminal = :x";
 
         $termTab= Array();
 
@@ -88,6 +88,7 @@ class TerminalDAO{
 
                 //Parcours de notre pstm tant qu'il y des données
                 while ($result = $pstmt->fetch(PDO::FETCH_OBJ)){
+
                     //Creation d'un terminal
                     $terminal = new Terminal();
 
