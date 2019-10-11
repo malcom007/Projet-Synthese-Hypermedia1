@@ -257,7 +257,7 @@
         <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
         <script src="./assets/js/SwipDash.min.js?v=1.3.0" type="text/javascript"></script>
         <script src="./assets/dddddd.js"></script>
-        <script src="./assets/js/SwipDash.js"></script>
+
 
         <script type="text/javascript" >
             $('.nav').on('click','li',function () {
