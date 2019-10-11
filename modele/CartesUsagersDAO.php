@@ -86,6 +86,8 @@ class CartesUsagersDAO extends CartesDAO
 
     }
 
+
+    //A travailler
     public static function addUsager($usager)
     {
         $request = "INSERT INTO cartesusagers (idUsager) values (:x) ";

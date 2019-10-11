@@ -60,18 +60,62 @@ var_dump($mapers);
  *                                              RECHERCHE PAR IDTERMINAL
  * --------------------------------------------------------------------------------------------------------------
  */
-/*$test=PersonneDAO::findById('3f9494');
-var_dump($test);
-//S'il n'y a aucune donnée
-if (empty($test)){
-    echo "Aucune données";
-}else{
-    foreach ($test as $item){
-       echo $item->getId()."<br>";
-        echo $item->getPrenom()."<br>";
-        echo $item->getPassword()."<br>";
+$user = "";
+
+try {
+
+    $userName = InputValidation::phoneValidation('4507775588');
+
+    if (!$userName) {
+        throw new Exception("Mot de passe ou username invalide");
     }
-}*/
+
+    $personne = PersonneDAO::connexion($userName);
+
+    if (empty($personne)) {
+        throw new Exception("Mot de passe ou username invalide");
+    }
+
+    $pwdEntry = "Malcom";
+
+    //Compare le mot de passe avec celui de la passe de donnée
+    $pwdEntry = MyGenerator::compareHachedPassword($pwdEntry, $personne[0]->getPassword());
+
+    //Si le mot de passe est invalide
+    if (!$pwdEntry) {
+        throw new Exception("Mot de passe ou Username invalide");
+    }
+
+    //Si l'utilisateur n'a pas encore confirmé son inscription
+    if ($personne[0]->getActived() == "0") {
+        throw  new Exception("Vérifier votre téléphone, vous devez d'abord confirmer votre inscription!");
+    }
+
+    //On recupere le nom pour l'afficher sur profil
+    $user = $personne[0]->getPrenom();
+
+    var_dump($user);
+
+} catch (Exception $ex) {
+    echo $ex->getMessage();
+    ?>
+    <script> console.error("Erreur connexiopn:  <?= $ex->getMessage()?>")</script>
+    <?php
+}
+
+
+die();
+//S'il n'y a aucune donnée
+if (empty($test)) {
+    echo "Aucune données";
+} else {
+    foreach ($test as $item) {
+        echo $item->getId() . "<br>";
+
+        echo $item->getPrenom() . "<br>";
+        echo $item->getPassword() . "<br>";
+    }
+}
 //var_dump($test);
 /****
  *--------------------------------------------------------------------------------------------------------------
@@ -80,23 +124,24 @@ if (empty($test)){
  */
 
 ////Stockage  resulte de la recherche avec l'ID
-$personne=PersonneDAO::findById('7AF0AD');
+$personne = PersonneDAO::findById('aed58fs');
 //
 ////A supprimer, juste pour le teste
 //echo "<BR>OBJET RECUPERE DE LA BASE DE DONNÉE</br>";
 ////A supprimer
 echo "A supprimer";
-var_dump($personne);
+
+
 //
 //
 //
 ////Si tableau obtenu a l'aide de la recherche n'est pas null, on continue
-if (!empty($personne)){
+if (!empty($personne)) {
 
 //    //On crée un objet qui servira pour le parametre de suppression
     $toDelete = new Personnes();
     //On attribue l'idTerminal avec le tableau de Type Terminal
-$toDelete->setId($personne[0]->getId());
+    $toDelete->setId($personne[0]->getId());
 //
 //    //On supprimer l'objet
     PersonneDAO::delete($toDelete);
@@ -111,7 +156,7 @@ $toDelete->setId($personne[0]->getId());
  */
 
 ////Stockage  resulte de la recherche avec l'ID
-$personne=PersonneDAO::findById('3f9494');
+$personne = PersonneDAO::findById('3f9494');
 //
 //
 ////A supprimer, juste pour le teste
@@ -123,7 +168,7 @@ var_dump($personne);
 //
 //
 ////Si tableau obtenu a l'aide de la recherche n'est pas null, on continue
-if (!empty($personne)){
+if (!empty($personne)) {
 //
 //
 //    //On crée un objet qui servira de parametre pour la mise à jour
@@ -154,31 +199,24 @@ if (!empty($personne)){
 //
 
 
-
-
-
-
-
-
-
-/***
- * --------------------------------------------------------------------------
- *                      HACHAGE DU MOT PASS ET VERIFICATION
- * --------------------------------------------------------------------------
- */
+    /***
+     * --------------------------------------------------------------------------
+     *                      HACHAGE DU MOT PASS ET VERIFICATION
+     * --------------------------------------------------------------------------
+     */
 //on crypte le motDePass pour insérer dans la base de données
-$hashPwd= crypt('jeaneu','$1$MK1!Dw8#k-% ');
+    $hashPwd = crypt('jeaneu', '$1$MK1!Dw8#k-% ');
 
 //RECOMMANDER
-$hashPwd= password_hash('malcom', PASSWORD_BCRYPT );
-echo '<br>'.$hashPwd.'<br>';
+    $hashPwd = password_hash('malcom', PASSWORD_BCRYPT);
+    echo '<br>' . $hashPwd . '<br>';
 
 //On verifie le mot de passe clair avec celui haché dans la base de donnée
-if (password_verify('malcom', $hashPwd)) {
-    echo 'Password is valid!';
-} else {
-    echo 'Invalid password.';
-}
+    if (password_verify('malcom', $hashPwd)) {
+        echo 'Password is valid!';
+    } else {
+        echo 'Invalid password.';
+    }
 
 
 }

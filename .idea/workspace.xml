@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d53d6ec3-0072-4013-a7f7-f1fbd8cf377f" name="Default Changelist" comment="" />
+    <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/vue/footer_home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/functions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/head_home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/homeChangeContent.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/functions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/CartesUsagersDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/CartesUsagersDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/PersonneDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/PersonneDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/Usager/AchatCredit.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/Usager/AjouterCarte.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/Usager/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/Usager/inscription.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,49 +46,33 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="tsconfig.json" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="MyriamProjetKin" />
-      </map>
-    </option>
   </component>
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
-  </component>
-  <component name="PhpWebServerValidation" path_to_validation_script="C:\xampp\htdocs\Projet-Synthese-Hypermedia1" selected_validation_type="LOCAL" web_path_to_validation_script="http://127.0.0.1/" />
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1QiV5RgJS2uiS990M8nxdv4bMnl" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="F:/Dossiers/420-B16-RO TECHNIQUES DE DVELOPPEMENT D'APPLICATIONS/projets de session/Projet-Synthese-Hypermedia1/modele/classes/testUsagerCarte.php" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Projet-Synthese-Hypermedia1\vue\Usager" />
-      <recent name="C:\xampp\htdocs\Projet-Synthese-Hypermedia1\vue" />
-      <recent name="C:\xampp\htdocs\Projet-Synthese-Hypermedia1\modele\classes" />
-      <recent name="C:\xampp\htdocs\Projet-Synthese-Hypermedia1\modele" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\vue" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\vue\Personne" />
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele" />
+      <recent name="G:\Mon Drive\2. Cours\Cours 2019\1 Ete\Hypermedia 1\Projet Synthese\Dossier Partage" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\controleur" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\UwAmp\www\Projet-Synthese-Hypermedia1\assets" />
-      <recent name="C:\xampp\htdocs\Projet-Synthese-Hypermedia1\modele" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\vue" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -87,48 +87,38 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.TestTerminalEntrepriseDao.php">
-    <configuration name="TestDAOTerminalEntreprise.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/terminal/TestDAOTerminalEntreprise.php">
-      <method v="2" />
-    </configuration>
-    <configuration name="TestDAOTerminal.php (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/TestDAOTerminal.php">
+  <component name="RunManager" selected="JavaScript Debug.index.php">
+    <configuration name="InscriptionAction.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/Personne/InscriptionAction.php">
       <method v="2" />
     </configuration>
     <configuration name="TestDaoPersonne.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/Personne/TestDaoPersonne.php">
       <method v="2" />
     </configuration>
-    <configuration name="TestDaoTerminal.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/terminal/TestDaoTerminal.php">
+    <configuration name="head_home.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/head_home.php">
       <method v="2" />
     </configuration>
-    <configuration name="TestTerminalEntrepriseDao.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/terminal/TestTerminalEntrepriseDao.php">
+    <configuration name="index.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/index.php">
+      <method v="2" />
+    </configuration>
+    <configuration name="test.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/test.html">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.TestTerminalEntrepriseDao.php" />
-        <item itemvalue="JavaScript Debug.TestDAOTerminalEntreprise.php" />
+        <item itemvalue="JavaScript Debug.index.php" />
+        <item itemvalue="JavaScript Debug.head_home.php" />
+        <item itemvalue="JavaScript Debug.test.html (1)" />
+        <item itemvalue="JavaScript Debug.InscriptionAction.php" />
         <item itemvalue="JavaScript Debug.TestDaoPersonne.php" />
-        <item itemvalue="JavaScript Debug.TestDaoTerminal.php" />
-        <item itemvalue="JavaScript Debug.TestDAOTerminal.php (1)" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d53d6ec3-0072-4013-a7f7-f1fbd8cf377f" name="Default Changelist" comment="Merge branch 'master' of https://github.com/malcom007/Projet-Synthese-Hypermedia1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;vue/Personne/TestDaoPersonne.php&#10;#&#9;vue/transporteur/TestDaoTransporteur.php" />
+      <changelist id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="" />
       <created>1568253219979</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -136,10 +126,11 @@
       <workItem from="1568253221465" duration="19920000" />
       <workItem from="1568841607093" duration="8497000" />
       <workItem from="1568903299903" duration="568000" />
-      <workItem from="1568904643335" duration="42547000" />
-      <workItem from="1569162963493" duration="45279000" />
-      <workItem from="1569508174483" duration="4877000" />
-      <workItem from="1570311943274" duration="43732000" />
+      <workItem from="1568904643335" duration="41051000" />
+      <workItem from="1570044410627" duration="8989000" />
+      <workItem from="1570157814977" duration="2089000" />
+      <workItem from="1570205578457" duration="60418000" />
+      <workItem from="1570656432779" duration="1001000" />
     </task>
     <task id="LOCAL-00001" summary="Delete some attribut">
       <created>1569012591306</created>
@@ -148,28 +139,7 @@
       <option name="project" value="LOCAL" />
       <updated>1569012591306</updated>
     </task>
-    <task id="LOCAL-00002" summary="Delete some attribut">
-      <created>1569413970772</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1569413970772</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Merge branch 'master' of https://github.com/malcom007/Projet-Synthese-Hypermedia1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;vue/Personne/TestDaoPersonne.php&#10;#&#9;vue/transporteur/TestDaoTransporteur.php&#10;&#10;page dash et transfert et achat">
-      <created>1570554653173</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1570554653173</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Merge branch 'master' of https://github.com/malcom007/Projet-Synthese-Hypermedia1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;vue/Personne/TestDaoPersonne.php&#10;#&#9;vue/transporteur/TestDaoTransporteur.php&#10;&#10;page dash et transfert et achat">
-      <created>1570559132561</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1570559132562</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,48 +157,9 @@
         </entry>
       </map>
     </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Delete some attribut" />
-    <MESSAGE value="Merge branch 'master' of https://github.com/malcom007/Projet-Synthese-Hypermedia1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;vue/Personne/TestDaoPersonne.php&#10;#&#9;vue/transporteur/TestDaoTransporteur.php&#10;&#10;page dash et transfert et achat" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/malcom007/Projet-Synthese-Hypermedia1&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;vue/Personne/TestDaoPersonne.php&#10;#&#9;vue/transporteur/TestDaoTransporteur.php&#10;&#10;page dash et transfert et achat" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand>
-      <path>
-        <item name="Projet-Synthese-Hypermedia1" type="b2602c69:ProjectViewProjectNode" />
-        <item name="Projet-Synthese-Hypermedia1" type="462c0819:PsiDirectoryNode" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <option name="LAST_COMMIT_MESSAGE" value="Delete some attribut" />
   </component>
 </project>
