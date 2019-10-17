@@ -5,9 +5,17 @@ require_once '../../modele/InputValidation.php';
 
 $test= new Admin();
 
-$test->createNewAdmin('Junior','Malcom','4502094445','malcom007','Malcom');
 
-$myTest = AdminDAO::create($test, JSON_FORCE_OBJECT);
+
+//$test->createNewAdmin('Junior','Malcom','4502094445','malcom007','Malcom');
+
+
+//$myTest = AdminDAO::create($test, JSON_FORCE_OBJECT);
+
+$myTest = AdminDAO::creditOfDay();
+
+var_dump($myTest);
+die;
 
 $myTest=AdminDAO::findById();
 

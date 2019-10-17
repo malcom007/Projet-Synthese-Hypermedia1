@@ -2,7 +2,7 @@ SELECT SUM(credit) FROM `termicartes` WHERE `dateTransaction` BETWEEN '2019-09-2
 
 SELECT `credit` FROM `termicartes` WHERE MONTH(dateTransaction)=MONTH(NOW())// POUR MOIS
 
-SELECT `credit` FROM `termicartes` WHERE DAYOFWEEK(dateTransaction)=DAYOFWEEK(NOW())// PAR JOUR
+
 
 SELECT * FROM `termicartes` WHERE DAYOFMONTH(dateTransaction)>=DAYOFMONTH(NOW())-7 //POUR UNE SEMAINE
 
@@ -10,3 +10,10 @@ SELECT * FROM `termicartes` WHERE DAYOFMONTH(dateTransaction)>=DAYOFMONTH(NOW())
 
 SELECT * FROM `termicartes` WHERE YEAR(dateTransaction)=YEAR(NOW()) // POUR L'ANNÉE EN COURS
 SELECT SUM(credit), idTerminal FROM `termicartes` GROUP BY idTerminal// PAR TERMINAL
+
+
+
+
+
+
+SELECT `credit` FROM `termicartes` WHERE DAYOFWEEK(dateTransaction)=DAYOFWEEK(NOW())// PAR JOUR

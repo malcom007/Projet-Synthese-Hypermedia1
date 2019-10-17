@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../modele/IdGenerator.php';
+require_once './modele/IdGenerator.php';
 
 class Cartes
 {
