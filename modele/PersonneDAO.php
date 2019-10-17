@@ -2,8 +2,9 @@
 
 require_once '/../modele/classes/Database.php';
 require_once '/../modele/classes/Personnes.php';
-require_once '../../modele/ContactsEntrsDAO.php';
-require_once '../../modele/UsagersDAO.php';
+require_once '/../modele/ContactsEntrsDAO.php';
+
+require_once '/../modele/UsagersDAO.php';
 
 
 class PersonneDAO{
@@ -14,14 +15,10 @@ class PersonneDAO{
      */
     public static function create(Personnes $personneO){
         $db = Database::getInstance();
-        var_dump($db->errorInfo());
-
 
         $request="INSERT INTO personnes (idPersonne,prenom,nom,numCell,	mail,password,typeCompte) values (:id,:prenom,:nom,:numCell,:mail,:pwd,:typeCompte)";
 
         try{
-
-
 
             //On s'assure que la connexion n'est pas null
             if (is_null($db)){
@@ -46,13 +43,11 @@ class PersonneDAO{
             Database::close();
 
             if ($typeCompte==2){
-                echo 'Hola type '.$typeCompte;
-                var_dump($typeCompte);
+
                 ContactsEntrsDAO::addContact($personneO->getId());
             }
             if ($typeCompte == 3) {
-                echo 'Hola type ' . $typeCompte;
-                var_dump($typeCompte);
+
                 UsagersDAO::create($personneO->getId());
             }
             ?>

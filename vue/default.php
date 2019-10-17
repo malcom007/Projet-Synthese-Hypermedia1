@@ -1,13 +1,16 @@
 <?php
+require_once './modele/PersonneDAO.php';
 include "head_home.php";
 
 ?>
+<?= var_dump(PersonneDAO::findById())?>
 
 <div class="container">
 
     <div class="row mt-3">
         <div class="col ">
             <h2> Lorem <span class="mk_Title_Colored">Ipsum</span></h2>
+
         </div>
     </div>
 
@@ -26,7 +29,7 @@ include "head_home.php";
     <div class="row ">
         <div class="col ">
 
-            <img src="../img/swipngo-01.jpg" alt="img" class="sng_hd">
+            <img src="./img/swipngo-01.jpg" alt="img" class="sng_hd">
             <div class="gradient"></div>
 
             <div class="row slide-text ml-0">

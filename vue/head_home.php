@@ -5,7 +5,7 @@
     <title>Gestionnaire Ticket</title>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <!-- Google Font   -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
@@ -65,6 +65,28 @@
                             <li class="user-register  mr-md-3"> <a href="#" class="text-uppercase btn nav-link"> <i class="fa fa-edit mr-1 "></i> Devenir client  </a></li>
                             <li class="user-login  "> <a href="#" class="text-uppercase btn"><i class="fa fa-user-circle mr-1 "></i> Se connecter  <i class="fa fa-chevron-down"></i></a></li>
                         </ul>
+
+                        <?php
+                        if (!ISSET($_SESSION)) session_start();
+                        if (ISSET($_SESSION["connected"]))
+                        {
+                            ?>
+                            <li class="user-register  mr-md-3"> <a href="?action=afficher" class="text-uppercase btn nav-link"> <i class="fa fa-edit mr-1 "></i> Devenir client  </a></li>
+                            <li class="user-login  "> <a href="?action=deconnecter" class="text-uppercase btn"><i class="fa fa-user-circle mr-1 "></i> Se connecter  <i class="fa fa-chevron-down"></i></a></li>
+
+                            <li><a href="?action=afficher">Liste des produits</a></li>
+                            <li><a href="?action=deconnecter">Se d�connecter (<?=$_SESSION["connected"]?>)</a></li>
+                            <?php
+                        }
+                        else
+                        {
+                            ?>
+                            <li class="user-register  mr-md-3"> <a href="?action=newMember" class="text-uppercase btn nav-link"> <i class="fa fa-edit mr-1 "></i> Devenir client  </a></li>
+                            <li class="user-login  "> <a href="?action=connecter" class="text-uppercase btn"><i class="fa fa-user-circle mr-1 "></i> Se connecter  <i class="fa fa-chevron-down"></i></a></li>
+
+                            <?php
+                        }
+                        ?>
 
 
 
