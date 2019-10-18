@@ -1,9 +1,5 @@
 <?php
 
-require_once '/../modele/classes/Database.php';
-require_once '/../modele/classes/TerminalEntreprise.php';
-require_once 'TransporteurDAO.php';
-
 
 class TerminalEntrepriseDAO extends TerminalDAO {
 

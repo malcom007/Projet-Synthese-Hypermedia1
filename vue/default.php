@@ -1,9 +1,9 @@
 <?php
-require_once './modele/PersonneDAO.php';
+
 include "head_home.php";
 
 ?>
-<?= var_dump(PersonneDAO::findById())?>
+
 
 <div class="container">
 
@@ -77,11 +77,11 @@ include "head_home.php";
     <div class="row mx-n5">
 
         <div class="col-6 ">
-            <img src="../img/Video.jpg" alt="">
+            <img src="./img/Video.jpg" alt="">
         </div>
 
         <div class="col-6">
-            <img src="../img/Video1.jpg" alt="">
+            <img src="./img/Video1.jpg" alt="">
         </div>
     </div>
 </div>

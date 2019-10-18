@@ -1,9 +1,9 @@
 <?php
-// -- Controleur frontal --
 
-require_once('/controleur/ActionBuilder.class.php');
+// -- Inclusion de l'autoloader frontal --
+require_once('/modele/config/Autoloader.php');
 
-require_once '/modele/PersonneDAO.php';
+
 
 if (ISSET($_REQUEST["action"]))
 	{

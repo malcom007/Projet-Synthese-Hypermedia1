@@ -1,5 +1,5 @@
 <?php
-require_once './modele/classes/Personnes.php';
+//require_once './modele/classes/Personnes.php';
 
 class ContactsEntrs extends  Personnes
 {

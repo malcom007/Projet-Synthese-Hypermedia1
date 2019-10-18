@@ -1,8 +1,5 @@
 <?php
-require_once '/../modele/classes/Database.php';
-require_once '/../modele/classes/Usagers.php';
-require_once '/../modele/classes/CarteUsagers.php';
-require_once 'PersonneDAO.php';
+
 class UsagersDAO extends PersonneDAO
 {
     /**

@@ -1,6 +1,6 @@
 <?php
 require_once '../../modele/IdGenerator.php';
-require_once '../../modele/classes/Terminal.php';
+
 
 
 class TerminalEntreprise extends Terminal {
