@@ -1,7 +1,5 @@
 <?php
-require_once '/../modele/classes/Database.php';
-require_once '/../modele/classes/Transporteur.php';
-require_once '/../modele/classes/Adresse.php';
+
 
 class TransporteurDAO
 {

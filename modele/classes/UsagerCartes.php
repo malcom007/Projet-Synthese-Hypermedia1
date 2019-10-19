@@ -1,7 +1,5 @@
 <?php
 
-require_once 'Cartes.php';
-require_once 'Usagers.php';
 
 class UsagerCartes
 {

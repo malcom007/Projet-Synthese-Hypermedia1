@@ -1,6 +1,5 @@
 <?php
 
-require_once '/../modele/classes/Database.php';
 class AdressDao
 {
     public static function addAdress(Adresse $adresso){

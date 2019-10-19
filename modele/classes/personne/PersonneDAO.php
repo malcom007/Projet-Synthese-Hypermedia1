@@ -1,11 +1,5 @@
 <?php
 
-require_once '/../modele/classes/Database.php';
-require_once '/../modele/classes/Personnes.php';
-require_once '/../modele/ContactsEntrsDAO.php';
-
-require_once '/../modele/UsagersDAO.php';
-
 
 class PersonneDAO{
 

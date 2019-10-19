@@ -1,7 +1,5 @@
 <?php
 
-require_once 'Personnes.php';
-
 class Usagers extends Personnes
 {
     private $_listeCarte = array();

@@ -6,8 +6,6 @@ class Terminal
     private $_IdTerminal,$_Libelle,$_MacAdresse,$_Prix, $_DateAjout;
 
 
-
-
     public function __construct()
     {
     }

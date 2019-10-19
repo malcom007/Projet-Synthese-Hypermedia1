@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-    <script src="functions.js"></script>
+    <script src="./js/functionsHead.js"></script>
     <script>
         loader();
     </script>
@@ -58,40 +58,8 @@
                         </div>
 
                     </div>
-
-                    <div class="col-sm-8 col-lg-6">
-
-                        <ul class="list-inline user-menu pull-right ">
-                            <li class="user-register  mr-md-3"> <a href="#" class="text-uppercase btn nav-link"> <i class="fa fa-edit mr-1 "></i> Devenir client  </a></li>
-                            <li class="user-login  "> <a href="#" class="text-uppercase btn"><i class="fa fa-user-circle mr-1 "></i> Se connecter  <i class="fa fa-chevron-down"></i></a></li>
-                        </ul>
-
-                        <?php
-                        if (!ISSET($_SESSION)) session_start();
-                        if (ISSET($_SESSION["connected"]))
-                        {
-                            ?>
-                            <li class="user-register  mr-md-3"> <a href="?action=afficher" class="text-uppercase btn nav-link"> <i class="fa fa-edit mr-1 "></i> Devenir client  </a></li>
-                            <li class="user-login  "> <a href="?action=deconnecter" class="text-uppercase btn"><i class="fa fa-user-circle mr-1 "></i> Se connecter  <i class="fa fa-chevron-down"></i></a></li>
-
-                            <li><a href="?action=afficher">Liste des produits</a></li>
-                            <li><a href="?action=deconnecter">Se d�connecter (<?=$_SESSION["connected"]?>)</a></li>
-                            <?php
-                        }
-                        else
-                        {
-                            ?>
-                            <li class="user-register  mr-md-3"> <a href="?action=newMember" class="text-uppercase btn nav-link"> <i class="fa fa-edit mr-1 "></i> Devenir client  </a></li>
-                            <li class="user-login  "> <a href="?action=connecter" class="text-uppercase btn"><i class="fa fa-user-circle mr-1 "></i> Se connecter  <i class="fa fa-chevron-down"></i></a></li>
-
-                            <?php
-                        }
-                        ?>
-
-
-
-
-                    </div>
+                    <!--Inclusion du Menu dynamique-->
+                    <?php require_once ('menuLogin.php');?>
 
                 </div>
 
@@ -109,7 +77,7 @@
                     <div class="mobileNav " id="myLinks">
                         <a class="btn active" href="#home">Home</a>
                         <a href="#news" class="btn">News</a>
-                        <a href="#contact" class="btn">Contact</a>
+                        <a href="?action=contact" class="btn">Contact</a>
                         <a href="#about" class="btn">About</a>
                     </div>
 
@@ -122,7 +90,7 @@
                     <div class="topnav" id="menu" >
                         <a class="btn active" href="#home">Home</a>
                         <a href="#news" class="btn">News</a>
-                        <a href="#contact" class="btn">Contact</a>
+                        <a href="?action=contact" class="btn">Contact</a>
                         <a href="#about" class="btn">About</a>
                     </div>
                 </div>
