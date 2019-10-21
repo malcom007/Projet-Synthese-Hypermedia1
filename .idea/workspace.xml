@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controleur/ContactAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/homeChangeContent.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modele/config/Autoloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style/styleforLogin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/functionsHead.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/menuLogin.php" afterDir="false" />
+    <list default="true" id="d53d6ec3-0072-4013-a7f7-f1fbd8cf377f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controleur/AfficherUsagerAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/AjoutTerminalAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/HistoriqueAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/ListeterminalAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/SupportTechniqueAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Projet-Synthese-Hypermedia1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projet-Synthese-Hypermedia1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vagrant.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controleur/ActionBuilder.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/ActionBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controleur/DefaultAction.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/DefaultAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/AdminDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/admin/AdminDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/AdressDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/adresse/AdressDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/CartesDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/carte/CartesDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/ContactsEntrsDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/ContactsEntrsDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/PersonneDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/personne/PersonneDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/TerminalDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/terminal/TerminalDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/TerminalEntrepriseDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/TerminalEntrepriseDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/TransporteurDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/TransporteurDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/UsagersDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/usager/UsagersDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/admin/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Adresse.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/adresse/Adresse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Cartes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/carte/Cartes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/ContactsEntrs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/ContactsEntrs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Personnes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/personne/Personnes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Terminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/terminal/Terminal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/TerminalEntreprise.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/TerminalEntreprise.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Transporteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/Transporteur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/UsagerCartes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/UsagerCartes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Usagers.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/usager/Usagers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/functionsHead.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/head_home.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/head_home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Acceuil_dashboard.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Transfer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/achat.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/SwipDash.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/SwipDash.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dddddd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/SwipDash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/SwipDash.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/core/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/core/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/core/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/plugins/bootstrap-notify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/plugins/chartjs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/plugins/perfect-scrollbar.jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/ActionBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/ActionBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dash.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/transporteur/requete" beforeDir="false" afterPath="$PROJECT_DIR$/vue/transporteur/requete" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,28 +73,29 @@
   </component>
   <component name="ProjectId" id="1QiV5RgJS2uiS990M8nxdv4bMnl" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../9-mvc_templating1" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele\classes" />
-      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele\adresse" />
-      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele\classes\transporteur" />
-      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele\classes\carte" />
-      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele\classes\admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\js" />
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\vue" />
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\vue\Personne" />
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele" />
       <recent name="G:\Mon Drive\2. Cours\Cours 2019\1 Ete\Hypermedia 1\Projet Synthese\Dossier Partage" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele\classes" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele\adresse" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele\classes\transporteur" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele\classes\carte" />
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele\classes\admin" />
     </key>
   </component>
   <component name="RunDashboard">

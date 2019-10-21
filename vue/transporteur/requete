@@ -12,8 +12,8 @@ SELECT * FROM `termicartes` WHERE YEAR(dateTransaction)=YEAR(NOW()) // POUR L'AN
 SELECT SUM(credit), idTerminal FROM `termicartes` GROUP BY idTerminal// PAR TERMINAL
 
 
-
-
+SELECT MONTH(dateTransaction) ,sum(credit) FROM `termicartes` inner JOIN cartesusagers ON termicartes.idCarte = cartesusagers.idCarte WHERE cartesusagers.idUsager='5cdc7f' GROUP BY MONTH(dateTransaction)
+//POUR CHAQUE MOIS
 
 
 SELECT `credit` FROM `termicartes` WHERE DAYOFWEEK(dateTransaction)=DAYOFWEEK(NOW())// PAR JOUR

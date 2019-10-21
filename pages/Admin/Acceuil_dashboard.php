@@ -47,16 +47,27 @@
                 <li>
                     <a class="nav-link" href="#" data-target="achat">
                         <i class="fas fa-money-bill-alt"></i>
-                        <p>Acheter Credit</p>
+                        <p>Ajouter Terminal</p>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#" data-target="Transfer">
+                    <a class="nav-link" href="#" data-target="ListTerminal">
                         <i class="fas fa-exchange-alt"></i>
-                        <p>Transferer Credit</p>
+                        <p>Liste des Entreprise </p>
                     </a>
                 </li>
-
+                <li >
+                    <a class="nav-link" href="#" data-target="Historque">
+                        <i class="fas fa-history"></i>
+                        <p>Historique</p>
+                    </a>
+                </li>
+                <li >
+                    <a class="nav-link" href="#" data-target="support">
+                        <i class="fas fa-envelope-open-text"></i>
+                        <p>Message</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
@@ -108,9 +119,8 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="dropdown nav-item ">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-                               aria-haspopup="true" aria-expanded="false">
+                        <li class="dropdown nav-item  ">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="true">
                                 <i class="fas fa-user-circle"></i>
                                 <p>
                                     <span class="d-lg-none d-md-block">Some Actions</span>
@@ -121,7 +131,7 @@
                                 <a class="dropdown-item" href="#" >message</a>
                                 <a  class="dropdown-item" href="#" >Drafts</a>
                                 <a  class="dropdown-item" href="#" >Sent Items</a>
-                                <div class="dropdown-divider" href="#" ></div>
+
                                 <a  class="dropdown-item" href="#" >deconnexion</a>
                             </div>
                         </li>
@@ -203,8 +213,8 @@
                         </div>
                         <div class="card-body">
                             <div class="progress">
-                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" role="progressbar"
-                                     class="progress-bar bg-primary" style="width: 6%;">
+                                <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="15" role="progressbar"
+                                     class="progress-bar bg-primary" style="width: 10%;">
                                 </div>
                             </div>
                             <p class="card-text">Better than last week (6%)</p>
@@ -296,6 +306,13 @@
 
                 });
 
+            });
+
+        </script>
+        <script>
+            $('.date-own').datepicker({
+                minViewMode: 2,
+                format: 'yyyy'
             });
 
         </script>

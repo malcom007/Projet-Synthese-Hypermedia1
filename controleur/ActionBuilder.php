@@ -13,6 +13,9 @@ class ActionBuilder{
 			case "deconnecter" :
 				return new LogoutAction();
 				break;
+			//pase d'accueil
+			case "afficher":
+				return new afficher();
 
 			//Page Contact form
 			case"contact":
