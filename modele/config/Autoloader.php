@@ -1,8 +1,17 @@
 <?php
 // -- Contrôleur frontal --
 spl_autoload_register(function ($class_name) {
+    if (file_exists('./controleur/personne/'.$class_name . '.php')) {
+        require_once './controleur/personne/'.$class_name . '.php';
+        return true;
+    }
+    return false;
+});
+
+// -- Contrôleur frontal --
+spl_autoload_register(function ($class_name) {
     if (file_exists('./controleur/'.$class_name . '.php')) {
-        require_once '/controleur/'.$class_name . '.php';
+        require_once './controleur/'.$class_name . '.php';
         return true;
     }
     return false;

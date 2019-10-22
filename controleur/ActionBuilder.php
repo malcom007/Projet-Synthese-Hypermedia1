@@ -17,8 +17,13 @@ class ActionBuilder{
 			//Page Contact form
 			case"contact":
 				return new ContactAction();
+				break;
 
-				break; 
+			//Page Contact form
+			case"sendMessage":
+				return new DefaultAction();
+				break;
+
 			default :
 				return new DefaultAction();
 		}

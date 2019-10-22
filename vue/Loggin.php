@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact</title>
+    <title>Login Page</title>
     <!--Made with love by Mutiullah Samim -->
     <!-- Google Font   -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -21,83 +21,59 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <!--Custom styles-->
-    <link rel="stylesheet" type="text/css" href="./style/styleforLogin.css">
+    <link rel="stylesheet" type="text/css" href="../style/styleforLogin.css">
 </head>
 <body>
-<?php
-$phone = (ISSET($_REQUEST['fphone'])) ? $_REQUEST['fphone']: "";
-$mail= (ISSET($_REQUEST['fmail'])) ? $_REQUEST['fmail'] : "";
-$nom = (ISSET($_REQUEST['fname'])) ? $_REQUEST['fname'] : "";
-?>
-
 <div class="container">
     <div class="d-flex justify-content-center h-100">
 
 
 
         <div class="card">
-
-
-
-
             <div class="card-header">
-                <h3>Contact</h3>
-
+                <h3>Sign In</h3>
+                <div class="d-flex justify-content-end social_icon">
+                    <span><i class="fab fa-facebook-square"></i></span>
+                    <span><i class="fab fa-google-plus-square"></i></span>
+                    <span><i class="fab fa-twitter-square"></i></span>
+                </div>
             </div>
-
             <div class="card-body">
-                <form name="myForm" onsubmit="return validateForm()" method="post" action="">
+                <form name="myForm" onsubmit="return validateForm()" method="post" action="Acceuil_dashboard.html">
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" value="<?= $nom?>" class="form-control" placeholder="Votre nom au complet" id="username" name="fname" pattern="[A-Za-z]{3,}" oninvalid="this.setCustomValidity('Entrez votre nom seulement')" required>
+                        <input type="text" class="form-control" placeholder="username" id="username" name="fname">
 
                     </div>
-
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input class="form-control" value="<?= $phone ?>" placeholder="Votre numero de téléphone" name="fphone" type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required oninvalid="this.setCustomValidity('Entrez un numéro valide. Format: 123-454-678')">
+                        <input type="password" class="form-control" placeholder="password" name="fpwd">
                     </div>
-
-                    <div class="input-group form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fas fa-at"></i></span>
-                        </div>
-                        <input type="email" value="<?= $mail?>" class="form-control" placeholder="votre adresse email" name="fmail">
-                    </div>
-
-                    <div class="input-group form-group">
-                        <textarea class="form-control"  rows="5" id="comment" placeholder="votre message ici" required></textarea>
-                    </div>
-
-
 
                     <div id="message">
 
                     </div>
 
-
-                    <div class="form-group ">
-                        <input name="action" value="sendMessage" type="hidden" />
-                        <input type="submit" value="Login" class="btn float-right login_btn " onclick="check()" ">
-
+                    <div class="row align-items-center remember">
+                        <input type="checkbox">Remember Me
                     </div>
-
                     <div class="form-group">
-                        <a href="?action=default" class="text-white rtn">
-                            <i class="fas fa-long-arrow-alt-left"></i>
-                            <span class="rtn">retour</span>
-                        </a>
-
+                        <input type="submit" value="Login" class="btn float-right login_btn" onclick="check()" ">
                     </div>
-
-
                 </form>
             </div>
-
+            <div class="card-footer">
+                <div class="d-flex justify-content-center links">
+                    Don't have an account?<a href="#">Sign Up</a>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <a href="#">Forgot your password?</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

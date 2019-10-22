@@ -3,12 +3,16 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-    background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+    background:url("../img/background.png") no-repeat fixed ;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     font-family: 'Numans', sans-serif;
 }
+
+
+
+
 
 .container{
     height: 100%;
@@ -16,11 +20,11 @@ html,body{
 }
 
 .card{
-    height: 370px;
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(0,0,0,0.5) !important;
+    background-color: rgba(255, 255, 255, 0.17) !important;
+    box-shadow: 3px 2px 18px 2px #3c3838;
 }
 
 .social_icon span{
@@ -78,13 +82,34 @@ input:focus{
 
 .login_btn{
     color: black;
-    background-color: #ff5821;
+    background-color: #ff5821;;
     width: 100px;
+}
+
+.cancel_btn{
+    color: black;
+    background-color: #f1f1f1;
+    width: 100px;
+}
+
+.cancel_btn:hover{
+    background-color: #ffffffab;;
+}
+
+span.rtn {
+    position: relative;
+    top: -3px;
+    padding-left: 4px;
+}
+
+a.text-white.rtn:hover {
+    color: #d6d2d2 !important;
+    text-decoration: none;
 }
 
 .login_btn:hover{
     color: black;
-    background-color: white;
+    background-color: #ff5821ab;
 }
 
 .links{

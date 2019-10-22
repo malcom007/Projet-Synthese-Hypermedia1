@@ -1,9 +1,6 @@
 <?php
 
 
-require_once '/../modele/classes/CarteUsagers.php';
-require_once '/../modele/classes/Database.php';
-
 class CartesUsagersDAO extends CartesDAO
 {
 

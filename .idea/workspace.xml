@@ -2,39 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controleur/ContactAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/homeChangeContent.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/modele/config/Autoloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style/styleforLogin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/functionsHead.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/menuLogin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/LoginAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controleur/SendMessageAction.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue/Loggin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controleur/ActionBuilder.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/ActionBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controleur/DefaultAction.class.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/DefaultAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/AdminDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/admin/AdminDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/AdressDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/adresse/AdressDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/CartesDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/carte/CartesDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/ContactsEntrsDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/ContactsEntrsDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/PersonneDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/personne/PersonneDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/TerminalDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/terminal/TerminalDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/TerminalEntrepriseDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/TerminalEntrepriseDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/TransporteurDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/TransporteurDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/UsagersDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/usager/UsagersDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/admin/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Adresse.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/adresse/Adresse.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Cartes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/carte/Cartes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/ContactsEntrs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/ContactsEntrs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Personnes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/personne/Personnes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Terminal.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/terminal/Terminal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/TerminalEntreprise.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/TerminalEntreprise.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Transporteur.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/Transporteur.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/UsagerCartes.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/UsagerCartes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/Usagers.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/usager/Usagers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/default.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/functions.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/functionsHead.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/head_home.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/head_home.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/ActionBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/ActionBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/ContactAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/personne/ContactAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/CartesUsagersDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/CartesUsagersDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/ContactsEntrsDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/ContactsEntrsDAO.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/classes/CarteUsagers.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/usager/CarteUsagers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/classes/ContactsEntrs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/ContactsEntrs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modele/config/Autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/config/Autoloader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/styleforLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/styleforLogin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/contact.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +57,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/modele" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="web.server" />
@@ -90,10 +71,10 @@
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele\classes\admin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele" />
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\js" />
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\vue" />
       <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\vue\Personne" />
-      <recent name="C:\UwAmp\UwAmp\www\coursPHP\ProjetSynthese\Projet-Synthese-Hypermedia1\modele" />
       <recent name="G:\Mon Drive\2. Cours\Cours 2019\1 Ete\Hypermedia 1\Projet Synthese\Dossier Partage" />
     </key>
   </component>
@@ -109,11 +90,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.testMail.php">
+  <component name="RunManager" selected="JavaScript Debug.TestDaoPersonne.php">
     <configuration name="TestAdminDAO.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/Personne/TestAdminDAO.php">
       <method v="2" />
     </configuration>
-    <configuration name="head_home.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/vue/head_home.php">
+    <configuration name="TestDaoPersonne.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/modele/TestDaoPersonne.php">
       <method v="2" />
     </configuration>
     <configuration name="index.php (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9595/coursPHP/ProjetSynthese/Projet-Synthese-Hypermedia1/index.php">
@@ -127,11 +108,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.TestDaoPersonne.php" />
         <item itemvalue="JavaScript Debug.testMail.php" />
         <item itemvalue="JavaScript Debug.index.php (1)" />
         <item itemvalue="JavaScript Debug.TestAdminDAO.php" />
         <item itemvalue="JavaScript Debug.index.php" />
-        <item itemvalue="JavaScript Debug.head_home.php" />
       </list>
     </recent_temporary>
   </component>
@@ -153,7 +134,7 @@
       <workItem from="1570157814977" duration="2089000" />
       <workItem from="1570205578457" duration="60418000" />
       <workItem from="1570656432779" duration="1595000" />
-      <workItem from="1571163310586" duration="33216000" />
+      <workItem from="1571163310586" duration="39446000" />
     </task>
     <task id="LOCAL-00001" summary="Delete some attribut">
       <created>1569012591306</created>
@@ -169,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571324696108</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Creating autoloader">
+      <created>1571436003674</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571436003674</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +178,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Delete some attribut" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete some attribut" />
+    <MESSAGE value="Creating autoloader" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating autoloader" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/modele/classes/terminal/TerminalDAO.php</url>
+          <line>9</line>
+          <properties>
+            <option name="className" value="\TerminalDAO" />
+            <option name="methodName" value="create" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
