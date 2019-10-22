@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="topnav" id="menu">
+    <a class="btn active" href="#home">Home</a>
+    <a href="#news" class="btn">News</a>
+    <a href="#contact" class="btn">Contact</a>
+    <a href="#about" class="btn">About</a>
+</div>
+
+
+
+<script>
+    // Add active class to the current button (highlight it)
+
+    //On recuper le parent de notre div
+    var header = document.getElementById("menu");
+    //On recupere une liste d'element ayant la btn se trouvant ds le parent header
+    var btns = header.getElementsByClassName("btn");
+
+    //on ajouter un écouteur de type click sur chaque btn en utilisant la boucle for et ainsi que son indice
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            //on recupere l'element ayant ayant la classe Active
+            var current = document.getElementsByClassName("active");
+            // on remplace cette classe en enlevant active
+            current[0].className = current[0].className.replace("active", " ");
+            //et l'objet courrant sur lequel on a cliqué, on ajoute active
+            this.className += " active";
+        });
+    }
+</script>
+
+</body>
+
+
+</html>

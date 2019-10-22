@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="content">
+    <div class="row">
+
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Message des Entreprise</h4>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                        <th>
+                            Numero de l'entreprise
+                        </th>
+
+
+                        <th class="text-right">
+                            Sujet
+                        </th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td >
+
+                                <a href="#C4">123456788</a>
+                            </td>
+
+
+                            <td class="text-right">
+                                5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#C4">123456788</a>
+                            </td>
+
+
+                            <td class="text-right" >
+                                5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <a href="#C4">123456788</a>
+                            </td>
+
+
+                            <td class="text-right">
+                                6
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Message des Usagés</h4>
+            </div>
+            <div class="card-body">
+                <div id="menu" class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                        <th>
+                            Numero de l'Usagé
+                        </th>
+
+
+                        <th class="text-right">
+                            Sujet
+                        </th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td >
+                                <a href="#C4" data-target="ListTerminal">123456788</a>
+                            </td>
+
+
+                            <td class="text-right">
+                                5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <a href="#C4">123456788</a>
+                            </td>
+
+
+                            <td class="text-right" >
+                                5
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <a href="#C4">123456788</a>
+                            </td>
+
+
+                            <td class="text-right">
+                                6
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        var trigger = $('#menu ul li a'),
+            container = $('#content');
+
+        trigger.on('click', function () {
+            var $this = $(this),
+                target = $this.data('target');
+            console.log(target);
+
+            $(trigger).removeClass('active');
+            $(this).addClass('active');
+
+            container.load(target + '.html');
+            return false;
+
+
+        });
+
+    });
+
+</script>
+</body>
+</html>
