@@ -21,7 +21,7 @@ class ActionBuilder{
 
 			//Page Contact form
 			case"sendMessage":
-				return new DefaultAction();
+				return new SendMessageAction();
 				break;
 
 			default :

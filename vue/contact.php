@@ -59,7 +59,7 @@ $nom = (ISSET($_REQUEST['fname'])) ? $_REQUEST['fname'] : "";
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>
                         </div>
-                        <input class="form-control" value="<?= $phone ?>" placeholder="Votre numero de téléphone" name="fphone" type="tel"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required oninvalid="this.setCustomValidity('Entrez un numéro valide. Format: 123-454-678')">
+                        <input class="form-control" value="<?= $phone ?>" placeholder="Votre numero de téléphone" name="fphone" type="tel"  pattern="[0-9]{10}" title="Entrez un numéro valide. Format: 123-454-678." required >
                     </div>
 
                     <div class="input-group form-group">
@@ -70,7 +70,7 @@ $nom = (ISSET($_REQUEST['fname'])) ? $_REQUEST['fname'] : "";
                     </div>
 
                     <div class="input-group form-group">
-                        <textarea class="form-control"  rows="5" id="comment" placeholder="votre message ici" required></textarea>
+                        <textarea name="fmsg" class="form-control"  rows="5" id="comment" placeholder="votre message ici" ></textarea>
                     </div>
 
 

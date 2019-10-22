@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="152caa51-32ef-41a4-a219-18433923dc41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controleur/LoginAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controleur/SendMessageAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue/Loggin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controleur/ActionBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/ActionBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controleur/ContactAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/personne/ContactAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/CartesUsagersDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/CartesUsagersDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/ContactsEntrsDAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/ContactsEntrsDAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/CarteUsagers.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/usager/CarteUsagers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modele/classes/ContactsEntrs.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/classes/transporteur/ContactsEntrs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controleur/SendMessageAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/controleur/SendMessageAction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/modele/config/Autoloader.php" beforeDir="false" afterPath="$PROJECT_DIR$/modele/config/Autoloader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/styleforLogin.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/styleforLogin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/Personne/TestDaoPersonne.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vue/contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue/default.php" beforeDir="false" afterPath="$PROJECT_DIR$/vue/default.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +126,7 @@
       <workItem from="1570157814977" duration="2089000" />
       <workItem from="1570205578457" duration="60418000" />
       <workItem from="1570656432779" duration="1595000" />
-      <workItem from="1571163310586" duration="39446000" />
+      <workItem from="1571163310586" duration="39449000" />
     </task>
     <task id="LOCAL-00001" summary="Delete some attribut">
       <created>1569012591306</created>

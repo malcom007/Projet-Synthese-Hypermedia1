@@ -2,7 +2,9 @@
 
 include "head_home.php";
 
+
 ?>
+
 
 
 <div class="container">
