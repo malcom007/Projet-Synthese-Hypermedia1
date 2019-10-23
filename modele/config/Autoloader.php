@@ -34,6 +34,8 @@ spl_autoload_register(function ($class_name) {
     return false;
 });
 
+
+
 // -- Classes/Personne frontal --
 spl_autoload_register(function ($class_name) {
     if (file_exists('./modele/classes/personne/'.$class_name . '.php')) {
@@ -42,6 +44,43 @@ spl_autoload_register(function ($class_name) {
     }
     return false;
 });
+spl_autoload_register(function ($class_name) {
+    if (file_exists('./modele/classes/transporteur/'.$class_name . '.php')) {
+        require_once './modele/classes/transporteur/'.$class_name . '.php';
+        return true;
+    }
+    return false;
+});
+spl_autoload_register(function ($class_name) {
+    if (file_exists('./modele/classes/terminal/'.$class_name . '.php')) {
+        require_once './modele/classes/terminal/'.$class_name . '.php';
+        return true;
+    }
+    return false;
+});
+spl_autoload_register(function ($class_name) {
+    if (file_exists('./modele/classes/terminal/'.$class_name . '.php')) {
+        require_once './modele/classes/terminal/'.$class_name . '.php';
+        return true;
+    }
+    return false;
+});
+spl_autoload_register(function ($class_name) {
+    if (file_exists('./controleur/transporteur/'.$class_name . '.php')) {
+        require_once './controleur/transporteur/'.$class_name . '.php';
+        return true;
+    }
+    return false;
+});
+
+spl_autoload_register(function ($class_name) {
+    if (file_exists('./vue/transporteur/'.$class_name . '.php')) {
+        require_once './vue/transporteur/'.$class_name . '.php';
+        return true;
+    }
+    return false;
+});
+
 
 // -- Classes/usager frontal --
 spl_autoload_register(function ($class_name) {
