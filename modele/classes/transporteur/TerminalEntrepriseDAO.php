@@ -1,6 +1,7 @@
 <?php
 
-
+//require_once ('../../modele/classes/terminal/TerminalDAO.php');
+//require_once ('../../modele/classes/Database.php');
 class TerminalEntrepriseDAO extends TerminalDAO {
 
 
@@ -133,7 +134,7 @@ class TerminalEntrepriseDAO extends TerminalDAO {
 
     public static function findAllByIdEntreprise($idEntreprise=Null)
     {
-        var_dump($idEntreprise);
+
 
 
         //Si On ne saisit pas l'id, on retourne toute la liste
@@ -142,6 +143,72 @@ class TerminalEntrepriseDAO extends TerminalDAO {
         }
         else
             $request="SELECT * FROM terminals JOIN entrepriseterminal WHERE entrepriseterminal.idTerminal = terminals.idTerminal AND entrepriseterminal.idEntreprise= :y";
+
+        $termTab= Array();
+
+        $db = Database::getInstance();
+
+
+        try{
+
+            //On s'assure que la connexion n'est pas null
+            if (is_null($db)){
+                throw new PDOException("Impossible d'effectuer une requette de recherche verifier la connexion");
+            }
+            //Preparation de la requette SQL pour l'execution(Tableau)
+            $pstmt = $db->prepare($request);
+
+
+            $pstmt->bindValue(':y',$idEntreprise);
+
+
+            $pstmt->execute();
+
+
+            //Parcours de notre pstm tant qu'il y des données
+            while ($result = $pstmt->fetch(PDO::FETCH_OBJ)){
+
+
+
+                //Creation d'un terminal
+                $terminal = new TerminalEntreprise();
+
+                //Transfere des information d'objet vers un tableau
+                $terminal->loadFromObjet($result);
+
+                //On insere chaque objet a la fin du tableau $termTab
+                array_push($termTab,$terminal);
+            }
+
+            $pstmt->closeCursor();
+            $pstmt= NULL;
+
+
+        }
+        catch (PDOException $ex){
+            ?>
+            <!-- Affichage du message d'erreur au console terminal-->
+            <script>console.log("Error createDAO:  <?= $ex->getMessage()?>")</script>
+            <?php
+        }
+
+        return $termTab;
+
+
+
+
+    }
+    public static function finddateByIdEntreprise($idEntreprise=Null)
+    {
+        var_dump($idEntreprise);
+
+
+        //Si On ne saisit pas l'id, on retourne toute la liste
+        if (is_null($idEntreprise)){
+            throw new Exception("Veuillez saisir un id valide ");
+        }
+        else
+            $request="SELECT statut FROM terminals JOIN entrepriseterminal WHERE entrepriseterminal.idTerminal = terminals.idTerminal AND entrepriseterminal.idEntreprise= :y";
 
         $termTab= Array();
 

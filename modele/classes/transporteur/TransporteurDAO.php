@@ -1,6 +1,7 @@
 <?php
 
-
+require_once ('../../modele/classes/Database.php');
+require_once ('../../modele/classes/adresse/Adresse.php');
 class TransporteurDAO
 {
     public static function create(Adresse $adresso, Transporteur $transport)
@@ -113,6 +114,49 @@ class TransporteurDAO
             <?php
         }
         return $transp;
+    }
+    public static function findAdresse($id)
+    {
+        $request = "SELECT * FROM adresses JOIN transporteurs WHERE transporteurs.idAdresse = adresses.idAdresse AND transporteurs.idTransporteur=:x";
+
+
+        $Adresse = Array();
+
+        $db = Database::getInstance();
+        try {
+
+            //On s'assure que la connexion n'est pas null
+            if (is_null($db)) {
+                throw new PDOException("Impossible d'effectuer une requette de recherche verifier la connexion");
+            }
+            //Preparation de la requette SQL pour l'execution(Tableau)
+            $pstmt = $db->prepare($request);
+
+            $pstmt->execute(array(':x' => $id));
+
+            //Parcours de notre pstm tant qu'il y des données
+            while ($result = $pstmt->fetch(PDO::FETCH_OBJ)) {
+                //Creation d'un terminal
+                $adres= new Adresse();
+
+                //Transfere des information d'objet vers un tableau
+                $adres->loadFromObjet($result);
+
+                //On insere chaque objet a la fin du tableau $termTab
+                array_push($Adresse, $adres);
+            }
+
+            $pstmt->closeCursor();
+            $pstmt = NULL;
+
+
+        } catch (PDOException $ex) {
+            ?>
+            <!-- Affichage du message d'erreur au console terminal-->
+            <script>console.log("Error createDAO:  <?= $ex->getMessage()?>")</script>
+            <?php
+        }
+        return $adres;
     }
 
     public static function delete($transporteuObjet)

@@ -1,30 +1,29 @@
 <?php
-require_once '../../modele/TransporteurDAO.php';
-require_once '../../modele/classes/Adresse.php';
-/*
+require_once ('../../modele/classes/transporteur/TransporteurDAO.php');
+require_once ('../../modele/classes/transporteur/Transporteur.php');
+require_once ('../../modele/classes/adresse/Adresse.php');
+
 //$Dao = new TransporteurDao();
 //$test= TransporteurDao::findAll();
 
 //echo $tes->getIdTransporteur();
 
-$test= TransporteurDao::find("");
-var_dump($test);
-
+$test= TransporteurDao::findAdresse("h545gf");
+//var_dump($test);
 if (empty($test)){
+
     echo "Aucune données";
 }else{
    foreach ($test as $item){
-       echo $item->getIdtransporteur()."<br>";
-       echo $item->getRaisonSocial()."<br>";
-       echo $item->getTelephone()."<br>";
+       echo $item->getRue()."<br>";
 
     }
 }
-*/
+
 /*
 $adress = new Adresse();
 $adress->createAdresse("rdc" ,"mayala","Herady","selembao","kinshasa","kin-243");
-$Trans = new Transporteur();
+$Trans = new transporteur();
 $Trans->addTransporteur("social","","5142081205");
 var_dump($adress);
 var_dump($Trans);
@@ -39,7 +38,7 @@ var_dump($Trans);
  *                                              DELETE
  * --------------------------------------------------------------------------------------------------------------
  */
-
+/*
 //Stockage  resulte de la recherche avec l'ID
 
 $transpo=TransporteurDAO::find('bea42e');
@@ -63,6 +62,6 @@ if (!empty($transpo)){
     //On supprimer l'objet
     TransporteurDAO::delete($toDelete);
 
+*/
 
 
-}

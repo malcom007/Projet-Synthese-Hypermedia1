@@ -1,7 +1,7 @@
 <?php
 
 // -- Inclusion de l'autoloader frontal --
-require_once('/modele/config/Autoloader.php');
+require_once('./modele/config/Autoloader.php');
 
 
 
