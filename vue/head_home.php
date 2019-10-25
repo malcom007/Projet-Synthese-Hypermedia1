@@ -88,8 +88,8 @@
                 <!-- Default Menu-->
                 <div class="row pl-3">
                     <div class="topnav" id="menu" >
-                        <a class="btn active" href="#home">Home</a>
-                        <a href="#news" class="btn">News</a>
+                        <a class="btn active" href="">Home</a>
+                        <a href="?action=terminalLogin" class="btn">News</a>
                         <a href="?action=contact" class="btn">Contact</a>
                         <a href="#about" class="btn">About</a>
                     </div>

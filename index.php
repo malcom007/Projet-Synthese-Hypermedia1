@@ -5,7 +5,9 @@ require_once('/modele/config/Autoloader.php');
 
 
 
-if (ISSET($_REQUEST["action"]))
+try{
+
+	if (ISSET($_REQUEST["action"]))
 	{
 		//$vue = ActionBuilder::getAction($_REQUEST["action"])->execute();
 		/*
@@ -15,13 +17,20 @@ if (ISSET($_REQUEST["action"]))
 		$vue = $controleur->execute();
 		/**/
 	}
-else	
+	else
 	{
 		//On crée une variable q
 		$action = ActionBuilder::getAction("");
 
 		$vue = $action->execute();
 	}
+
+}
+catch (Exception $ex){
+	echo " <script> console.log('Eeure Mlaocom'".$ex.")   </script>  ";
+}
+
+
 // On affiche la page (vue)
 include_once('vue/'.$vue.'.php');
 ?>

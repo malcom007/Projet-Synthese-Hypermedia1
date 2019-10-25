@@ -36,7 +36,7 @@ function activeMenu() {
 }
 
 function juno() {
-    alert("Hello");
+
     /*
     x=document.getElementById("sng_Home_2_Menu_1");
     y=x.getElementsByTagName("li");

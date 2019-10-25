@@ -1,6 +1,6 @@
 <?php
 
-class ActionBuilder{
+class ActionBuilder {
 	public static function getAction($nomAction){
 		switch ($nomAction)
 		{
@@ -13,9 +13,15 @@ class ActionBuilder{
 			case "deconnecter" :
 				return new LogoutAction();
 				break;
+
+			// Page se Logout
+			case "dashboardTerminal" :
+				return new DashboardTerminalAction();
+				break;
+
 			//pase d'accueil
-			case "afficher":
-				return new afficher();
+			case "terminalLogin":
+				return new TerminalLoginAction();
 
 			//Page Contact form
 			case"contact":

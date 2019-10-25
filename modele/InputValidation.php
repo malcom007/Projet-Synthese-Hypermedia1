@@ -55,7 +55,7 @@ InputValidation
         //Verification de format num tel saisi si correspond a ceux dans le tableau formats
         if (!in_array(trim(preg_replace('/[0-9]/', '#', htmlspecialchars($phoneNumber))), $formats)){
 
-            throw new Exception("Format de telephone invalide, format accepté: ### ### ####");
+            return false;
         }
         else
             return $phoneNumber=trim(preg_replace('/\s/', '',htmlspecialchars($phoneNumber) ));

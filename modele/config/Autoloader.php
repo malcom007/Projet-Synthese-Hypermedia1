@@ -8,6 +8,25 @@ spl_autoload_register(function ($class_name) {
     return false;
 });
 
+
+// -- Contrôleur frontal --
+spl_autoload_register(function ($class_name) {
+    if (file_exists('./controleur/visiteur/'.$class_name . '.php')) {
+        require_once './controleur/visiteur/'.$class_name . '.php';
+        return true;
+    }
+    return false;
+});
+
+// -- Contrôleur frontal --
+spl_autoload_register(function ($class_name) {
+    if (file_exists('./controleur/transporteur/'.$class_name . '.php')) {
+        require_once './controleur/transporteur/'.$class_name . '.php';
+        return true;
+    }
+    return false;
+});
+
 // -- Contrôleur frontal --
 spl_autoload_register(function ($class_name) {
     if (file_exists('./controleur/'.$class_name . '.php')) {
@@ -81,6 +100,15 @@ spl_autoload_register(function ($class_name) {
 
 // -- Classes/carte frontal --
 spl_autoload_register(function ($class_name) {
+    if (file_exists('./modele/classes/message/'.$class_name . '.php')) {
+        require_once './modele/classes/message/'.$class_name . '.php';
+        return true;
+    }
+    return false;
+});
+
+// -- Classes/carte frontal --
+spl_autoload_register(function ($class_name) {
     if (file_exists('./modele/classes/carte/'.$class_name . '.php')) {
         require_once './modele/classes/carte/'.$class_name . '.php';
         return true;
@@ -105,6 +133,15 @@ spl_autoload_register(function ($class_name) {
     return false;
 });
 
+
+// -- Contrôleur frontal --
+spl_autoload_register(function () {
+    if (file_exists('./modele/IdGenerator.php')) {
+        require_once './modele/IdGenerator.php';
+        return true;
+    }
+    return false;
+});
 
 // -- Contrôleur frontal --
 spl_autoload_register(function () {

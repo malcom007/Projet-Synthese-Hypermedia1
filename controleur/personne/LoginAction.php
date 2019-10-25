@@ -2,22 +2,9 @@
 
 class LoginAction implements Action {
 
-    public function execute()
+    public  function execute()
     {
-        //verification si y a deja une session
-        if (!ISSET($_SESSION)){
-            session_start();
-        }
-
-        //Verification si connecté si en tant qu'Admin
-        if (ISSET($_SESSION['userName']) && ISSET($_SESSION['profil'])){
-
-            if ($_SESSION['profil'] === 1){
-                return 'dashboard';
-            }
-
-    }
-
+        return "login";
     }
 
     public function valide()

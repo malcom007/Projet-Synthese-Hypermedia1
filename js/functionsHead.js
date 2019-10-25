@@ -123,7 +123,7 @@ function changeContent(idCible) {
 
          }
     }
-    httpRequest.open("GET", "homeChangeContent.json", true);
+    httpRequest.open("GET", "./js/homeChangeContent.json", true);
     httpRequest.send();
 
 }

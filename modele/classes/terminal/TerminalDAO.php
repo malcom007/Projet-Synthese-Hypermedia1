@@ -63,10 +63,10 @@ class TerminalDAO{
 
         //Si On ne saisit pas l'id, on retourne toute la liste
         if ($id==NULL){
-            $request="SELECT * FROM terminals";
+            $request="SELECT transTermi.idTerminal, termi.macAdress, transTermi.statut, transTermi.login, transTermi.password, transpo.RaisonSociale, transpo.idTransporteur FROM Entrepriseterminal as transTermi INNER JOIN terminals as termi on transTermi.idTerminal = termi.idTerminal INNER JOIN transporteurs as transpo on transpo.idTransporteur = transTermi.idEntreprise";
         }
         else
-            $request="SELECT * FROM entrepriseterminal  WHERE idTerminal = :x";
+            $request="SELECT transTermi.idTerminal, termi.macAdress, transTermi.statut, transTermi.login, transTermi.password, transpo.RaisonSociale, transpo.idTransporteur FROM Entrepriseterminal as transTermi INNER JOIN terminals as termi on transTermi.idTerminal = termi.idTerminal INNER JOIN transporteurs as transpo on transpo.idTransporteur = transTermi.idEntreprise WHERE login  = :x";
 
         $termTab= Array();
 
@@ -87,11 +87,14 @@ class TerminalDAO{
                 //Parcours de notre pstm tant qu'il y des données
                 while ($result = $pstmt->fetch(PDO::FETCH_OBJ)){
 
+
                     //Creation d'un terminal
-                    $terminal = new Terminal();
+                    $terminal = new TerminalEntreprise();
 
                     //Transfere des information d'objet vers un tableau
                     $terminal->loadFromObjet($result);
+
+
 
                     //On insere chaque objet a la fin du tableau $termTab
                     array_push($termTab,$terminal);

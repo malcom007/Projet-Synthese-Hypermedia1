@@ -1,6 +1,6 @@
 <?php
 
-////require_once '/config/config.php';
+
 
 //Pour mon test dans le dossier racine
 require_once '/../config/Config.php';
