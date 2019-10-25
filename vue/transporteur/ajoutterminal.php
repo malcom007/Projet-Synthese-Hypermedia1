@@ -16,41 +16,15 @@
                     <h5 class="title">Ajouter Terminal</h5>
                 </div>
                 <?php
-                require_once ('../../modele/classes/transporteur/TerminalEntreprise.php');
-                require_once ('../../modele/classes/transporteur/TerminalEntrepriseDAO.php');
-                require_once ('../../modele/classes/transporteur/TransporteurDAO.php');
-                require_once ('../../modele/classes/transporteur/Transporteur.php');
-                require_once ('../../modele/classes/adresse/Adresse.php');
+
 
                 $dao = new TransporteurDAO();
-                $daoA= new TerminalEntrepriseDAO();
+
                 $id = "";
                 $login="";
                 $pswrd="";
                 $textBouton = "ajouter";
-                if (ISSET($_REQUEST['action'])) {
-                    if (ISSET($_REQUEST["bnok"])) {
-                        $idTermininal = TerminalEntrepriseDAO::findById($_REQUEST['id']);
-                        $idEntreprise = TransporteurDAO::find('h545gf');
-                        if (empty($idTermininal)) {
-                            throw new Exception("Aucun terminal trouvé avec ce ID");
-                        }
-                        $idTermininal = $idTermininal[0]->getIdTerminal();
-
-                        if (empty($idEntreprise)) {
-                            throw new Exception("Aucun Transport trouvé avec ce ID");
-                        }
-                        $idEntreprise = $idEntreprise[0]->getIdTransporteur();
-                        var_dump($idEntreprise);
-                        $monTerminal = new TerminalEntreprise();
-                        $monTerminal->setIdTerminal($idTermininal);
-                        $monTerminal->setIdEntreprise($idEntreprise);
-                        $monTerminal->setLogin($_REQUEST['login']);
-                        $monTerminal->getPassword($_REQUEST['pswrd']);
-                        $daoA->addTerminal($monTerminal);
-                        var_dump($idEntreprise);
-                    }
-                }
+                $idEntreprise = TransporteurDAO::find('h545gf');
                 $test = $dao->find('h545gf');
 
                 if (empty($test)){
@@ -73,7 +47,7 @@
                 }
                 ?>
                 <div class="card-body">
-                    <form>
+                    <form id="contact-form" method="post" action="">
                         <div class="row">
                             <div class="col-md-3 pr-1">
                                 <div class="form-group">
@@ -125,30 +99,33 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
+                            <form id="contact-form" method="post" action="">
                             <div class="col-md-4 pl-1">
                                 <div class="form-group">
                                     <label>Id du Terminal</label>
-                                    <input type="text" class="form-control"  placeholder="id" value="<?=$id?>"  >
+                                    <input type="text" name="idTerminal" class="form-control"  placeholder="id"   >
                                 </div>
                             </div>
                             <div class="col-md-4 pl-1">
                                 <div class="form-group">
                                     <label>Entre un Login</label>
-                                    <input type="text" class="form-control"  placeholder="login" value="<?=$login?>"  >
+                                    <input type="text" class="form-control" name="login" placeholder="login" >
                                 </div>
                             </div>
                             <div class="col-md-4 pl-1">
                                 <div class="form-group">
                                     <label>Mot de Passe</label>
-                                    <input type="text" class="form-control" placeholder="PassWord" value="<?=$pswrd?>" >
+                                    <input type="text" class="form-control" name="pswrd" placeholder="PassWord" >
                                 </div>
                             </div>
                         </div>
                         <div class="row">
 
                             <div class="col-md-3">
-                                <input class="btn btn-primary btn-block" type="submit" name="bnok" value="<?=$textBouton?>"/>
+                                <input type="hidden" name="action" value="AjouterTerminal">
+                                <input class="btn btn-primary btn-block" type="submit" name="bnok" "/>
                             </div>
                             <div class="col-md-3">
                                 <button class="btn btn-primary btn-block" >Annuler</button>

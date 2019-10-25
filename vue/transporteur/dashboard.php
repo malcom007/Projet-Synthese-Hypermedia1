@@ -15,11 +15,7 @@
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- CSS Files -->
     <link rel="stylesheet" href="./style/assets/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="../style/assets/css/SwipDash.css?v=1.3.0"/>
-
-
-
-
+    <link rel="stylesheet" href="./style/assets/css/SwipDash.css?v=1.3.0"/>
 
 </head>
 <body>
@@ -266,7 +262,7 @@
         <!--  Notifications Plugin    -->
 
         <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-        <script src="./style/assets/js/SwipDash.min.js?v=1.3.0" type="text/javascript"></script>
+        <script src="/js/dashboard/SwipDash.min.js?v=1.3.0" type="text/javascript"></script>
         <script src="./js/dashboard/graphique.js"></script>
 
 
@@ -301,7 +297,7 @@
                     $(trigger).removeClass('active');
                     $(this).addClass('active');
 
-                    container.load('vue/transporteur/'+target + '.php');
+                    container.load('./vue/transporteur/'+target + '.php');
                     return false;
 
 

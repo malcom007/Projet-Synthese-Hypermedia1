@@ -1,16 +1,16 @@
 <?php
 //
 
-require_once '../../modele/TerminalDAO.php';
+//require_once '../../modele/TerminalDAO.php';
+require_once ('../../modele/classes/terminal/TerminalCarteDAO.php');
+//$monTerminal = new Terminal();
 
-$monTerminal = new Terminal();
+//$monTerminal->addTerminalInventory("Termin","A5njd85",250);
 
-$monTerminal->addTerminalInventory("Termin","A5njd85",250);
-
-$test1= TerminalDAO::create($monTerminal);
+//$test1= TerminalDAO::create($monTerminal);
 
 
-var_dump($monTerminal);
+//var_dump($monTerminal);
 
 
 /****
@@ -18,18 +18,10 @@ var_dump($monTerminal);
  *                                              RECHERCHE PAR IDTERMINAL
  * --------------------------------------------------------------------------------------------------------------
  */
-$test=TerminalDAO::findById();
+$test=TerminalCarteDAO::findbyDateday('2019-10-23');
+var_dump($test);
 //S'il n'y a aucune donnée
-if (empty($test)){
-    echo "Aucune données";
-}else{
-    echo "Essaie";
-    foreach ($test as $item){
-        echo $item->getIdTerminal()."<br>";
-        echo $item->getLibelle()."<br>";
-        echo $item->getMacAdresse()."<br>";
-    }
-}
+
 //var_dump($test);
 /****
  *--------------------------------------------------------------------------------------------------------------

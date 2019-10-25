@@ -1,6 +1,6 @@
 <?php
 //require_once '/../modele/PersonneDAO.php';
-require_once '/../modele/classes/ContactsEntrs.php';
+
 
 class ContactsEntrsDAO extends  PersonneDAO
 {

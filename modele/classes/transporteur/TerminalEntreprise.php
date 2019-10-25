@@ -1,11 +1,8 @@
 <?php
-require_once './modele/IdGenerator.php';
-
-
-
+//require_once './modele/IdGenerator.php';
 class TerminalEntreprise extends Terminal {
 
-    private $_IdEntreprise,$_Statut,$_Login,$_Password, $_DateActivation,$_DateModification, $_RaisonSocial;
+    private $_IdEntreprise,$_Statut,$_Login,$_Password, $_DateActivation,$_DateModification;
 
     public function addTerminal($idTerminal, $idEntreprise,$login,$password){
         $this->setIdTerminal($idTerminal);
@@ -24,15 +21,15 @@ class TerminalEntreprise extends Terminal {
     public function loadFromObjet( $obj)
     {
 
-
-        $this->_IdEntreprise = $obj->idTransporteur;
-        $this->_RaisonSocial = $obj->RaisonSociale;
+        $this->_IdEntreprise = $obj->idEntreprise;
         $this->setIdTerminal($obj->idTerminal);
-        parent::setMacAdresse($obj->macAdress);
+        $this->setMacAdresse($obj->macAdress);
+        $this->setLibelle($obj->libelle);
         $this->_Login=$obj->login;
         $this->_Password=$obj->password;
         $this->_Statut=$obj->statut;
-
+        $this->_DateActivation=$obj->dateActivation;
+        $this->_DateModification=$obj->dateModification;
 
     }
 
@@ -139,23 +136,6 @@ class TerminalEntreprise extends Terminal {
     {
         $this->_DateModification = $DateModification;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getRaisonSocial()
-    {
-        return $this->_RaisonSocial;
-    }
-
-    /**
-     * @param mixed $RaisonSocial
-     */
-    public function setRaisonSocial($RaisonSocial)
-    {
-        $this->_RaisonSocial = $RaisonSocial;
-    }
-
 
 
 

@@ -33,6 +33,16 @@ class ActionBuilder {
 				return new SendMessageAction();
 				break;
 
+			//Page Contact form
+			case"dashboard":
+				return new DashboardTransporteurAction();
+				break;
+
+			//page Login
+			case "AjouterTerminal" :
+				return new AjouterTerminalAction();
+				break;
+
 			default :
 				return new DefaultAction();
 		}

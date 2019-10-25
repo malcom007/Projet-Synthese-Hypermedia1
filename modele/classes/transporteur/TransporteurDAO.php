@@ -1,7 +1,5 @@
 <?php
 
-require_once ('../../modele/classes/Database.php');
-require_once ('../../modele/classes/adresse/Adresse.php');
 class TransporteurDAO
 {
     public static function create(Adresse $adresso, Transporteur $transport)

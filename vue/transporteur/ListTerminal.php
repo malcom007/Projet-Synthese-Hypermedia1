@@ -35,7 +35,7 @@
                             </thead>
                             <tbody>
                             <?php
-
+                            require_once ('../../modele/classes/transporteur/TerminalEntrepriseDAO.php');
 
                             $dao = new TerminalEntrepriseDAO();
                             $test = $dao->findAllByIdEntreprise('h545gf');

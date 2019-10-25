@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- CSS Files -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./assets/css/SwipDash.css?v=1.3.0"/>
+    <link rel="stylesheet" href="../../style/assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../../style/assets/css/SwipDash.css?v=1.3.0"/>
 
 
 
@@ -143,9 +143,7 @@
         <!-- End Navbar -->
         <div class="panel-header2 panel-header-sm">
         </div>
-        <?php
-        require_once ('modele/classes/U')
-        ?>
+
         <div id="content" class="content">
             <div class="row">
                 <div class="col-md-12">
@@ -261,14 +259,14 @@
             </div>
         </footer>
         <!--   Core JS Files   -->
-        <script src="./assets/js/core/jquery.min.js"></script>
+        <script src="../../js/dashboard/core/jquery.min.js"></script>
         <!-- Chart JS -->
-        <script src="./assets/js/plugins/chartjs.min.js"></script>
+        <script src="../../js/dashboard/plugins/chartjs.min.js"></script>
         <!--  Notifications Plugin    -->
-        <script src="./assets/js/plugins/bootstrap-notify.js"></script>
+
         <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-        <script src="./assets/js/SwipDash.min.js?v=1.3.0" type="text/javascript"></script>
-        <script src="./assets/dddddd.js"></script>
+        <script src="../../js/dashboard/SwipDash.min.js?v=1.3.0" type="text/javascript"></script>
+        <script src="../../js/dashboard/graphique.js"></script>
 
 
         <script type="text/javascript" >
@@ -282,7 +280,7 @@
         <script>
             $(document).ready(function () {
                 // Javascript method's body can be found in assets/js/ddddd.js
-                dddddd.initDashboardPageCharts();
+                graphique.initDashboardPageCharts();
 
             });
         </script>
@@ -302,7 +300,7 @@
                     $(trigger).removeClass('active');
                     $(this).addClass('active');
 
-                    container.load(target + '.html');
+                    container.load(target + '.php');
                     return false;
 
 

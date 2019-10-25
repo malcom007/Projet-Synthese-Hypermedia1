@@ -8,8 +8,8 @@ require_once ('../../modele/classes/adresse/Adresse.php');
 
 //echo $tes->getIdTransporteur();
 
-$test= TransporteurDao::findAdresse("h545gf");
-//var_dump($test);
+$test= TransporteurDao::find("h545gf");
+var_dump($test);
 if (empty($test)){
 
     echo "Aucune données";
