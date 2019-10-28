@@ -57,7 +57,7 @@ class TerminalDAO{
      * @param $id
      * @return Terminal|null
      */
-    public static function findById($id=NULL)
+    public static function findById2($id=NULL)
     {
         $request="";
 
@@ -102,6 +102,63 @@ class TerminalDAO{
 
                 $pstmt->closeCursor();
                 $pstmt= NULL;
+
+
+        }
+        catch (PDOException $ex){
+            ?>
+            <!-- Affichage du message d'erreur au console terminal-->
+            <script>console.log("Error createDAO:  <?= $ex->getMessage()?>")</script>
+            <?php
+        }
+        return $termTab;
+
+
+
+
+    }
+    public static function findById($id=NULL)
+    {
+        $request="";
+
+        //Si On ne saisit pas l'id, on retourne toute la liste
+        if ($id==NULL){
+            $request="SELECT * FROM terminals";
+        }
+        else
+            $request="SELECT * FROM terminals  WHERE idTerminal = :x";
+
+        $termTab= Array();
+
+        $db = Database::getInstance();
+
+
+        try{
+
+            //On s'assure que la connexion n'est pas null
+            if (is_null($db)){
+                throw new PDOException("Impossible d'effectuer une requette de recherche verifier la connexion");
+            }
+            //Preparation de la requette SQL pour l'execution(Tableau)
+            $pstmt = $db->prepare($request);
+
+            $pstmt->execute(array(':x' => $id));
+
+            //Parcours de notre pstm tant qu'il y des données
+            while ($result = $pstmt->fetch(PDO::FETCH_OBJ)){
+
+                //Creation d'un terminal
+                $terminal = new Terminal();
+
+                //Transfere des information d'objet vers un tableau
+                $terminal->loadFromObjet($result);
+
+                //On insere chaque objet a la fin du tableau $termTab
+                array_push($termTab,$terminal);
+            }
+
+            $pstmt->closeCursor();
+            $pstmt= NULL;
 
 
         }

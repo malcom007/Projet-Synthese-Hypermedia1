@@ -42,6 +42,14 @@ class ActionBuilder {
 			case "AjouterTerminal" :
 				return new AjouterTerminalAction();
 				break;
+			case"dashboardAdmin":
+				return new DashboardAdminAction();
+				break;
+
+			//page Login
+			case "AjouterTransporteur" :
+				return new AjoutEntrepriseAction();
+				break;
 
 			default :
 				return new DefaultAction();

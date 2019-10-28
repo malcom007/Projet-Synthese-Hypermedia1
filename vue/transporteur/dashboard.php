@@ -35,8 +35,8 @@
 
 
             <ul  class="nav">
-                <li class="active">
-                    <a class="nav-link" href="#" data-target="dash">
+                <li >
+                    <a class="nav-link" href="vue/transporteur/dashboard.php" >
                         <i class="fa fa-home"></i>
                         <p>Acceuil</p>
                     </a>
@@ -262,7 +262,7 @@
         <!--  Notifications Plugin    -->
 
         <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-        <script src="/js/dashboard/SwipDash.min.js?v=1.3.0" type="text/javascript"></script>
+        <script src="./js/dashboard/SwipDash.min.js?v=1.3.0" type="text/javascript"></script>
         <script src="./js/dashboard/graphique.js"></script>
 
 

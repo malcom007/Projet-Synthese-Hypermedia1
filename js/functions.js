@@ -74,6 +74,15 @@ function mobileSwitch() {
         x.style.display = "block";
     }
 }
+function valideCham() {
+    Swal.fire({
+        type: 'error',
+        title: 'remplisez tout le champ',
+        showConfirmButton: false,
+        timer:2300
+    })
+    
+}
 
 
 

@@ -15,7 +15,7 @@ try{
     $idTermininal = TerminalEntrepriseDAO::findById('7522F');
 
     //Verification id du transporteur si enregistré
-    $idEntreprise = TransporteurDAO::find('00964B');
+    $idEntreprise = TransporteurDAO::find('h545gf');
     if (empty($idTermininal)){
         throw new Exception("Aucun terminal trouvé avec ce ID");
     }

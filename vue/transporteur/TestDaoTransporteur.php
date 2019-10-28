@@ -20,7 +20,7 @@ if (empty($test)){
     }
 }
 
-/*
+
 $adress = new Adresse();
 $adress->createAdresse("rdc" ,"mayala","Herady","selembao","kinshasa","kin-243");
 $Trans = new transporteur();
@@ -32,7 +32,7 @@ $adres=TransporteurDAO::create($adress,$Trans);
 
 var_dump($adress);
 var_dump($Trans);
-*/
+
 /****
  *--------------------------------------------------------------------------------------------------------------
  *                                              DELETE

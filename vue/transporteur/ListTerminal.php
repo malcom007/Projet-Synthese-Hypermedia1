@@ -12,9 +12,6 @@
             <div class="card">
                 <div class="card-header">
                     <h5 class="title">Terminal</h5>
-
-
-
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -35,7 +32,7 @@
                             </thead>
                             <tbody>
                             <?php
-                            require_once ('../../modele/classes/transporteur/TerminalEntrepriseDAO.php');
+                            require_once('../../modele/config/Autoloader.php');
 
                             $dao = new TerminalEntrepriseDAO();
                             $test = $dao->findAllByIdEntreprise('h545gf');
@@ -43,7 +40,7 @@
                             if (empty($test)){
                                 echo "Aucune données";
                             }else{
-                                foreach ($test as $item){
+                                foreach ($row =$test as $item){
                                     $item->getIdTerminal();
 
 

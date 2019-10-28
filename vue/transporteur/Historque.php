@@ -17,20 +17,24 @@
                             <?php
 
 
-                            $date="";
+                            require_once('../../modele/config/Autoloader.php');
 
+                            $date="";
+                            if (ISSET($_REQUEST["from"])) {
                                 $dao = new TerminalCarteDAO();
                                 $test = $dao->findbyDateday($_REQUEST['date']);
+                                var_dump($test);
                                 $date=$test->getDateTransaction();
-
+                            }
 
                             ?>
                     <div  id="date" class="form-group row">
 
                         <label for="example-datetime-local-input" class="col-2 col-form-label">selectionner une date</label>
                         <div class="col-10">
-                            <form class="form-horizontal" method="post" action="Historque.php">
-                            <input class="form-control" type="date" name="date" value="<?=$date?>" id="date">
+                            <form class="form-horizontal" name=" from" method="post" action="Historque.php">
+                            <input class="form-control" type="date" name="date" value="" id="date">
+
                             </form>
 
 

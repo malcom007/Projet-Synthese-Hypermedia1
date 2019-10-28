@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
@@ -14,12 +15,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- CSS Files -->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./assets/css/SwipDash.css?v=1.3.0"/>
-
-
-
-
+    <link rel="stylesheet" href="./style/assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./style/assets/css/SwipDash.css?v=1.3.0"/>
 </head>
 <body>
 <div class="wrapper">
@@ -45,13 +42,13 @@
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#" data-target="achat">
+                    <a class="nav-link" href="#" data-target="AjouterEntreprise">
                         <i class="fas fa-money-bill-alt"></i>
-                        <p>Ajouter Terminal</p>
+                        <p>Ajouter Entreprise</p>
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" href="#" data-target="ListTerminal">
+                    <a class="nav-link" href="#" data-target="ListEntreprises">
                         <i class="fas fa-exchange-alt"></i>
                         <p>Liste des Entreprise </p>
                     </a>
@@ -259,15 +256,15 @@
             </div>
         </footer>
         <!--   Core JS Files   -->
-        <script src="./assets/js/core/jquery.min.js"></script>
+        <!--   Core JS Files   -->
+        <script src="./js/dashboard/core/jquery.min.js"></script>
         <!-- Chart JS -->
-        <script src="./assets/js/plugins/chartjs.min.js"></script>
+        <script src="./js/dashboard/plugins/chartjs.min.js"></script>
         <!--  Notifications Plugin    -->
-        <script src="./assets/js/plugins/bootstrap-notify.js"></script>
-        <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
-        <script src="./assets/js/SwipDash.min.js?v=1.3.0" type="text/javascript"></script>
-        <script src="./assets/dddddd.js"></script>
 
+        <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+        <script src="./js/dashboard/SwipDash.min.js?v=1.3.0" type="text/javascript"></script>
+        <script src="./js/dashboard/graphique.js"></script>
 
         <script type="text/javascript" >
             $('.nav').on('click','li',function () {
@@ -279,8 +276,8 @@
 
         <script>
             $(document).ready(function () {
-                // Javascript method's body can be found in assets/js/ddddd.js
-                dddddd.initDashboardPageCharts();
+                // Javascript method's body can be found in assets/js/.js
+                graphique.initDashboardPageCharts();
 
             });
         </script>
@@ -300,7 +297,7 @@
                     $(trigger).removeClass('active');
                     $(this).addClass('active');
 
-                    container.load(target + '.html');
+                    container.load('./vue/admin/'+target + '.php');
                     return false;
 
 
